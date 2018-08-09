@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B13674CB211C35F500282FB3 /* TCViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B13674CA211C35F500282FB3 /* TCViewModel.m */; };
 		B1780AC1211C1BD5003844EB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1780AC0211C1BD5003844EB /* AppDelegate.m */; };
 		B1780AC4211C1BD5003844EB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1780AC3211C1BD5003844EB /* ViewController.m */; };
 		B1780AC7211C1BD5003844EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1780AC5211C1BD5003844EB /* Main.storyboard */; };
 		B1780AC9211C1BD6003844EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1780AC8211C1BD6003844EB /* Assets.xcassets */; };
 		B1780ACC211C1BD6003844EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1780ACA211C1BD6003844EB /* LaunchScreen.storyboard */; };
 		B1780ACF211C1BD6003844EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1780ACE211C1BD6003844EB /* main.m */; };
+		B1780AD8211C1FD2003844EB /* TCCopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1780AD7211C1FD2003844EB /* TCCopyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B13674C9211C35F500282FB3 /* TCViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCViewModel.h; sourceTree = "<group>"; };
+		B13674CA211C35F500282FB3 /* TCViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCViewModel.m; sourceTree = "<group>"; };
 		B1780ABC211C1BD5003844EB /* MyBlogDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBlogDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1780ABF211C1BD5003844EB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B1780AC0211C1BD5003844EB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +30,8 @@
 		B1780ACB211C1BD6003844EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1780ACD211C1BD6003844EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1780ACE211C1BD6003844EB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B1780AD6211C1FD2003844EB /* TCCopyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCCopyViewController.h; sourceTree = "<group>"; };
+		B1780AD7211C1FD2003844EB /* TCCopyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCCopyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,8 @@
 		B1780ABE211C1BD5003844EB /* MyBlogDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B1780AD9211C21A6003844EB /* MVVM */,
+				B1780AD5211C1E38003844EB /* Copy,Strong,DeepCopy,ShallowCopy */,
 				B1780ABF211C1BD5003844EB /* AppDelegate.h */,
 				B1780AC0211C1BD5003844EB /* AppDelegate.m */,
 				B1780AC2211C1BD5003844EB /* ViewController.h */,
@@ -69,6 +77,24 @@
 				B1780ACE211C1BD6003844EB /* main.m */,
 			);
 			path = MyBlogDemo;
+			sourceTree = "<group>";
+		};
+		B1780AD5211C1E38003844EB /* Copy,Strong,DeepCopy,ShallowCopy */ = {
+			isa = PBXGroup;
+			children = (
+				B1780AD6211C1FD2003844EB /* TCCopyViewController.h */,
+				B1780AD7211C1FD2003844EB /* TCCopyViewController.m */,
+			);
+			path = "Copy,Strong,DeepCopy,ShallowCopy";
+			sourceTree = "<group>";
+		};
+		B1780AD9211C21A6003844EB /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				B13674C9211C35F500282FB3 /* TCViewModel.h */,
+				B13674CA211C35F500282FB3 /* TCViewModel.m */,
+			);
+			path = MVVM;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +169,8 @@
 			files = (
 				B1780AC4211C1BD5003844EB /* ViewController.m in Sources */,
 				B1780ACF211C1BD6003844EB /* main.m in Sources */,
+				B13674CB211C35F500282FB3 /* TCViewModel.m in Sources */,
+				B1780AD8211C1FD2003844EB /* TCCopyViewController.m in Sources */,
 				B1780AC1211C1BD5003844EB /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
