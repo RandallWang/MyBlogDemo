@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B1330FC7211F1F2A00ED2E1A /* TCRunTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1330FC6211F1F2A00ED2E1A /* TCRunTimeViewController.m */; };
 		B13674CB211C35F500282FB3 /* TCViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B13674CA211C35F500282FB3 /* TCViewModel.m */; };
 		B1780AC1211C1BD5003844EB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1780AC0211C1BD5003844EB /* AppDelegate.m */; };
 		B1780AC4211C1BD5003844EB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1780AC3211C1BD5003844EB /* ViewController.m */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B1330FC5211F1F2A00ED2E1A /* TCRunTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCRunTimeViewController.h; sourceTree = "<group>"; };
+		B1330FC6211F1F2A00ED2E1A /* TCRunTimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCRunTimeViewController.m; sourceTree = "<group>"; };
 		B13674C9211C35F500282FB3 /* TCViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCViewModel.h; sourceTree = "<group>"; };
 		B13674CA211C35F500282FB3 /* TCViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCViewModel.m; sourceTree = "<group>"; };
 		B1780ABC211C1BD5003844EB /* MyBlogDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBlogDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +48,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B1330FC4211F1F0600ED2E1A /* RuntimeDemo */ = {
+			isa = PBXGroup;
+			children = (
+				B1330FC5211F1F2A00ED2E1A /* TCRunTimeViewController.h */,
+				B1330FC6211F1F2A00ED2E1A /* TCRunTimeViewController.m */,
+			);
+			path = RuntimeDemo;
+			sourceTree = "<group>";
+		};
 		B1780AB3211C1BD5003844EB = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +76,7 @@
 		B1780ABE211C1BD5003844EB /* MyBlogDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B1330FC4211F1F0600ED2E1A /* RuntimeDemo */,
 				B1780AD9211C21A6003844EB /* MVVM */,
 				B1780AD5211C1E38003844EB /* Copy,Strong,DeepCopy,ShallowCopy */,
 				B1780ABF211C1BD5003844EB /* AppDelegate.h */,
@@ -169,6 +182,7 @@
 			files = (
 				B1780AC4211C1BD5003844EB /* ViewController.m in Sources */,
 				B1780ACF211C1BD6003844EB /* main.m in Sources */,
+				B1330FC7211F1F2A00ED2E1A /* TCRunTimeViewController.m in Sources */,
 				B13674CB211C35F500282FB3 /* TCViewModel.m in Sources */,
 				B1780AD8211C1FD2003844EB /* TCCopyViewController.m in Sources */,
 				B1780AC1211C1BD5003844EB /* AppDelegate.m in Sources */,

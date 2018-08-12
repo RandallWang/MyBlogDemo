@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "TCCopyViewController.h"
+#import "TCRunTimeViewController.h"
 #import "TCViewModel.h"
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
@@ -29,7 +30,7 @@
     [self setUpViewModel];
     [self.tableView reloadData];
     
-    self.navigationItem.title = @"My blog demo";
+    self.title = @"My blog demo";
 }
 
 
@@ -58,9 +59,10 @@
 
 #pragma mark - Private Method
 - (void)setUpViewModel {
-    TCViewModel *model = [[TCViewModel alloc] initWithTitle:@"Copy VS Strong,Deep Copy VS Shallow Copy" targetVCName:NSStringFromClass([TCCopyViewController class])];
-    
-    self.viewModels = @[model];
+    TCViewModel *copyViewModel = [[TCViewModel alloc] initWithTitle:@"Copy VS Strong,Deep Copy VS Shallow Copy" targetVCName:NSStringFromClass([TCCopyViewController class])];
+    TCViewModel *runtimeViewModel = [[TCViewModel alloc] initWithTitle:@"Runtime Demo" targetVCName:NSStringFromClass([TCRunTimeViewController class])];
+
+    self.viewModels = @[copyViewModel, runtimeViewModel];
 }
 
 @end
