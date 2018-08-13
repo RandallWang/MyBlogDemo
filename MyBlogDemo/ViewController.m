@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "TCCopyViewController.h"
 #import "TCRunTimeViewController.h"
+#import "TCRetainCycleViewController.h"
 #import "TCViewModel.h"
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
@@ -61,8 +62,9 @@
 - (void)setUpViewModel {
     TCViewModel *copyViewModel = [[TCViewModel alloc] initWithTitle:@"Copy VS Strong,Deep Copy VS Shallow Copy" targetVCName:NSStringFromClass([TCCopyViewController class])];
     TCViewModel *runtimeViewModel = [[TCViewModel alloc] initWithTitle:@"Runtime Demo" targetVCName:NSStringFromClass([TCRunTimeViewController class])];
-
-    self.viewModels = @[copyViewModel, runtimeViewModel];
+    TCViewModel *retainCycleViewModel = [[TCViewModel alloc] initWithTitle:@"Retain Cycle" targetVCName:[TCRetainCycleViewController class]];
+    
+    self.viewModels = @[copyViewModel, runtimeViewModel, retainCycleViewModel];
 }
 
 @end

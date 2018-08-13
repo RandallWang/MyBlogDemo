@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B1330FC7211F1F2A00ED2E1A /* TCRunTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1330FC6211F1F2A00ED2E1A /* TCRunTimeViewController.m */; };
 		B13674CB211C35F500282FB3 /* TCViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B13674CA211C35F500282FB3 /* TCViewModel.m */; };
+		B14FA7CB2121B76300D07D30 /* TCRetainCycleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B14FA7CA2121B76300D07D30 /* TCRetainCycleViewController.m */; };
 		B1780AC1211C1BD5003844EB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1780AC0211C1BD5003844EB /* AppDelegate.m */; };
 		B1780AC4211C1BD5003844EB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1780AC3211C1BD5003844EB /* ViewController.m */; };
 		B1780AC7211C1BD5003844EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1780AC5211C1BD5003844EB /* Main.storyboard */; };
@@ -23,6 +24,8 @@
 		B1330FC6211F1F2A00ED2E1A /* TCRunTimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCRunTimeViewController.m; sourceTree = "<group>"; };
 		B13674C9211C35F500282FB3 /* TCViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCViewModel.h; sourceTree = "<group>"; };
 		B13674CA211C35F500282FB3 /* TCViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCViewModel.m; sourceTree = "<group>"; };
+		B14FA7C92121B76300D07D30 /* TCRetainCycleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCRetainCycleViewController.h; sourceTree = "<group>"; };
+		B14FA7CA2121B76300D07D30 /* TCRetainCycleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCRetainCycleViewController.m; sourceTree = "<group>"; };
 		B1780ABC211C1BD5003844EB /* MyBlogDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBlogDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1780ABF211C1BD5003844EB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B1780AC0211C1BD5003844EB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -57,6 +60,15 @@
 			path = RuntimeDemo;
 			sourceTree = "<group>";
 		};
+		B14FA7C82121B71B00D07D30 /* RetainCycle */ = {
+			isa = PBXGroup;
+			children = (
+				B14FA7C92121B76300D07D30 /* TCRetainCycleViewController.h */,
+				B14FA7CA2121B76300D07D30 /* TCRetainCycleViewController.m */,
+			);
+			path = RetainCycle;
+			sourceTree = "<group>";
+		};
 		B1780AB3211C1BD5003844EB = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +88,7 @@
 		B1780ABE211C1BD5003844EB /* MyBlogDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B14FA7C82121B71B00D07D30 /* RetainCycle */,
 				B1330FC4211F1F0600ED2E1A /* RuntimeDemo */,
 				B1780AD9211C21A6003844EB /* MVVM */,
 				B1780AD5211C1E38003844EB /* Copy,Strong,DeepCopy,ShallowCopy */,
@@ -185,6 +198,7 @@
 				B1330FC7211F1F2A00ED2E1A /* TCRunTimeViewController.m in Sources */,
 				B13674CB211C35F500282FB3 /* TCViewModel.m in Sources */,
 				B1780AD8211C1FD2003844EB /* TCCopyViewController.m in Sources */,
+				B14FA7CB2121B76300D07D30 /* TCRetainCycleViewController.m in Sources */,
 				B1780AC1211C1BD5003844EB /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
