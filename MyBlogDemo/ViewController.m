@@ -62,7 +62,7 @@
 - (void)setUpViewModel {
     TCViewModel *copyViewModel = [[TCViewModel alloc] initWithTitle:@"Copy VS Strong,Deep Copy VS Shallow Copy" targetVCName:NSStringFromClass([TCCopyViewController class])];
     TCViewModel *runtimeViewModel = [[TCViewModel alloc] initWithTitle:@"Runtime Demo" targetVCName:NSStringFromClass([TCRunTimeViewController class])];
-    TCViewModel *retainCycleViewModel = [[TCViewModel alloc] initWithTitle:@"Retain Cycle" targetVCName:[TCRetainCycleViewController class]];
+    TCViewModel *retainCycleViewModel = [[TCViewModel alloc] initWithTitle:@"Retain Cycle" targetVCName:NSStringFromClass([TCRetainCycleViewController class])];
     
     self.viewModels = @[copyViewModel, runtimeViewModel, retainCycleViewModel];
 }
