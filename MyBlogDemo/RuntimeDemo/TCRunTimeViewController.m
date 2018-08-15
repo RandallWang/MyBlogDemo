@@ -8,6 +8,7 @@
 
 #import "TCRunTimeViewController.h"
 #import <objc/runtime.h>
+#import "TCForwardTarget.h"
 
 #pragma mark - Method Swizzling
 @interface NSMutableArray (methodSwizzling)
@@ -58,7 +59,8 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"runtime Demo";
     
-    [self methodSwizzlingDemo];
+//    [self methodSwizzlingDemo];
+    [self triggerMessageForwarding];
 }
 
 #pragma mark - AssociatedObject
@@ -68,16 +70,47 @@
 
 
 #pragma mark - Message Forwarding
+- (void)triggerMessageForwarding {
+//    [self performSelector:@selector(methodIsNotImplemented)];
+//    [self performSelector:@selector(methodIsNotImplemented1)];
+    [self performSelector:@selector(methodIsNotImplemented2)];
+
+}
+
+void backUpMethod (id self, SEL _cmd) {
+    printf("do something else");
+}
+
 + (BOOL)resolveInstanceMethod:(SEL)sel {
-    return NO;
+    if (sel == @selector(methodIsNotImplemented)) {
+        class_addMethod([self class], sel, (IMP)backUpMethod, "v@:@");
+        return YES;
+    }
+    NSLog(@"resolved SEL:%@", NSStringFromSelector(sel));
+    return [super resolveInstanceMethod:sel];
 }
 
 - (id)forwardingTargetForSelector:(SEL)aSelector {
+    TCForwardTarget *forwardTarget = [[TCForwardTarget alloc] init];
+    if ([forwardTarget respondsToSelector:aSelector]) {
+        return forwardTarget;
+    }
     return nil;
 }
 
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
+    NSMethodSignature *sig = [TCForwardTarget instanceMethodSignatureForSelector:@selector(NotRecognizedMessage)];
+    return sig;
+}
+
 - (void)forwardInvocation:(NSInvocation *)anInvocation {
+    NSLog(@"Invocation:%@",anInvocation);
+    TCForwardTarget *forwardTarget = [[TCForwardTarget alloc] init];
+
+    [anInvocation setTarget:forwardTarget];
+    [anInvocation setSelector:@selector(NotRecognizedMessage)];
     
+    [anInvocation invoke];
 }
 
 #pragma mark - Method Swizzling
