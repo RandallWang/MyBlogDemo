@@ -18,6 +18,7 @@
 		B1780ACF211C1BD6003844EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1780ACE211C1BD6003844EB /* main.m */; };
 		B1780AD8211C1FD2003844EB /* TCCopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1780AD7211C1FD2003844EB /* TCCopyViewController.m */; };
 		B19692C9212481DC0049B804 /* TCForwardTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = B19692C8212481DC0049B804 /* TCForwardTarget.m */; };
+		B19CCF3321259DCB007C4764 /* TCCopyItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B19CCF3221259DCB007C4764 /* TCCopyItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		B1780AD7211C1FD2003844EB /* TCCopyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCCopyViewController.m; sourceTree = "<group>"; };
 		B19692C7212481DC0049B804 /* TCForwardTarget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCForwardTarget.h; sourceTree = "<group>"; };
 		B19692C8212481DC0049B804 /* TCForwardTarget.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCForwardTarget.m; sourceTree = "<group>"; };
+		B19CCF3121259DCB007C4764 /* TCCopyItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCCopyItem.h; sourceTree = "<group>"; };
+		B19CCF3221259DCB007C4764 /* TCCopyItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCCopyItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 			children = (
 				B1780AD6211C1FD2003844EB /* TCCopyViewController.h */,
 				B1780AD7211C1FD2003844EB /* TCCopyViewController.m */,
+				B19CCF3121259DCB007C4764 /* TCCopyItem.h */,
+				B19CCF3221259DCB007C4764 /* TCCopyItem.m */,
 			);
 			path = "Copy,Strong,DeepCopy,ShallowCopy";
 			sourceTree = "<group>";
@@ -203,6 +208,7 @@
 				B1330FC7211F1F2A00ED2E1A /* TCRunTimeViewController.m in Sources */,
 				B13674CB211C35F500282FB3 /* TCViewModel.m in Sources */,
 				B1780AD8211C1FD2003844EB /* TCCopyViewController.m in Sources */,
+				B19CCF3321259DCB007C4764 /* TCCopyItem.m in Sources */,
 				B14FA7CB2121B76300D07D30 /* TCRetainCycleViewController.m in Sources */,
 				B1780AC1211C1BD5003844EB /* AppDelegate.m in Sources */,
 				B19692C9212481DC0049B804 /* TCForwardTarget.m in Sources */,
