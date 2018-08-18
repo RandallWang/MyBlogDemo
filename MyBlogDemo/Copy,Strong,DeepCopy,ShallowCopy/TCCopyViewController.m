@@ -26,7 +26,9 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"Copy and Strong";
 
-    [self copyAndStrongStringTest];
+//    [self copyAndStrongStringTest];
+    
+    [self imageViewTest];
 }
 
 - (void)copyAndStrongStringTest {
@@ -61,6 +63,24 @@
 }
 
 - (void)copyAndStrongArrayTest {
+    
+}
+
+- (void)imageViewTest {
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100 , 100, 100)];
+    [self.view addSubview:imageView];
+    
+    UIImage *testImage = [UIImage imageNamed:@"a"];
+    NSLog(@"image:%p,**************%p", testImage, &testImage);
+    
+    imageView.image = testImage;
+    
+    UIImage *image = imageView.image;
+    NSLog(@"imageVIew.image:%p,**************%p", imageView.image, &image);
+    
+    testImage = nil;
+    NSLog(@"image:%p,**************%p", testImage, &testImage);
+    NSLog(@"imageVIew.image:%p,**************%p", imageView.image, &image);
     
 }
 

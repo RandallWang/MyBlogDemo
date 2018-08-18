@@ -19,6 +19,7 @@
 		B1780AD8211C1FD2003844EB /* TCCopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1780AD7211C1FD2003844EB /* TCCopyViewController.m */; };
 		B19692C9212481DC0049B804 /* TCForwardTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = B19692C8212481DC0049B804 /* TCForwardTarget.m */; };
 		B19CCF3321259DCB007C4764 /* TCCopyItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B19CCF3221259DCB007C4764 /* TCCopyItem.m */; };
+		B19CCF372125AC6B007C4764 /* TCMemoryOptimizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B19CCF362125AC6B007C4764 /* TCMemoryOptimizationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		B19692C8212481DC0049B804 /* TCForwardTarget.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCForwardTarget.m; sourceTree = "<group>"; };
 		B19CCF3121259DCB007C4764 /* TCCopyItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCCopyItem.h; sourceTree = "<group>"; };
 		B19CCF3221259DCB007C4764 /* TCCopyItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCCopyItem.m; sourceTree = "<group>"; };
+		B19CCF352125AC6B007C4764 /* TCMemoryOptimizationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCMemoryOptimizationViewController.h; sourceTree = "<group>"; };
+		B19CCF362125AC6B007C4764 /* TCMemoryOptimizationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCMemoryOptimizationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,7 @@
 		B1780ABE211C1BD5003844EB /* MyBlogDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B19CCF342125ABF3007C4764 /* MemoryOptimization */,
 				B14FA7C82121B71B00D07D30 /* RetainCycle */,
 				B1330FC4211F1F0600ED2E1A /* RuntimeDemo */,
 				B1780AD9211C21A6003844EB /* MVVM */,
@@ -131,6 +135,15 @@
 				B13674CA211C35F500282FB3 /* TCViewModel.m */,
 			);
 			path = MVVM;
+			sourceTree = "<group>";
+		};
+		B19CCF342125ABF3007C4764 /* MemoryOptimization */ = {
+			isa = PBXGroup;
+			children = (
+				B19CCF352125AC6B007C4764 /* TCMemoryOptimizationViewController.h */,
+				B19CCF362125AC6B007C4764 /* TCMemoryOptimizationViewController.m */,
+			);
+			path = MemoryOptimization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1780AC4211C1BD5003844EB /* ViewController.m in Sources */,
+				B19CCF372125AC6B007C4764 /* TCMemoryOptimizationViewController.m in Sources */,
 				B1780ACF211C1BD6003844EB /* main.m in Sources */,
 				B1330FC7211F1F2A00ED2E1A /* TCRunTimeViewController.m in Sources */,
 				B13674CB211C35F500282FB3 /* TCViewModel.m in Sources */,

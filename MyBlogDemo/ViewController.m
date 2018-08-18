@@ -10,6 +10,7 @@
 #import "TCCopyViewController.h"
 #import "TCRunTimeViewController.h"
 #import "TCRetainCycleViewController.h"
+#import "TCMemoryOptimizationViewController.h"
 #import "TCViewModel.h"
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
@@ -63,8 +64,10 @@
     TCViewModel *copyViewModel = [[TCViewModel alloc] initWithTitle:@"Copy VS Strong,Deep Copy VS Shallow Copy" targetVCName:NSStringFromClass([TCCopyViewController class])];
     TCViewModel *runtimeViewModel = [[TCViewModel alloc] initWithTitle:@"Runtime Demo" targetVCName:NSStringFromClass([TCRunTimeViewController class])];
     TCViewModel *retainCycleViewModel = [[TCViewModel alloc] initWithTitle:@"Retain Cycle" targetVCName:NSStringFromClass([TCRetainCycleViewController class])];
+    TCViewModel *memoryOptimizationViewModel = [[TCViewModel alloc] initWithTitle:@"Memory Optimization" targetVCName:NSStringFromClass([TCMemoryOptimizationViewController class])];
+
     
-    self.viewModels = @[copyViewModel, runtimeViewModel, retainCycleViewModel];
+    self.viewModels = @[copyViewModel, runtimeViewModel, retainCycleViewModel, memoryOptimizationViewModel];
 }
 
 @end
