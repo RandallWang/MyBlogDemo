@@ -7,6 +7,7 @@
 //
 
 #import "TCMemoryOptimizationViewController.h"
+#import "TCImage.h"
 
 @interface TCMemoryOptimizationViewController ()
 
@@ -20,7 +21,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 //    [self notUsingAutoReleasePool];
-//    [self usingAutoReleasePool];
+    [self usingAutoReleasePool];
     self.view.backgroundColor = [UIColor whiteColor];
     
 }
@@ -29,17 +30,24 @@
 
 - (void)notUsingAutoReleasePool {
     int i = 0;
-    while (i < 1000000) {
-        NSArray *newArray = [NSArray array];
+    NSMutableArray *myTestArray = [NSMutableArray array];
+    while (i < 10000) {
+//UIImage will not release if using "imageNamed:",check https://stackoverflow.com/questions/24653440/uiimage-dont-release-memory
+//        TCImage *tempImage = [TCImage imageNamed:@"a"];
+        
+        TCImage *tempImage = [TCImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"testImage" ofType:@"jpg"]];
+        
         i += 1;
     }
+    NSLog(@"first while is done");
+    [self usingAutoReleasePool];
 }
 
 - (void)usingAutoReleasePool {
     int i = 0;
-    while (i < 1000000) {
+    while (i < 10000) {
         @autoreleasepool {
-            NSArray *newArray = [NSArray array];
+            TCImage *tempImage = [TCImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"testImage" ofType:@"jpg"]];
             i += 1;
         }
     }

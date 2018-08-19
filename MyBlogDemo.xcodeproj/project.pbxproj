@@ -20,6 +20,8 @@
 		B19692C9212481DC0049B804 /* TCForwardTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = B19692C8212481DC0049B804 /* TCForwardTarget.m */; };
 		B19CCF3321259DCB007C4764 /* TCCopyItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B19CCF3221259DCB007C4764 /* TCCopyItem.m */; };
 		B19CCF372125AC6B007C4764 /* TCMemoryOptimizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B19CCF362125AC6B007C4764 /* TCMemoryOptimizationViewController.m */; };
+		B19EA86721297EC100E5A54E /* TCImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B19EA86621297EC100E5A54E /* TCImage.m */; };
+		B19EA8692129896800E5A54E /* testImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B19EA8682129896700E5A54E /* testImage.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,9 @@
 		B19CCF3221259DCB007C4764 /* TCCopyItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCCopyItem.m; sourceTree = "<group>"; };
 		B19CCF352125AC6B007C4764 /* TCMemoryOptimizationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCMemoryOptimizationViewController.h; sourceTree = "<group>"; };
 		B19CCF362125AC6B007C4764 /* TCMemoryOptimizationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCMemoryOptimizationViewController.m; sourceTree = "<group>"; };
+		B19EA86521297EC100E5A54E /* TCImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCImage.h; sourceTree = "<group>"; };
+		B19EA86621297EC100E5A54E /* TCImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCImage.m; sourceTree = "<group>"; };
+		B19EA8682129896700E5A54E /* testImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = testImage.jpg; path = Assets.xcassets/a.imageset/testImage.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +110,7 @@
 				B1780AD9211C21A6003844EB /* MVVM */,
 				B1780AD5211C1E38003844EB /* Copy,Strong,DeepCopy,ShallowCopy */,
 				B1780ABF211C1BD5003844EB /* AppDelegate.h */,
+				B19EA8682129896700E5A54E /* testImage.jpg */,
 				B1780AC0211C1BD5003844EB /* AppDelegate.m */,
 				B1780AC2211C1BD5003844EB /* ViewController.h */,
 				B1780AC3211C1BD5003844EB /* ViewController.m */,
@@ -142,6 +148,8 @@
 			children = (
 				B19CCF352125AC6B007C4764 /* TCMemoryOptimizationViewController.h */,
 				B19CCF362125AC6B007C4764 /* TCMemoryOptimizationViewController.m */,
+				B19EA86521297EC100E5A54E /* TCImage.h */,
+				B19EA86621297EC100E5A54E /* TCImage.m */,
 			);
 			path = MemoryOptimization;
 			sourceTree = "<group>";
@@ -206,6 +214,7 @@
 				B1780ACC211C1BD6003844EB /* LaunchScreen.storyboard in Resources */,
 				B1780AC9211C1BD6003844EB /* Assets.xcassets in Resources */,
 				B1780AC7211C1BD5003844EB /* Main.storyboard in Resources */,
+				B19EA8692129896800E5A54E /* testImage.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +227,7 @@
 			files = (
 				B1780AC4211C1BD5003844EB /* ViewController.m in Sources */,
 				B19CCF372125AC6B007C4764 /* TCMemoryOptimizationViewController.m in Sources */,
+				B19EA86721297EC100E5A54E /* TCImage.m in Sources */,
 				B1780ACF211C1BD6003844EB /* main.m in Sources */,
 				B1330FC7211F1F2A00ED2E1A /* TCRunTimeViewController.m in Sources */,
 				B13674CB211C35F500282FB3 /* TCViewModel.m in Sources */,
