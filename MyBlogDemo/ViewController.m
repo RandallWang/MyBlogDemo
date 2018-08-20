@@ -11,6 +11,7 @@
 #import "TCRunTimeViewController.h"
 #import "TCRetainCycleViewController.h"
 #import "TCMemoryOptimizationViewController.h"
+#import "TCBlockViewController.h"
 #import "TCViewModel.h"
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
@@ -65,9 +66,9 @@
     TCViewModel *runtimeViewModel = [[TCViewModel alloc] initWithTitle:@"Runtime Demo" targetVCName:NSStringFromClass([TCRunTimeViewController class])];
     TCViewModel *retainCycleViewModel = [[TCViewModel alloc] initWithTitle:@"Retain Cycle" targetVCName:NSStringFromClass([TCRetainCycleViewController class])];
     TCViewModel *memoryOptimizationViewModel = [[TCViewModel alloc] initWithTitle:@"Memory Optimization" targetVCName:NSStringFromClass([TCMemoryOptimizationViewController class])];
-
+    TCViewModel *blockViewModel = [[TCViewModel alloc] initWithTitle:@"Block" targetVCName:NSStringFromClass([TCBlockViewController class])];
     
-    self.viewModels = @[copyViewModel, runtimeViewModel, retainCycleViewModel, memoryOptimizationViewModel];
+    self.viewModels = @[copyViewModel, runtimeViewModel, retainCycleViewModel, memoryOptimizationViewModel, blockViewModel];
 }
 
 @end

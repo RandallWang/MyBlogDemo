@@ -22,6 +22,7 @@
 		B19CCF372125AC6B007C4764 /* TCMemoryOptimizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B19CCF362125AC6B007C4764 /* TCMemoryOptimizationViewController.m */; };
 		B19EA86721297EC100E5A54E /* TCImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B19EA86621297EC100E5A54E /* TCImage.m */; };
 		B19EA8692129896800E5A54E /* testImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B19EA8682129896700E5A54E /* testImage.jpg */; };
+		B19EA87021299A2D00E5A54E /* TCBlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B19EA86F21299A2D00E5A54E /* TCBlockViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,8 @@
 		B19EA86521297EC100E5A54E /* TCImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCImage.h; sourceTree = "<group>"; };
 		B19EA86621297EC100E5A54E /* TCImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCImage.m; sourceTree = "<group>"; };
 		B19EA8682129896700E5A54E /* testImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = testImage.jpg; path = Assets.xcassets/a.imageset/testImage.jpg; sourceTree = "<group>"; };
+		B19EA86E21299A2D00E5A54E /* TCBlockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCBlockViewController.h; sourceTree = "<group>"; };
+		B19EA86F21299A2D00E5A54E /* TCBlockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCBlockViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,7 @@
 		B1780ABE211C1BD5003844EB /* MyBlogDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B19EA86D21299A1700E5A54E /* Block */,
 				B19CCF342125ABF3007C4764 /* MemoryOptimization */,
 				B14FA7C82121B71B00D07D30 /* RetainCycle */,
 				B1330FC4211F1F0600ED2E1A /* RuntimeDemo */,
@@ -152,6 +156,15 @@
 				B19EA86621297EC100E5A54E /* TCImage.m */,
 			);
 			path = MemoryOptimization;
+			sourceTree = "<group>";
+		};
+		B19EA86D21299A1700E5A54E /* Block */ = {
+			isa = PBXGroup;
+			children = (
+				B19EA86E21299A2D00E5A54E /* TCBlockViewController.h */,
+				B19EA86F21299A2D00E5A54E /* TCBlockViewController.m */,
+			);
+			path = Block;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +249,7 @@
 				B14FA7CB2121B76300D07D30 /* TCRetainCycleViewController.m in Sources */,
 				B1780AC1211C1BD5003844EB /* AppDelegate.m in Sources */,
 				B19692C9212481DC0049B804 /* TCForwardTarget.m in Sources */,
+				B19EA87021299A2D00E5A54E /* TCBlockViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
