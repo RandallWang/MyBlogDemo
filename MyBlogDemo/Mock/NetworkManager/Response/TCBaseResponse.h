@@ -1,5 +1,5 @@
 //
-//  TCListItemRequest.h
+//  TCBaseResponse.h
 //  MyBlogDemo
 //
 //  Created by Tianchi Wang on 2018/12/19.
@@ -7,14 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TCBaseRequest.h"
-
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TCListItemRequest : TCBaseRequest
+@interface TCBaseResponse : NSObject
 
-
++ (instancetype)resultFromResponseData:(NSDictionary *)responseData;
 
 @end
 

@@ -1,5 +1,5 @@
 //
-//  TCListItemRequest.h
+//  TCItemModel.h
 //  MyBlogDemo
 //
 //  Created by Tianchi Wang on 2018/12/19.
@@ -7,14 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TCBaseRequest.h"
-
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TCListItemRequest : TCBaseRequest
+@interface TCItemModel : NSObject
 
-
+@property (nonatomic, copy)NSString *itemName;
+@property (nonatomic, copy)NSString *itemDescription;
 
 @end
 

@@ -7,10 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TCBaseResponse.h"
+
+@class TCItemModel;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TCListItemResponse : NSObject
+@interface TCListItemResponse : TCBaseResponse
+
+@property (nonatomic, copy)NSArray <TCItemModel *>*items;
 
 @end
 

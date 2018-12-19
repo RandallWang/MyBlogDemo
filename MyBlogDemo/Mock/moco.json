@@ -1,8 +1,43 @@
 [
-	{
-	  "response" :
-		{
-		  "text" : "This message is mocked by MOCO"
-		}
-	}
+    {
+        "request" :
+        {
+            "method" : "get",
+            "uri" : "/listItems"
+        },
+        "response" :
+        {
+            "json" :
+            {
+                "listArray" :
+                [
+                    {
+                        "name" : "item1",
+                        "description" : "The first item",
+                        "type" : "1",
+                        "thumbnail" : ""
+                    },
+                    {
+                        "name" : "item2",
+                        "description" : "The second item",
+                        "type" : "2",
+                        "thumbnail" : ""
+                    }
+                ]
+            }
+            
+        }
+    },
+    {
+        "request" :
+        {
+            "method" : "get",
+            "uri" : "/test"
+        },
+        "response" :
+        {
+            "text" : "This message is mocked by MOCO"
+        }
+        
+    }
 ]

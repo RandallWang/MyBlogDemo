@@ -33,6 +33,9 @@
 		B1B8AAF721C892CE00B93D79 /* TCNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B8AAF621C892CE00B93D79 /* TCNetworkManager.m */; };
 		B1B8AAFB21CA1B8E00B93D79 /* TCListItemRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B8AAFA21CA1B8E00B93D79 /* TCListItemRequest.m */; };
 		B1B8AB0021CA1C1C00B93D79 /* TCListItemResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B8AAFF21CA1C1C00B93D79 /* TCListItemResponse.m */; };
+		B1B8AB0321CA1D7800B93D79 /* TCItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B8AB0221CA1D7800B93D79 /* TCItemModel.m */; };
+		B1B8AB0621CA1FC100B93D79 /* TCBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B8AB0521CA1FC100B93D79 /* TCBaseRequest.m */; };
+		B1B8AB0921CA1FD200B93D79 /* TCBaseResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B8AB0821CA1FD200B93D79 /* TCBaseResponse.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +98,12 @@
 		B1B8AAFA21CA1B8E00B93D79 /* TCListItemRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCListItemRequest.m; sourceTree = "<group>"; };
 		B1B8AAFE21CA1C1C00B93D79 /* TCListItemResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCListItemResponse.h; sourceTree = "<group>"; };
 		B1B8AAFF21CA1C1C00B93D79 /* TCListItemResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCListItemResponse.m; sourceTree = "<group>"; };
+		B1B8AB0121CA1D7800B93D79 /* TCItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCItemModel.h; sourceTree = "<group>"; };
+		B1B8AB0221CA1D7800B93D79 /* TCItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCItemModel.m; sourceTree = "<group>"; };
+		B1B8AB0421CA1FC100B93D79 /* TCBaseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCBaseRequest.h; sourceTree = "<group>"; };
+		B1B8AB0521CA1FC100B93D79 /* TCBaseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCBaseRequest.m; sourceTree = "<group>"; };
+		B1B8AB0721CA1FD200B93D79 /* TCBaseResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCBaseResponse.h; sourceTree = "<group>"; };
+		B1B8AB0821CA1FD200B93D79 /* TCBaseResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCBaseResponse.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +185,8 @@
 		B172BE5E21C635E10025986A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B1B8AB0121CA1D7800B93D79 /* TCItemModel.h */,
+				B1B8AB0221CA1D7800B93D79 /* TCItemModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -301,6 +312,8 @@
 			children = (
 				B1B8AAF921CA1B8E00B93D79 /* TCListItemRequest.h */,
 				B1B8AAFA21CA1B8E00B93D79 /* TCListItemRequest.m */,
+				B1B8AB0421CA1FC100B93D79 /* TCBaseRequest.h */,
+				B1B8AB0521CA1FC100B93D79 /* TCBaseRequest.m */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -310,6 +323,8 @@
 			children = (
 				B1B8AAFE21CA1C1C00B93D79 /* TCListItemResponse.h */,
 				B1B8AAFF21CA1C1C00B93D79 /* TCListItemResponse.m */,
+				B1B8AB0721CA1FD200B93D79 /* TCBaseResponse.h */,
+				B1B8AB0821CA1FD200B93D79 /* TCBaseResponse.m */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -435,13 +450,16 @@
 				B1330FC7211F1F2A00ED2E1A /* TCRunTimeViewController.m in Sources */,
 				B13674CB211C35F500282FB3 /* TCViewModel.m in Sources */,
 				B1780AD8211C1FD2003844EB /* TCCopyViewController.m in Sources */,
+				B1B8AB0621CA1FC100B93D79 /* TCBaseRequest.m in Sources */,
 				B1B8AAF721C892CE00B93D79 /* TCNetworkManager.m in Sources */,
 				B172BE5C21C3A4050025986A /* TCGoodTableViewController.m in Sources */,
 				B19CCF3321259DCB007C4764 /* TCCopyItem.m in Sources */,
+				B1B8AB0921CA1FD200B93D79 /* TCBaseResponse.m in Sources */,
 				B14FA7CB2121B76300D07D30 /* TCRetainCycleViewController.m in Sources */,
 				B1780AC1211C1BD5003844EB /* AppDelegate.m in Sources */,
 				B19692C9212481DC0049B804 /* TCForwardTarget.m in Sources */,
 				B1390EDB212BB6460009CF4E /* TCLoadAndInitializeViewController.m in Sources */,
+				B1B8AB0321CA1D7800B93D79 /* TCItemModel.m in Sources */,
 				B172BE5521C34B540025986A /* TCGCDViewController.m in Sources */,
 				B19EA87021299A2D00E5A54E /* TCBlockViewController.m in Sources */,
 			);

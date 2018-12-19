@@ -7,9 +7,11 @@
 //
 
 #import "TCMockViewController.h"
+#import "TCNetworkManager.h"
+#import "TCListItemRequest.h"
 
 
-@interface TCMockViewController ()
+@interface TCMockViewController ()<TCNetworkDelegate>
 
 @end
 
@@ -21,7 +23,9 @@
     self.title = @"Mock";
     self.view.backgroundColor = [UIColor whiteColor];
 //    [self testPostmanMock];
-    [self testMocoMock];
+//    [self testMocoMock];
+    
+    [self testNetworkManager];
 }
 
 - (void)testPostmanMock {
@@ -41,7 +45,7 @@
 - (void)testMocoMock {
     NSURLSession *session = [NSURLSession sharedSession];
     
-    NSURL *mocoURL= [NSURL URLWithString:@"http://localhost:12306"];
+    NSURL *mocoURL= [NSURL URLWithString:@"http://localhost:12306/test"];
     NSURLRequest *request = [NSURLRequest requestWithURL:mocoURL];
     
     NSURLSessionTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
@@ -51,6 +55,20 @@
     [task resume];
 }
 
+- (void)testNetworkManager {
+    TCListItemRequest *request = [[TCListItemRequest alloc] init];
+    [[TCNetworkManager manager] startRequest:request];
+    [[TCNetworkManager manager] setDelegate:self];
+}
 
+#pragma mark - TCNetworkDelegate
+- (void)failedWithError:(NSError *)error {
+    NSLog(@"Error:%@",error.description);
+}
 
+- (void)successedWithResponse:(TCBaseResponse *)response {
+    if (response) {
+        NSLog(@"successed,response:%@",response);
+    }
+}
 @end

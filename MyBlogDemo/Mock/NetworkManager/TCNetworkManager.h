@@ -8,14 +8,28 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum : NSUInteger {
-    TCHttpMethodPOST,
-    TCHttpMethodGET,
-} TCHttpMethod;
+@class TCBaseRequest;
+@class TCBaseResponse;
+
+
+@protocol TCNetworkDelegate
+
+- (void)successedWithResponse:(TCBaseResponse *)response;
+- (void)failedWithError:(NSError *)error;
+
+@end
+
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TCNetworkManager : NSObject
+
+@property (nonatomic, weak) id<TCNetworkDelegate> delegate;
+
++ (instancetype)manager;
+
+- (void)startRequest:(TCBaseRequest *)request;
+
 
 @end
 
