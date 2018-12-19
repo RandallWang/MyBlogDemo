@@ -68,7 +68,7 @@
 
 - (void)successedWithResponse:(TCBaseResponse *)response {
     if (response) {
-        NSLog(@"successed,response:%@",response);
+        NSLog(@"successed,\n response:%@",response);
     }
 }
 @end
