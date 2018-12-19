@@ -13,6 +13,7 @@
 #import "TCMemoryOptimizationViewController.h"
 #import "TCBlockViewController.h"
 #import "TCGCDViewController.h"
+#import "TCMockViewController.h"
 #import "TCViewModel.h"
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
@@ -69,8 +70,9 @@
     TCViewModel *memoryOptimizationViewModel = [[TCViewModel alloc] initWithTitle:@"Memory Optimization" targetVCName:NSStringFromClass([TCMemoryOptimizationViewController class])];
     TCViewModel *blockViewModel = [[TCViewModel alloc] initWithTitle:@"Block" targetVCName:NSStringFromClass([TCBlockViewController class])];
     TCViewModel *GCDViewModel = [[TCViewModel alloc] initWithTitle:@"GCD" targetVCName:NSStringFromClass([TCGCDViewController class])];
+    TCViewModel *MockViewModel = [[TCViewModel alloc] initWithTitle:@"Mock" targetVCName:NSStringFromClass([TCMockViewController class])];
 
-    self.viewModels = @[copyViewModel, runtimeViewModel, retainCycleViewModel, memoryOptimizationViewModel, blockViewModel, GCDViewModel];
+    self.viewModels = @[copyViewModel, runtimeViewModel, retainCycleViewModel, memoryOptimizationViewModel, blockViewModel, GCDViewModel, MockViewModel];
 }
 
 @end

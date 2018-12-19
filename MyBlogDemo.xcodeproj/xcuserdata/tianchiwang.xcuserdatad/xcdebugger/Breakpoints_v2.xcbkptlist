@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyBlogDemo/RuntimeDemo/TCRunTimeViewController.m"
-            timestampString = "556041525.316034"
+            timestampString = "566663516.4934959"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "24"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyBlogDemo/RuntimeDemo/TCRunTimeViewController.m"
-            timestampString = "556041525.316638"
+            timestampString = "566663516.493577"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "107"
@@ -96,6 +96,22 @@
             startingLineNumber = "54"
             endingLineNumber = "54"
             landmarkName = "-usingAutoReleasePool"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyBlogDemo/Mock/TCMockViewController.m"
+            timestampString = "566663516.4939851"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "-testMocoMock"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

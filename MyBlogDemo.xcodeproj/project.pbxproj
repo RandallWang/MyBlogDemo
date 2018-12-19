@@ -12,6 +12,11 @@
 		B1390EDB212BB6460009CF4E /* TCLoadAndInitializeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1390EDA212BB6460009CF4E /* TCLoadAndInitializeViewController.m */; };
 		B14FA7CB2121B76300D07D30 /* TCRetainCycleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B14FA7CA2121B76300D07D30 /* TCRetainCycleViewController.m */; };
 		B172BE5521C34B540025986A /* TCGCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B172BE5421C34B540025986A /* TCGCDViewController.m */; };
+		B172BE5C21C3A4050025986A /* TCGoodTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B172BE5B21C3A4050025986A /* TCGoodTableViewController.m */; };
+		B172BE6721C65B8F0025986A /* MyBlogDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B172BE6621C65B8F0025986A /* MyBlogDemoTests.m */; };
+		B172BE7021C662400025986A /* TCMockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B172BE6F21C662400025986A /* TCMockViewController.m */; };
+		B172BE7321C6843A0025986A /* TCDemoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B172BE7221C6843A0025986A /* TCDemoTableViewCell.m */; };
+		B172BE7521C6958D0025986A /* moco.json in Resources */ = {isa = PBXBuildFile; fileRef = B172BE7421C6958D0025986A /* moco.json */; };
 		B1780AC1211C1BD5003844EB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1780AC0211C1BD5003844EB /* AppDelegate.m */; };
 		B1780AC4211C1BD5003844EB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1780AC3211C1BD5003844EB /* ViewController.m */; };
 		B1780AC7211C1BD5003844EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1780AC5211C1BD5003844EB /* Main.storyboard */; };
@@ -25,7 +30,20 @@
 		B19EA86721297EC100E5A54E /* TCImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B19EA86621297EC100E5A54E /* TCImage.m */; };
 		B19EA8692129896800E5A54E /* testImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B19EA8682129896700E5A54E /* testImage.jpg */; };
 		B19EA87021299A2D00E5A54E /* TCBlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B19EA86F21299A2D00E5A54E /* TCBlockViewController.m */; };
+		B1B8AAF721C892CE00B93D79 /* TCNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B8AAF621C892CE00B93D79 /* TCNetworkManager.m */; };
+		B1B8AAFB21CA1B8E00B93D79 /* TCListItemRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B8AAFA21CA1B8E00B93D79 /* TCListItemRequest.m */; };
+		B1B8AB0021CA1C1C00B93D79 /* TCListItemResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B8AAFF21CA1C1C00B93D79 /* TCListItemResponse.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B172BE6921C65B8F0025986A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1780AB4211C1BD5003844EB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1780ABB211C1BD5003844EB;
+			remoteInfo = MyBlogDemo;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B1330FC5211F1F2A00ED2E1A /* TCRunTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCRunTimeViewController.h; sourceTree = "<group>"; };
@@ -38,6 +56,16 @@
 		B14FA7CA2121B76300D07D30 /* TCRetainCycleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCRetainCycleViewController.m; sourceTree = "<group>"; };
 		B172BE5321C34B540025986A /* TCGCDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCGCDViewController.h; sourceTree = "<group>"; };
 		B172BE5421C34B540025986A /* TCGCDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCGCDViewController.m; sourceTree = "<group>"; };
+		B172BE5A21C3A4050025986A /* TCGoodTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCGoodTableViewController.h; sourceTree = "<group>"; };
+		B172BE5B21C3A4050025986A /* TCGoodTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCGoodTableViewController.m; sourceTree = "<group>"; };
+		B172BE6421C65B8E0025986A /* MyBlogDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyBlogDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B172BE6621C65B8F0025986A /* MyBlogDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyBlogDemoTests.m; sourceTree = "<group>"; };
+		B172BE6821C65B8F0025986A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B172BE6E21C662400025986A /* TCMockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCMockViewController.h; sourceTree = "<group>"; };
+		B172BE6F21C662400025986A /* TCMockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCMockViewController.m; sourceTree = "<group>"; };
+		B172BE7121C6843A0025986A /* TCDemoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCDemoTableViewCell.h; sourceTree = "<group>"; };
+		B172BE7221C6843A0025986A /* TCDemoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCDemoTableViewCell.m; sourceTree = "<group>"; };
+		B172BE7421C6958D0025986A /* moco.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = moco.json; sourceTree = "<group>"; };
 		B1780ABC211C1BD5003844EB /* MyBlogDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBlogDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1780ABF211C1BD5003844EB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B1780AC0211C1BD5003844EB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -61,9 +89,22 @@
 		B19EA8682129896700E5A54E /* testImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = testImage.jpg; path = Assets.xcassets/a.imageset/testImage.jpg; sourceTree = "<group>"; };
 		B19EA86E21299A2D00E5A54E /* TCBlockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCBlockViewController.h; sourceTree = "<group>"; };
 		B19EA86F21299A2D00E5A54E /* TCBlockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCBlockViewController.m; sourceTree = "<group>"; };
+		B1B8AAF521C892CE00B93D79 /* TCNetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCNetworkManager.h; sourceTree = "<group>"; };
+		B1B8AAF621C892CE00B93D79 /* TCNetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCNetworkManager.m; sourceTree = "<group>"; };
+		B1B8AAF921CA1B8E00B93D79 /* TCListItemRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCListItemRequest.h; sourceTree = "<group>"; };
+		B1B8AAFA21CA1B8E00B93D79 /* TCListItemRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCListItemRequest.m; sourceTree = "<group>"; };
+		B1B8AAFE21CA1C1C00B93D79 /* TCListItemResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCListItemResponse.h; sourceTree = "<group>"; };
+		B1B8AAFF21CA1C1C00B93D79 /* TCListItemResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCListItemResponse.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B172BE6121C65B8E0025986A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B1780AB9211C1BD5003844EB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -112,10 +153,58 @@
 			path = GCD;
 			sourceTree = "<group>";
 		};
+		B172BE5621C3912D0025986A /* GoodTableView */ = {
+			isa = PBXGroup;
+			children = (
+				B172BE5E21C635E10025986A /* Model */,
+				B172BE5D21C635D90025986A /* View */,
+				B172BE5A21C3A4050025986A /* TCGoodTableViewController.h */,
+				B172BE5B21C3A4050025986A /* TCGoodTableViewController.m */,
+			);
+			path = GoodTableView;
+			sourceTree = "<group>";
+		};
+		B172BE5D21C635D90025986A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B172BE7121C6843A0025986A /* TCDemoTableViewCell.h */,
+				B172BE7221C6843A0025986A /* TCDemoTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B172BE5E21C635E10025986A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B172BE5F21C640550025986A /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				B1B8AAF421C8929900B93D79 /* NetworkManager */,
+				B172BE6E21C662400025986A /* TCMockViewController.h */,
+				B172BE6F21C662400025986A /* TCMockViewController.m */,
+				B172BE7421C6958D0025986A /* moco.json */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		B172BE6521C65B8F0025986A /* MyBlogDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				B172BE6621C65B8F0025986A /* MyBlogDemoTests.m */,
+				B172BE6821C65B8F0025986A /* Info.plist */,
+			);
+			path = MyBlogDemoTests;
+			sourceTree = "<group>";
+		};
 		B1780AB3211C1BD5003844EB = {
 			isa = PBXGroup;
 			children = (
 				B1780ABE211C1BD5003844EB /* MyBlogDemo */,
+				B172BE6521C65B8F0025986A /* MyBlogDemoTests */,
 				B1780ABD211C1BD5003844EB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -124,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				B1780ABC211C1BD5003844EB /* MyBlogDemo.app */,
+				B172BE6421C65B8E0025986A /* MyBlogDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,6 +221,8 @@
 		B1780ABE211C1BD5003844EB /* MyBlogDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B172BE5F21C640550025986A /* Mock */,
+				B172BE5621C3912D0025986A /* GoodTableView */,
 				B172BE5221C348530025986A /* GCD */,
 				B1390ED8212BB6030009CF4E /* Load&Initialize */,
 				B19EA86D21299A1700E5A54E /* Block */,
@@ -193,9 +285,56 @@
 			path = Block;
 			sourceTree = "<group>";
 		};
+		B1B8AAF421C8929900B93D79 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				B1B8AAFC21CA1BD800B93D79 /* Response */,
+				B1B8AAF821CA19B600B93D79 /* Request */,
+				B1B8AAF521C892CE00B93D79 /* TCNetworkManager.h */,
+				B1B8AAF621C892CE00B93D79 /* TCNetworkManager.m */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		B1B8AAF821CA19B600B93D79 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				B1B8AAF921CA1B8E00B93D79 /* TCListItemRequest.h */,
+				B1B8AAFA21CA1B8E00B93D79 /* TCListItemRequest.m */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		B1B8AAFC21CA1BD800B93D79 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				B1B8AAFE21CA1C1C00B93D79 /* TCListItemResponse.h */,
+				B1B8AAFF21CA1C1C00B93D79 /* TCListItemResponse.m */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B172BE6321C65B8E0025986A /* MyBlogDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B172BE6B21C65B8F0025986A /* Build configuration list for PBXNativeTarget "MyBlogDemoTests" */;
+			buildPhases = (
+				B172BE6021C65B8E0025986A /* Sources */,
+				B172BE6121C65B8E0025986A /* Frameworks */,
+				B172BE6221C65B8E0025986A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B172BE6A21C65B8F0025986A /* PBXTargetDependency */,
+			);
+			name = MyBlogDemoTests;
+			productName = MyBlogDemoTests;
+			productReference = B172BE6421C65B8E0025986A /* MyBlogDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B1780ABB211C1BD5003844EB /* MyBlogDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1780AD2211C1BD6003844EB /* Build configuration list for PBXNativeTarget "MyBlogDemo" */;
@@ -222,6 +361,10 @@
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Tianchi Wang";
 				TargetAttributes = {
+					B172BE6321C65B8E0025986A = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = B1780ABB211C1BD5003844EB;
+					};
 					B1780ABB211C1BD5003844EB = {
 						CreatedOnToolsVersion = 10.0;
 					};
@@ -241,11 +384,19 @@
 			projectRoot = "";
 			targets = (
 				B1780ABB211C1BD5003844EB /* MyBlogDemo */,
+				B172BE6321C65B8E0025986A /* MyBlogDemoTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B172BE6221C65B8E0025986A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B1780ABA211C1BD5003844EB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -254,23 +405,38 @@
 				B1780AC9211C1BD6003844EB /* Assets.xcassets in Resources */,
 				B1780AC7211C1BD5003844EB /* Main.storyboard in Resources */,
 				B19EA8692129896800E5A54E /* testImage.jpg in Resources */,
+				B172BE7521C6958D0025986A /* moco.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B172BE6021C65B8E0025986A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B172BE6721C65B8F0025986A /* MyBlogDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B1780AB8211C1BD5003844EB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1B8AB0021CA1C1C00B93D79 /* TCListItemResponse.m in Sources */,
 				B1780AC4211C1BD5003844EB /* ViewController.m in Sources */,
+				B1B8AAFB21CA1B8E00B93D79 /* TCListItemRequest.m in Sources */,
+				B172BE7321C6843A0025986A /* TCDemoTableViewCell.m in Sources */,
+				B172BE7021C662400025986A /* TCMockViewController.m in Sources */,
 				B19CCF372125AC6B007C4764 /* TCMemoryOptimizationViewController.m in Sources */,
 				B19EA86721297EC100E5A54E /* TCImage.m in Sources */,
 				B1780ACF211C1BD6003844EB /* main.m in Sources */,
 				B1330FC7211F1F2A00ED2E1A /* TCRunTimeViewController.m in Sources */,
 				B13674CB211C35F500282FB3 /* TCViewModel.m in Sources */,
 				B1780AD8211C1FD2003844EB /* TCCopyViewController.m in Sources */,
+				B1B8AAF721C892CE00B93D79 /* TCNetworkManager.m in Sources */,
+				B172BE5C21C3A4050025986A /* TCGoodTableViewController.m in Sources */,
 				B19CCF3321259DCB007C4764 /* TCCopyItem.m in Sources */,
 				B14FA7CB2121B76300D07D30 /* TCRetainCycleViewController.m in Sources */,
 				B1780AC1211C1BD5003844EB /* AppDelegate.m in Sources */,
@@ -282,6 +448,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B172BE6A21C65B8F0025986A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1780ABB211C1BD5003844EB /* MyBlogDemo */;
+			targetProxy = B172BE6921C65B8F0025986A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B1780AC5211C1BD5003844EB /* Main.storyboard */ = {
@@ -303,6 +477,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B172BE6C21C65B8F0025986A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8U54G7LGSB;
+				INFOPLIST_FILE = MyBlogDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = WTC.MyBlogDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyBlogDemo.app/MyBlogDemo";
+			};
+			name = Debug;
+		};
+		B172BE6D21C65B8F0025986A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8U54G7LGSB;
+				INFOPLIST_FILE = MyBlogDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = WTC.MyBlogDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyBlogDemo.app/MyBlogDemo";
+			};
+			name = Release;
+		};
 		B1780AD0211C1BD6003844EB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -454,6 +668,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B172BE6B21C65B8F0025986A /* Build configuration list for PBXNativeTarget "MyBlogDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B172BE6C21C65B8F0025986A /* Debug */,
+				B172BE6D21C65B8F0025986A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B1780AB7211C1BD5003844EB /* Build configuration list for PBXProject "MyBlogDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
