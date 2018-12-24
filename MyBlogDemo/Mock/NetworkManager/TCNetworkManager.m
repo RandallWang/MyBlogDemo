@@ -9,8 +9,10 @@
 #import "TCNetworkManager.h"
 #import "TCBaseRequest.h"
 #import "TCBaseResponse.h"
+#import <OHHTTPStubs/OHHTTPStubs.h>
+#import <OHHTTPStubs/OHPathHelpers.h>
 
-static const NSString *ErrorDomain = @"";
+static const NSErrorDomain ErrorDomain = @"TC.MyBlogDemo.Network";
 
 
 @interface TCNetworkManager()
@@ -27,6 +29,9 @@ static const NSString *ErrorDomain = @"";
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         manager = [[TCNetworkManager alloc] init];
+#if DEBUG
+        [manager installStub];
+#endif
     });
     
     return manager;
@@ -44,10 +49,15 @@ static const NSString *ErrorDomain = @"";
             [self.delegate failedWithError:error];
         }else {
             NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-            Class responseClass = [myRequest responseClass];
-            TCBaseResponse *response = [responseClass resultFromResponseData:json];
-            
-            [self.delegate successedWithResponse:response];
+            if (json) {
+                Class responseClass = [myRequest responseClass];
+                TCBaseResponse *response = [responseClass resultFromResponseData:json];
+                
+                [self.delegate successedWithResponse:response];
+            }else {
+                NSError *emptyResponse = [NSError errorWithDomain:ErrorDomain code:-1 userInfo:@{@"info":@"Response json is nil"}];
+                [self.delegate failedWithError:emptyResponse];
+            }
         }
     }];
     
@@ -55,6 +65,18 @@ static const NSString *ErrorDomain = @"";
 }
 
 
+#pragma mark - OHHTTPStubs
+- (void)installStub {
+    [OHHTTPStubs stubRequestsPassingTest:^BOOL(NSURLRequest * _Nonnull request) {
+        return [request.URL.lastPathComponent isEqualToString:@"listItems"];
+    } withStubResponse:^OHHTTPStubsResponse * _Nonnull(NSURLRequest * _Nonnull request) {
+        return [[OHHTTPStubsResponse responseWithFileAtPath:OHPathForFile(@"httpStub.json", self.class)
+                                                 statusCode:200
+                                                    headers:@{@"Content-Type":@"application/json; charset=utf-8"}]
+                requestTime:0.5f
+                responseTime:OHHTTPStubsDownloadSpeedWifi];
+    }];
+}
 
 
 @end

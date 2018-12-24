@@ -11,7 +11,32 @@
             "description" : "The second item",
             "type" : "2",
             "thumbnail" : ""
+        },
+        {
+            "name" : "item3",
+            "description" : "The second item",
+            "type" : "2",
+            "thumbnail" : ""
+        },
+        {
+            "name" : "item4",
+            "description" : "The second item",
+            "type" : "2",
+            "thumbnail" : ""
+        },
+        {
+            "name" : "item5",
+            "description" : "The second item",
+            "type" : "2",
+            "thumbnail" : ""
+        },
+        {
+            "name" : "item6",
+            "description" : "The second item",
+            "type" : "2",
+            "thumbnail" : ""
         }
+
     ]
 }
     

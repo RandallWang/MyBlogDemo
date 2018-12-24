@@ -32,6 +32,7 @@
 		B19EA86721297EC100E5A54E /* TCImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B19EA86621297EC100E5A54E /* TCImage.m */; };
 		B19EA8692129896800E5A54E /* testImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B19EA8682129896700E5A54E /* testImage.jpg */; };
 		B19EA87021299A2D00E5A54E /* TCBlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B19EA86F21299A2D00E5A54E /* TCBlockViewController.m */; };
+		B1A3C23421D0D39F00C9E0BD /* httpStub.json in Resources */ = {isa = PBXBuildFile; fileRef = B1B91DDC21CB45DD0011DBB6 /* httpStub.json */; };
 		B1B8AAF721C892CE00B93D79 /* TCNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B8AAF621C892CE00B93D79 /* TCNetworkManager.m */; };
 		B1B8AAFB21CA1B8E00B93D79 /* TCListItemRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B8AAFA21CA1B8E00B93D79 /* TCListItemRequest.m */; };
 		B1B8AB0021CA1C1C00B93D79 /* TCListItemResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B8AAFF21CA1C1C00B93D79 /* TCListItemResponse.m */; };
@@ -459,6 +460,7 @@
 				B1780AC7211C1BD5003844EB /* Main.storyboard in Resources */,
 				B19EA8692129896800E5A54E /* testImage.jpg in Resources */,
 				B172BE7521C6958D0025986A /* moco.json in Resources */,
+				B1A3C23421D0D39F00C9E0BD /* httpStub.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

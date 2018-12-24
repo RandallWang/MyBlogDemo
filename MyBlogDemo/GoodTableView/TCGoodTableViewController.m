@@ -8,8 +8,12 @@
 
 #import "TCGoodTableViewController.h"
 #import "TCDemoTableViewCell.h"
+#import "TCListItemRequest.h"
+#import "TCListItemResponse.h"
+#import "TCNetworkManager.h"
 
-@interface TCGoodTableViewController ()
+
+@interface TCGoodTableViewController ()<TCNetworkDelegate>
 
 @end
 
@@ -22,7 +26,13 @@
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-     self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.title = @"A Good TableView";
+    
+    [[TCNetworkManager manager] setDelegate:self];
+
+    [self startListRequest];
 }
 
 #pragma mark - Table view data source
@@ -81,5 +91,30 @@
 }
 */
 
+#pragma mark - Network
+- (void)startListRequest {
+    TCListItemRequest *request = [[TCListItemRequest alloc] init];
+    [[TCNetworkManager manager] startRequest:request];
+}
+
+- (void)startLoadTableView:(TCListItemResponse *)response {
+    
+}
+
+#pragma mark - TCNetworkDelegate
+- (void)successedWithResponse:(TCBaseResponse *)response {
+    if ([response isKindOfClass:[TCListItemResponse class]]) {
+        [self startLoadTableView:(TCListItemResponse *)response];
+    }
+}
+
+- (void)failedWithError:(NSError *)error {
+    [self showErrorView:error];
+}
+
+#pragma mark - Private Methods
+- (void)showErrorView:(NSError *)error {
+    NSLog(@"ERROR: %@",error.localizedDescription);
+}
 
 @end

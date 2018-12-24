@@ -5,6 +5,7 @@ target 'MyBlogDemo' do
   # use_frameworks!
 
   # Pods for MyBlogDemo
+  pod 'OHHTTPStubs'
 
   target 'MyBlogDemoTests' do
     inherit! :search_paths

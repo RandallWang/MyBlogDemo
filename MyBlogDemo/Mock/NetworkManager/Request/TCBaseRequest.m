@@ -9,9 +9,9 @@
 #import "TCBaseRequest.h"
 #import "TCBaseResponse.h"
 
-//static NSString * const Host = @"https://app.randallwang.com";
+static NSString * const Host = @"https://app.randallwang.com";
 
-static NSString * const Host = @"http://localhost:12306";
+//static NSString * const Host = @"http://localhost:12306";
 
 
 @implementation TCBaseRequest
