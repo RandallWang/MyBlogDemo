@@ -14,6 +14,7 @@
 #import "TCBlockViewController.h"
 #import "TCGCDViewController.h"
 #import "TCMockViewController.h"
+#import "TCGoodTableViewController.h"
 #import "TCViewModel.h"
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
@@ -71,8 +72,9 @@
     TCViewModel *blockViewModel = [[TCViewModel alloc] initWithTitle:@"Block" targetVCName:NSStringFromClass([TCBlockViewController class])];
     TCViewModel *GCDViewModel = [[TCViewModel alloc] initWithTitle:@"GCD" targetVCName:NSStringFromClass([TCGCDViewController class])];
     TCViewModel *MockViewModel = [[TCViewModel alloc] initWithTitle:@"Mock" targetVCName:NSStringFromClass([TCMockViewController class])];
+    TCViewModel *TableViewViewModel = [[TCViewModel alloc] initWithTitle:@"Table View" targetVCName:NSStringFromClass([TCGoodTableViewController class])];
 
-    self.viewModels = @[copyViewModel, runtimeViewModel, retainCycleViewModel, memoryOptimizationViewModel, blockViewModel, GCDViewModel, MockViewModel];
+    self.viewModels = @[copyViewModel, runtimeViewModel, retainCycleViewModel, memoryOptimizationViewModel, blockViewModel, GCDViewModel, MockViewModel, TableViewViewModel];
 }
 
 @end

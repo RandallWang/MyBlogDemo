@@ -13,8 +13,8 @@
 - (instancetype)initWithTitle:(NSString *)title targetVCName:(NSString *)vcName {
     self = [super init];
     if (self) {
-        self.title = title;
-        self.targetVCName = vcName;
+        _title = title;
+        _targetVCName = vcName;
     }
     return self;
 }

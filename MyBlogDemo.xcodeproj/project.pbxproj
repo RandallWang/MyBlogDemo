@@ -40,6 +40,8 @@
 		B1B8AB0621CA1FC100B93D79 /* TCBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B8AB0521CA1FC100B93D79 /* TCBaseRequest.m */; };
 		B1B8AB0921CA1FD200B93D79 /* TCBaseResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = B1B8AB0821CA1FD200B93D79 /* TCBaseResponse.m */; };
 		B1B91DDE21CB464C0011DBB6 /* httpStub.json in Resources */ = {isa = PBXBuildFile; fileRef = B1B91DDC21CB45DD0011DBB6 /* httpStub.json */; };
+		B1CF67F721E4990E003D8E24 /* SwiftDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF67F621E4990E003D8E24 /* SwiftDemo.swift */; };
+		B1CF680221E5D4F7003D8E24 /* AtomicTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CF680121E5D4F7003D8E24 /* AtomicTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +116,9 @@
 		B1B8AB0721CA1FD200B93D79 /* TCBaseResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCBaseResponse.h; sourceTree = "<group>"; };
 		B1B8AB0821CA1FD200B93D79 /* TCBaseResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCBaseResponse.m; sourceTree = "<group>"; };
 		B1B91DDC21CB45DD0011DBB6 /* httpStub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = httpStub.json; sourceTree = "<group>"; };
+		B1CF67F521E4990E003D8E24 /* MyBlogDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyBlogDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		B1CF67F621E4990E003D8E24 /* SwiftDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDemo.swift; sourceTree = "<group>"; };
+		B1CF680121E5D4F7003D8E24 /* AtomicTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AtomicTest.m; sourceTree = "<group>"; };
 		E1531DD6D286098607ECFA3E /* Pods-MyBlogDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBlogDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyBlogDemoTests/Pods-MyBlogDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -218,6 +223,7 @@
 		B172BE6521C65B8F0025986A /* MyBlogDemoTests */ = {
 			isa = PBXGroup;
 			children = (
+				B1CF680121E5D4F7003D8E24 /* AtomicTest.m */,
 				B172BE6621C65B8F0025986A /* MyBlogDemoTests.m */,
 				B1B91DDC21CB45DD0011DBB6 /* httpStub.json */,
 				B172BE6821C65B8F0025986A /* Info.plist */,
@@ -248,6 +254,7 @@
 		B1780ABE211C1BD5003844EB /* MyBlogDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B1CF67F421E498EA003D8E24 /* Swift */,
 				B172BE5F21C640550025986A /* Mock */,
 				B172BE5621C3912D0025986A /* GoodTableView */,
 				B172BE5221C348530025986A /* GCD */,
@@ -345,6 +352,15 @@
 			path = Response;
 			sourceTree = "<group>";
 		};
+		B1CF67F421E498EA003D8E24 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				B1CF67F621E4990E003D8E24 /* SwiftDemo.swift */,
+				B1CF67F521E4990E003D8E24 /* MyBlogDemo-Bridging-Header.h */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
 		E206F889C50DBA3CAECA1CF7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -420,6 +436,7 @@
 					};
 					B1780ABB211C1BD5003844EB = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -510,6 +527,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1CF680221E5D4F7003D8E24 /* AtomicTest.m in Sources */,
 				B172BE6721C65B8F0025986A /* MyBlogDemoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -522,6 +540,7 @@
 				B1780AC4211C1BD5003844EB /* ViewController.m in Sources */,
 				B1B8AAFB21CA1B8E00B93D79 /* TCListItemRequest.m in Sources */,
 				B172BE7321C6843A0025986A /* TCDemoTableViewCell.m in Sources */,
+				B1CF67F721E4990E003D8E24 /* SwiftDemo.swift in Sources */,
 				B172BE7021C662400025986A /* TCMockViewController.m in Sources */,
 				B19CCF372125AC6B007C4764 /* TCMemoryOptimizationViewController.m in Sources */,
 				B19EA86721297EC100E5A54E /* TCImage.m in Sources */,
@@ -578,20 +597,24 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E1531DD6D286098607ECFA3E /* Pods-MyBlogDemoTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ARCHS = "$(ARCHS_STANDARD)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8U54G7LGSB;
 				INFOPLIST_FILE = MyBlogDemoTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = WTC.MyBlogDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyBlogDemo.app/MyBlogDemo";
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -599,20 +622,24 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7BFDC55F51D5AC57B4A9AC6B /* Pods-MyBlogDemoTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ARCHS = "$(ARCHS_STANDARD)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8U54G7LGSB;
 				INFOPLIST_FILE = MyBlogDemoTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = WTC.MyBlogDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyBlogDemo.app/MyBlogDemo";
+				VALID_ARCHS = "arm64 arm64e armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -667,7 +694,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -720,7 +747,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -733,6 +760,7 @@
 			baseConfigurationReference = 19184C06CB65DC3EBC8ED9B9 /* Pods-MyBlogDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8U54G7LGSB;
 				INFOPLIST_FILE = MyBlogDemo/Info.plist;
@@ -743,6 +771,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = WTC.MyBlogDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyBlogDemo/Swift/MyBlogDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -752,6 +783,7 @@
 			baseConfigurationReference = 8A619B6DCF69E6043B8C6FA0 /* Pods-MyBlogDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8U54G7LGSB;
 				INFOPLIST_FILE = MyBlogDemo/Info.plist;
@@ -762,6 +794,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = WTC.MyBlogDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyBlogDemo/Swift/MyBlogDemo-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

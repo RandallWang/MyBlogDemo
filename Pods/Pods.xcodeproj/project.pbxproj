@@ -429,30 +429,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		15FACB3AC7E190ABC467CD5E48A05D62 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7DA4A55083E5D666D7B6DB54AC22B7CD /* OHHTTPStubs.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/OHHTTPStubs/OHHTTPStubs-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = OHHTTPStubs;
-				PRODUCT_NAME = OHHTTPStubs;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		199D972A13F2B4C56847F7A89CCA83BC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -538,7 +514,31 @@
 			};
 			name = Release;
 		};
-		63FD1967225062B659342CEA78B484D7 /* Debug */ = {
+		7943CF916E51743DEFFED370BB323011 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DA4A55083E5D666D7B6DB54AC22B7CD /* OHHTTPStubs.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/OHHTTPStubs/OHHTTPStubs-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = OHHTTPStubs;
+				PRODUCT_NAME = OHHTTPStubs;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		81BD38F5C106552C0A110AD3A2855495 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 14F1FCC12AE939DCBE27B4E651D82134 /* Pods-MyBlogDemoTests.debug.xcconfig */;
 			buildSettings = {
@@ -559,7 +559,7 @@
 			};
 			name = Debug;
 		};
-		6645579944FC3EF55843E71106FDD7DC /* Debug */ = {
+		B41128554C6CA6A08EA0AABE5F72C877 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7DA4A55083E5D666D7B6DB54AC22B7CD /* OHHTTPStubs.xcconfig */;
 			buildSettings = {
@@ -578,9 +578,11 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
 		BCB9D1AE91B84E58A5AE3405D848C53C /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -603,7 +605,7 @@
 			};
 			name = Debug;
 		};
-		E37C181EFB8047326530C31D93F4F6D4 /* Release */ = {
+		DA17A16074BB5757843305AB01FD8FEF /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0B754F5EA7ADDBB1E0A9BE70A2935E79 /* Pods-MyBlogDemoTests.release.xcconfig */;
 			buildSettings = {
@@ -689,8 +691,8 @@
 		0C960ABD79C432B0E887DE3319B5604E /* Build configuration list for PBXNativeTarget "OHHTTPStubs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6645579944FC3EF55843E71106FDD7DC /* Debug */,
-				15FACB3AC7E190ABC467CD5E48A05D62 /* Release */,
+				7943CF916E51743DEFFED370BB323011 /* Debug */,
+				B41128554C6CA6A08EA0AABE5F72C877 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -716,8 +718,8 @@
 		9A69114C232743B583F8FD7B64DC4D4A /* Build configuration list for PBXNativeTarget "Pods-MyBlogDemoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				63FD1967225062B659342CEA78B484D7 /* Debug */,
-				E37C181EFB8047326530C31D93F4F6D4 /* Release */,
+				81BD38F5C106552C0A110AD3A2855495 /* Debug */,
+				DA17A16074BB5757843305AB01FD8FEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

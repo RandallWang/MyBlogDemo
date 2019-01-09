@@ -98,7 +98,7 @@
 }
 
 - (void)startLoadTableView:(TCListItemResponse *)response {
-    
+    NSLog(@"%@", response);
 }
 
 #pragma mark - TCNetworkDelegate
