@@ -13,8 +13,8 @@
 @property (nonatomic, strong)NSString *strongString;
 @property (nonatomic, copy) NSString *stringCopy;
 
-@property (nonatomic, strong)NSArray *arrayStrong;
-@property (nonatomic, copy)NSArray *arrayCopy;
+@property (nonatomic, copy) NSMutableArray *testCopyMutableArray;
+
 
 @end
 
@@ -27,6 +27,7 @@
     self.title = @"Copy and Strong";
 
 //    [self copyAndStrongStringTest];
+//    [self MutableCopyArrayTest];
     
     [self imageViewTest];
 }
@@ -62,8 +63,11 @@
     NSLog(@"*********************");
 }
 
-- (void)copyAndStrongArrayTest {
+- (void)MutableCopyArrayTest {
+    NSMutableArray *testArray = [NSMutableArray arrayWithObjects:@"aa", @"bb", nil];
+    self.testCopyMutableArray = testArray;
     
+    [self.testCopyMutableArray addObject:@"c"];//This will crash
 }
 
 - (void)imageViewTest {

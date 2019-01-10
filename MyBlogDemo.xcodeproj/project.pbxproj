@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		117F723D1EE47EF29FEE392E /* libPods-MyBlogDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E571DC4B60F5C837624076 /* libPods-MyBlogDemoTests.a */; };
 		5D6C15FC74F9AC539EE84B4B /* libPods-MyBlogDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC90A4872D366F2433ABD26 /* libPods-MyBlogDemo.a */; };
+		B1075CAB21E745C30088DFE1 /* SwiftProtocolOptionalDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1075CAA21E745C30088DFE1 /* SwiftProtocolOptionalDemo.swift */; };
 		B1330FC7211F1F2A00ED2E1A /* TCRunTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1330FC6211F1F2A00ED2E1A /* TCRunTimeViewController.m */; };
 		B13674CB211C35F500282FB3 /* TCViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B13674CA211C35F500282FB3 /* TCViewModel.m */; };
 		B1390EDB212BB6460009CF4E /* TCLoadAndInitializeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1390EDA212BB6460009CF4E /* TCLoadAndInitializeViewController.m */; };
@@ -60,6 +61,7 @@
 		70E571DC4B60F5C837624076 /* libPods-MyBlogDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyBlogDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BFDC55F51D5AC57B4A9AC6B /* Pods-MyBlogDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBlogDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyBlogDemoTests/Pods-MyBlogDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		8A619B6DCF69E6043B8C6FA0 /* Pods-MyBlogDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBlogDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyBlogDemo/Pods-MyBlogDemo.release.xcconfig"; sourceTree = "<group>"; };
+		B1075CAA21E745C30088DFE1 /* SwiftProtocolOptionalDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftProtocolOptionalDemo.swift; sourceTree = "<group>"; };
 		B1330FC5211F1F2A00ED2E1A /* TCRunTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCRunTimeViewController.h; sourceTree = "<group>"; };
 		B1330FC6211F1F2A00ED2E1A /* TCRunTimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCRunTimeViewController.m; sourceTree = "<group>"; };
 		B13674C9211C35F500282FB3 /* TCViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCViewModel.h; sourceTree = "<group>"; };
@@ -357,6 +359,7 @@
 			children = (
 				B1CF67F621E4990E003D8E24 /* SwiftDemo.swift */,
 				B1CF67F521E4990E003D8E24 /* MyBlogDemo-Bridging-Header.h */,
+				B1075CAA21E745C30088DFE1 /* SwiftProtocolOptionalDemo.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -542,6 +545,7 @@
 				B172BE7321C6843A0025986A /* TCDemoTableViewCell.m in Sources */,
 				B1CF67F721E4990E003D8E24 /* SwiftDemo.swift in Sources */,
 				B172BE7021C662400025986A /* TCMockViewController.m in Sources */,
+				B1075CAB21E745C30088DFE1 /* SwiftProtocolOptionalDemo.swift in Sources */,
 				B19CCF372125AC6B007C4764 /* TCMemoryOptimizationViewController.m in Sources */,
 				B19EA86721297EC100E5A54E /* TCImage.m in Sources */,
 				B1780ACF211C1BD6003844EB /* main.m in Sources */,
