@@ -16,6 +16,7 @@
 #import "TCMockViewController.h"
 #import "TCGoodTableViewController.h"
 #import "TCViewModel.h"
+#import "MyBlogDemo-Swift.h"
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -73,8 +74,9 @@
     TCViewModel *GCDViewModel = [[TCViewModel alloc] initWithTitle:@"GCD" targetVCName:NSStringFromClass([TCGCDViewController class])];
     TCViewModel *MockViewModel = [[TCViewModel alloc] initWithTitle:@"Mock" targetVCName:NSStringFromClass([TCMockViewController class])];
     TCViewModel *TableViewViewModel = [[TCViewModel alloc] initWithTitle:@"Table View" targetVCName:NSStringFromClass([TCGoodTableViewController class])];
+    TCViewModel *SwiftViewModel = [[TCViewModel alloc] initWithTitle:@"Swift" targetVCName:NSStringFromClass([SwiftDemo class])];
 
-    self.viewModels = @[copyViewModel, runtimeViewModel, retainCycleViewModel, memoryOptimizationViewModel, blockViewModel, GCDViewModel, MockViewModel, TableViewViewModel];
+    self.viewModels = @[copyViewModel, runtimeViewModel, retainCycleViewModel, memoryOptimizationViewModel, blockViewModel, GCDViewModel, MockViewModel, TableViewViewModel, SwiftViewModel];
 }
 
 @end
