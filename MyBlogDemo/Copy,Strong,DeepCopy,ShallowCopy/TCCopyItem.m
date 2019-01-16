@@ -13,7 +13,7 @@
 
 - (instancetype)initWithName:(NSString *)name {
     if (self = [super init]) {
-        self.name = name;
+        _name = [name copy];
     }
     return self;
 }
@@ -23,10 +23,8 @@
     return itemCopy;
 }
 
-- (id)deepCopy {
-    TCCopyItem *deepCopy = [[[self class] alloc] initWithName:_name];
-    return deepCopy;
+- (NSString *)description {
+    return [NSString stringWithFormat:@"name:%@", self.name];
 }
-
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "TCCopyViewController.h"
+#import "TCCopyItem.h"
 
 @interface TCCopyViewController ()
 
@@ -31,7 +32,7 @@
 //    [self copyAndStrongStringTest];
 //    [self MutableCopyArrayTest];
     [self strongArray];
-    
+//    [self testDeepCopy];
 //    [self imageViewTest];
 }
 
@@ -67,15 +68,20 @@
 }
 
 - (void)strongArray {
-    NSString *a = @"a";
+    NSMutableString *a = [NSMutableString stringWithString:@"a"];
     NSMutableArray *test = [NSMutableArray arrayWithObjects:a, @"b", nil];
     
     self.testStrongArray = test;
     self.testCopyArray = test;
     
-    NSArray *array = [NSArray arrayWithArray:test];
     
-    a = @"b";
+    
+    NSArray *array = [[NSArray alloc] initWithArray:test copyItems:test];
+    
+//    a = @"b";
+    [a appendString:@"xxxx"];
+    NSLog(@"array:%@",array);
+    
     [test addObject:@"c"];
     
     NSLog(@"strong array%@", self.testStrongArray);
@@ -87,6 +93,22 @@
     self.testCopyMutableArray = testArray;
     
     [self.testCopyMutableArray addObject:@"c"];//This will crash
+}
+
+- (void)testDeepCopy {
+    NSMutableString *s = [NSMutableString stringWithString:@"a"];
+
+    TCCopyItem *item = [[TCCopyItem alloc] initWithName:s];
+
+    TCCopyItem *newItem = [item copy];
+
+    NSLog(@"item name:%@", item.name);
+    NSLog(@"DeepCopy item name:%@", newItem.name);
+
+    [s appendString:@"xxx"];
+
+    NSLog(@"item name:%@", item.name);
+    NSLog(@"DeepCopy item name:%@", newItem.name);
 }
 
 - (void)imageViewTest {
@@ -108,3 +130,4 @@
 }
 
 @end
+
