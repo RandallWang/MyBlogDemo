@@ -8,12 +8,6 @@
 
 #import "TCCopyItem.h"
 
-@interface TCCopyItem (){
-    NSMutableSet *_contents;
-}
-
-@end
-
 
 @implementation TCCopyItem
 

@@ -72,9 +72,6 @@
 #pragma mark - Message Forwarding
 - (void)triggerMessageForwarding {
 //    [self performSelector:@selector(methodIsNotImplemented)];
-//    [self performSelector:@selector(methodIsNotImplemented1)];
-    [self performSelector:@selector(methodIsNotImplemented2)];
-
 }
 
 void backUpMethod (id self, SEL _cmd) {

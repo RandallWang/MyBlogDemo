@@ -15,6 +15,8 @@
 
 @property (nonatomic, copy) NSMutableArray *testCopyMutableArray;
 
+@property (nonatomic, strong) NSArray *testStrongArray;
+@property (nonatomic, copy) NSArray *testCopyArray;
 
 @end
 
@@ -28,8 +30,9 @@
 
 //    [self copyAndStrongStringTest];
 //    [self MutableCopyArrayTest];
+    [self strongArray];
     
-    [self imageViewTest];
+//    [self imageViewTest];
 }
 
 - (void)copyAndStrongStringTest {
@@ -61,6 +64,22 @@
     NSLog(@"address:%p,value:%@", self.strongString, self.strongString);
     NSLog(@"address:%p,value:%@", self.stringCopy, self.stringCopy);
     NSLog(@"*********************");
+}
+
+- (void)strongArray {
+    NSString *a = @"a";
+    NSMutableArray *test = [NSMutableArray arrayWithObjects:a, @"b", nil];
+    
+    self.testStrongArray = test;
+    self.testCopyArray = test;
+    
+    NSArray *array = [NSArray arrayWithArray:test];
+    
+    a = @"b";
+    [test addObject:@"c"];
+    
+    NSLog(@"strong array%@", self.testStrongArray);
+    NSLog(@"copy array%@", self.testCopyArray);
 }
 
 - (void)MutableCopyArrayTest {
