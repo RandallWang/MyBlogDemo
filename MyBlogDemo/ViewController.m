@@ -17,6 +17,7 @@
 #import "TCGoodTableViewController.h"
 #import "TCViewModel.h"
 #import "MyBlogDemo-Swift.h"
+#import "ResponderChainViewController.h"
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -75,8 +76,9 @@
     TCViewModel *MockViewModel = [[TCViewModel alloc] initWithTitle:@"Mock" targetVCName:NSStringFromClass([TCMockViewController class])];
     TCViewModel *TableViewViewModel = [[TCViewModel alloc] initWithTitle:@"Table View" targetVCName:NSStringFromClass([TCGoodTableViewController class])];
     TCViewModel *SwiftViewModel = [[TCViewModel alloc] initWithTitle:@"Swift" targetVCName:NSStringFromClass([SwiftDemo class])];
+    TCViewModel *ResponderChainViewModel = [[TCViewModel alloc] initWithTitle:@"ResponderChain" targetVCName:NSStringFromClass([ResponderChainViewController class])];
 
-    self.viewModels = @[copyViewModel, runtimeViewModel, retainCycleViewModel, memoryOptimizationViewModel, blockViewModel, GCDViewModel, MockViewModel, TableViewViewModel, SwiftViewModel];
+    self.viewModels = @[copyViewModel, runtimeViewModel, retainCycleViewModel, memoryOptimizationViewModel, blockViewModel, GCDViewModel, MockViewModel, TableViewViewModel, SwiftViewModel, ResponderChainViewModel];
 }
 
 @end
