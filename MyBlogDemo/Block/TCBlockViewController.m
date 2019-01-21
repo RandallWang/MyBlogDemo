@@ -9,9 +9,15 @@
 #import "TCBlockViewController.h"
 #import "TCCopyItem.h"
 
+#import <objc/runtime.h>
+
+
 typedef void(^TestBlock)(int testValue);
 
 @interface TCBlockViewController ()
+
+@property (nonatomic, strong) TestBlock strongBlock;
+@property (nonatomic, copy) TestBlock copyBlock;
 
 - (void)TCBlockCompletionHandler:(TestBlock)completion;
 
@@ -24,8 +30,10 @@ typedef void(^TestBlock)(int testValue);
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
-    [self simpleBlockUsage];
-    [self standerBlockUsage];
+//    [self simpleBlockUsage];
+//    [self standerBlockUsage];
+    
+    [self blockProperty];
 }
 
 - (void)simpleBlockUsage {
@@ -60,6 +68,60 @@ typedef void(^TestBlock)(int testValue);
 - (void)TCBlockCompletionHandler:(TestBlock)completion {
     NSLog(@"do something");
     completion(1);
+}
+
+- (void)blockProperty {
+    TCBlockViewController *__weak weakSelf = self;
+    
+    self.strongBlock = ^(int testValue) {
+        NSLog(@"%i",testValue);
+        NSLog(@"strongBlock:%@",weakSelf.strongBlock);
+    };
+    
+    self.copyBlock = ^(int testValue) {
+        NSLog(@"%i",testValue);
+        NSLog(@"copyBlock:%@",weakSelf.copyBlock);
+    };
+    
+    self.copyBlock(1);
+    self.copyBlock(2);
+
+    self.strongBlock(3);
+    self.strongBlock(2);
+    
+//        "name:strongBlock,attributes:T@?,C,N,V_strongBlock",
+//        "name:copyBlock,attributes:T@?,C,N,V_copyBlock"
+    [self dumpInfo];
+}
+
+- (void)dumpInfo {
+    Class clazz = [self class];
+    u_int count;
+
+    Ivar* ivars = class_copyIvarList(clazz, &count);
+    NSMutableArray* ivarArray = [NSMutableArray arrayWithCapacity:count];
+    for (int i = 0; i < count ; i++) {
+        const char* ivarName = ivar_getName(ivars[i]);
+        [ivarArray addObject:[NSString  stringWithCString:ivarName encoding:NSUTF8StringEncoding]];
+    }
+    free(ivars);
+    
+    objc_property_t* properties = class_copyPropertyList(clazz, &count);
+    NSMutableArray* propertyArray = [NSMutableArray arrayWithCapacity:count];
+    for (int i = 0; i < count ; i++) {
+        const char* propertyName = property_getName(properties[i]);
+        const char* propertyAttributes = property_getAttributes(properties[i]);
+        [propertyArray addObject:[NSString stringWithFormat:@"name:%@,attributes:%@", [NSString stringWithCString:propertyName encoding:NSUTF8StringEncoding], [NSString stringWithCString:propertyAttributes encoding:NSUTF8StringEncoding]]];
+    }
+    free(properties);
+    
+    NSDictionary* classDump = [NSDictionary dictionaryWithObjectsAndKeys:
+                               ivarArray, @"ivars",
+                               propertyArray, @"properties",
+                               nil];
+    
+    NSLog(@"%@", classDump);
+
 }
 
 @end
