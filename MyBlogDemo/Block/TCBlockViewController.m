@@ -7,6 +7,7 @@
 //
 
 #import "TCBlockViewController.h"
+#import "TCCopyItem.h"
 
 typedef void(^TestBlock)(int testValue);
 
@@ -38,17 +39,22 @@ typedef void(^TestBlock)(int testValue);
 
 - (void)standerBlockUsage {
     NSArray *testArray = @[@"1", @"2", @"3"];
-    __block int count = 0;
+    __block NSMutableString *string = [NSMutableString string];
+    NSLog(@"string:%p,pointer address:%p", string, &string);
+
     [testArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        count += 1;
-        NSLog(@"count:%i", count);
+        [string appendString:[NSString stringWithFormat:@"%@", obj]];
+        NSLog(@"string:%p,pointer address:%p", string, &string);
     }];
     
+    TCCopyItem *test = [[TCCopyItem alloc] initWithName:@"a"];
+    NSLog(@"item:%@,pointer address:%p", test, &test);
     [self TCBlockCompletionHandler:^void(int testValue) {
+        NSLog(@"item:%@,pointer address:%p", test, &test);
+
         NSLog(@"%i",testValue);
         NSLog(@"done!");
     }];
-
 }
 
 - (void)TCBlockCompletionHandler:(TestBlock)completion {

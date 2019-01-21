@@ -29,7 +29,7 @@
     
 //    [self dispatchBarrierAsync];
     
-    [self createaDeadLock];
+//    [self createaDeadLock]; 
 }
 
 - (void)serialQueue {

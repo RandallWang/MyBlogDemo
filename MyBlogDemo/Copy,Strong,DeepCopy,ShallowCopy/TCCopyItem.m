@@ -24,7 +24,7 @@
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"name:%@", self.name];
+    return [NSString stringWithFormat:@"name:%@, address:%p", self.name, self];
 }
 
 @end
