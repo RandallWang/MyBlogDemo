@@ -19,11 +19,15 @@ class SwiftDemo: UIViewController {
 
     override func viewDidLoad() {
         view.backgroundColor = UIColor.white
-        map()
-        flatMap()
-        compactMap()
-        filter()
-        reduce()
+//        map()
+//        flatMap()
+//        compactMap()
+//        filter()
+//        reduce()
+        
+//        optionalProtocolMethod()
+        
+        blockTest()
     }
     
     func map() {
@@ -70,7 +74,26 @@ class SwiftDemo: UIViewController {
         let result4 = demoArray3.flatMap{$0}.compactMap({$0}).map({$0*2})
         print(result4)
     }
-
 }
 
+extension SwiftDemo: printable {
+    func optionalProtocolMethod() {
+        canPrintSomething()
+    }
+    
+    func canPrintSomething() {
+        print("my implementation")
+    }
+}
 
+typealias myClosuer = (String) -> Void
+
+extension SwiftDemo {
+    func blockTest() {
+        let closure:myClosuer = {(name: String) in
+            print(name)
+        }
+        
+        closure("petter")
+    }
+}

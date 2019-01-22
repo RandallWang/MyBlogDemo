@@ -8,3 +8,12 @@
 
 import Foundation
 
+protocol printable {
+    func canPrintSomething()
+}
+
+extension printable {
+    func canPrintSomething() {
+        print("Default result")
+    }
+}
