@@ -1,4 +1,5 @@
 PODS:
+  - Masonry (1.1.0)
   - OHHTTPStubs (6.1.0):
     - OHHTTPStubs/Default (= 6.1.0)
   - OHHTTPStubs/Core (6.1.0)
@@ -19,23 +20,26 @@ PODS:
     - RxAtomic (~> 4.4)
 
 DEPENDENCIES:
+  - Masonry
   - OHHTTPStubs
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - Masonry
     - OHHTTPStubs
     - RxAtomic
     - RxCocoa
     - RxSwift
 
 SPEC CHECKSUMS:
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   OHHTTPStubs: 1e21c7d2c084b8153fc53d48400d8919d2d432d0
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
 
-PODFILE CHECKSUM: e0ad33ff9e11d505697f57a0ff7452bf939d48c8
+PODFILE CHECKSUM: 4be71d4a3862944d062bc8af1fd836e7a2ce0fa0
 
 COCOAPODS: 1.5.0

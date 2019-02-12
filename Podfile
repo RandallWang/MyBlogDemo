@@ -11,6 +11,7 @@ target 'MyBlogDemo' do
   pod 'OHHTTPStubs'
   pod 'RxSwift',    '~> 4.0'
   pod 'RxCocoa',    '~> 4.0'
+  pod 'Masonry'
 
   target 'MyBlogDemoTests' do
     inherit! :search_paths

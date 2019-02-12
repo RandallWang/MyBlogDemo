@@ -11,6 +11,7 @@
 #import "TCListItemRequest.h"
 #import "TCListItemResponse.h"
 #import "TCNetworkManager.h"
+#import "FakeNetRequest.h"
 
 
 @interface TCGoodTableViewController ()<TCNetworkDelegate>

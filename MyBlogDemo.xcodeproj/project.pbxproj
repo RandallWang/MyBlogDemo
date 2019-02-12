@@ -10,6 +10,9 @@
 		12DF5351F21017FA691A971A /* Pods_MyBlogDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5E3272CB990F469E762EFF /* Pods_MyBlogDemoTests.framework */; };
 		527BB56B1AC5243CF9D8E828 /* Pods_MyBlogDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0416E95980E86CB68EB3A71 /* Pods_MyBlogDemo.framework */; };
 		B1075CAB21E745C30088DFE1 /* SwiftProtocolOptionalDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1075CAA21E745C30088DFE1 /* SwiftProtocolOptionalDemo.swift */; };
+		B127866722129696007A0830 /* TCAutoLayoutTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B127866522129696007A0830 /* TCAutoLayoutTableViewCell.m */; };
+		B127866822129696007A0830 /* TCAutoLayoutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B127866622129696007A0830 /* TCAutoLayoutTableViewCell.xib */; };
+		B127866B221296FA007A0830 /* TCMasonryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B127866A221296FA007A0830 /* TCMasonryTableViewCell.m */; };
 		B1330FC7211F1F2A00ED2E1A /* TCRunTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1330FC6211F1F2A00ED2E1A /* TCRunTimeViewController.m */; };
 		B13674CB211C35F500282FB3 /* TCViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B13674CA211C35F500282FB3 /* TCViewModel.m */; };
 		B1390EDB212BB6460009CF4E /* TCLoadAndInitializeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1390EDA212BB6460009CF4E /* TCLoadAndInitializeViewController.m */; };
@@ -33,6 +36,8 @@
 		B19E2B9A21F4AE8A00DEB583 /* DemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = B19E2B9921F4AE8A00DEB583 /* DemoView.m */; };
 		B19E2B9E21F4B0F200DEB583 /* ResponderChainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B19E2B9C21F4B0F200DEB583 /* ResponderChainViewController.m */; };
 		B19E2B9F21F4B0F200DEB583 /* ResponderChainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B19E2B9D21F4B0F200DEB583 /* ResponderChainViewController.xib */; };
+		B19E2BA221F6C2A700DEB583 /* RxSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19E2BA121F6C2A700DEB583 /* RxSwiftViewController.swift */; };
+		B19E2BA721F81A4B00DEB583 /* FakeNetRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B19E2BA621F81A4B00DEB583 /* FakeNetRequest.m */; };
 		B19EA86721297EC100E5A54E /* TCImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B19EA86621297EC100E5A54E /* TCImage.m */; };
 		B19EA8692129896800E5A54E /* testImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B19EA8682129896700E5A54E /* testImage.jpg */; };
 		B19EA87021299A2D00E5A54E /* TCBlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B19EA86F21299A2D00E5A54E /* TCBlockViewController.m */; };
@@ -64,6 +69,11 @@
 		7BFDC55F51D5AC57B4A9AC6B /* Pods-MyBlogDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBlogDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyBlogDemoTests/Pods-MyBlogDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		8A619B6DCF69E6043B8C6FA0 /* Pods-MyBlogDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBlogDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyBlogDemo/Pods-MyBlogDemo.release.xcconfig"; sourceTree = "<group>"; };
 		B1075CAA21E745C30088DFE1 /* SwiftProtocolOptionalDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftProtocolOptionalDemo.swift; sourceTree = "<group>"; };
+		B127866422129696007A0830 /* TCAutoLayoutTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCAutoLayoutTableViewCell.h; sourceTree = "<group>"; };
+		B127866522129696007A0830 /* TCAutoLayoutTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCAutoLayoutTableViewCell.m; sourceTree = "<group>"; };
+		B127866622129696007A0830 /* TCAutoLayoutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TCAutoLayoutTableViewCell.xib; sourceTree = "<group>"; };
+		B1278669221296FA007A0830 /* TCMasonryTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCMasonryTableViewCell.h; sourceTree = "<group>"; };
+		B127866A221296FA007A0830 /* TCMasonryTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCMasonryTableViewCell.m; sourceTree = "<group>"; };
 		B1330FC5211F1F2A00ED2E1A /* TCRunTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCRunTimeViewController.h; sourceTree = "<group>"; };
 		B1330FC6211F1F2A00ED2E1A /* TCRunTimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCRunTimeViewController.m; sourceTree = "<group>"; };
 		B13674C9211C35F500282FB3 /* TCViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCViewModel.h; sourceTree = "<group>"; };
@@ -107,6 +117,9 @@
 		B19E2B9B21F4B0F200DEB583 /* ResponderChainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResponderChainViewController.h; sourceTree = "<group>"; };
 		B19E2B9C21F4B0F200DEB583 /* ResponderChainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResponderChainViewController.m; sourceTree = "<group>"; };
 		B19E2B9D21F4B0F200DEB583 /* ResponderChainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResponderChainViewController.xib; sourceTree = "<group>"; };
+		B19E2BA121F6C2A700DEB583 /* RxSwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftViewController.swift; sourceTree = "<group>"; };
+		B19E2BA521F81A4B00DEB583 /* FakeNetRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FakeNetRequest.h; sourceTree = "<group>"; };
+		B19E2BA621F81A4B00DEB583 /* FakeNetRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FakeNetRequest.m; sourceTree = "<group>"; };
 		B19EA86521297EC100E5A54E /* TCImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCImage.h; sourceTree = "<group>"; };
 		B19EA86621297EC100E5A54E /* TCImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCImage.m; sourceTree = "<group>"; };
 		B19EA8682129896700E5A54E /* testImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = testImage.jpg; path = Assets.xcassets/a.imageset/testImage.jpg; sourceTree = "<group>"; };
@@ -193,6 +206,7 @@
 		B172BE5621C3912D0025986A /* GoodTableView */ = {
 			isa = PBXGroup;
 			children = (
+				B19E2BA421F8195900DEB583 /* FakeNetworkRequest */,
 				B172BE5E21C635E10025986A /* Model */,
 				B172BE5D21C635D90025986A /* View */,
 				B172BE5A21C3A4050025986A /* TCGoodTableViewController.h */,
@@ -206,6 +220,11 @@
 			children = (
 				B172BE7121C6843A0025986A /* TCDemoTableViewCell.h */,
 				B172BE7221C6843A0025986A /* TCDemoTableViewCell.m */,
+				B127866422129696007A0830 /* TCAutoLayoutTableViewCell.h */,
+				B127866522129696007A0830 /* TCAutoLayoutTableViewCell.m */,
+				B127866622129696007A0830 /* TCAutoLayoutTableViewCell.xib */,
+				B1278669221296FA007A0830 /* TCMasonryTableViewCell.h */,
+				B127866A221296FA007A0830 /* TCMasonryTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -264,6 +283,7 @@
 		B1780ABE211C1BD5003844EB /* MyBlogDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B19E2BA021F6C28900DEB583 /* RxSwift */,
 				B19E2B9321F4A76200DEB583 /* ResponderChain */,
 				B1CF67F421E498EA003D8E24 /* Swift */,
 				B172BE5F21C640550025986A /* Mock */,
@@ -339,6 +359,23 @@
 				B19E2B9921F4AE8A00DEB583 /* DemoView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B19E2BA021F6C28900DEB583 /* RxSwift */ = {
+			isa = PBXGroup;
+			children = (
+				B19E2BA121F6C2A700DEB583 /* RxSwiftViewController.swift */,
+			);
+			path = RxSwift;
+			sourceTree = "<group>";
+		};
+		B19E2BA421F8195900DEB583 /* FakeNetworkRequest */ = {
+			isa = PBXGroup;
+			children = (
+				B19E2BA521F81A4B00DEB583 /* FakeNetRequest.h */,
+				B19E2BA621F81A4B00DEB583 /* FakeNetRequest.m */,
+			);
+			path = FakeNetworkRequest;
 			sourceTree = "<group>";
 		};
 		B19EA86D21299A1700E5A54E /* Block */ = {
@@ -513,6 +550,7 @@
 				B19EA8692129896800E5A54E /* testImage.jpg in Resources */,
 				B172BE7521C6958D0025986A /* moco.json in Resources */,
 				B1A3C23421D0D39F00C9E0BD /* httpStub.json in Resources */,
+				B127866822129696007A0830 /* TCAutoLayoutTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,6 +564,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MyBlogDemo/Pods-MyBlogDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -533,6 +572,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -625,6 +665,9 @@
 				B1780ACF211C1BD6003844EB /* main.m in Sources */,
 				B1330FC7211F1F2A00ED2E1A /* TCRunTimeViewController.m in Sources */,
 				B13674CB211C35F500282FB3 /* TCViewModel.m in Sources */,
+				B127866B221296FA007A0830 /* TCMasonryTableViewCell.m in Sources */,
+				B19E2BA721F81A4B00DEB583 /* FakeNetRequest.m in Sources */,
+				B19E2BA221F6C2A700DEB583 /* RxSwiftViewController.swift in Sources */,
 				B19E2B9E21F4B0F200DEB583 /* ResponderChainViewController.m in Sources */,
 				B1780AD8211C1FD2003844EB /* TCCopyViewController.m in Sources */,
 				B1B8AB0621CA1FC100B93D79 /* TCBaseRequest.m in Sources */,
@@ -638,6 +681,7 @@
 				B19692C9212481DC0049B804 /* TCForwardTarget.m in Sources */,
 				B1390EDB212BB6460009CF4E /* TCLoadAndInitializeViewController.m in Sources */,
 				B1B8AB0321CA1D7800B93D79 /* TCItemModel.m in Sources */,
+				B127866722129696007A0830 /* TCAutoLayoutTableViewCell.m in Sources */,
 				B172BE5521C34B540025986A /* TCGCDViewController.m in Sources */,
 				B19EA87021299A2D00E5A54E /* TCBlockViewController.m in Sources */,
 			);

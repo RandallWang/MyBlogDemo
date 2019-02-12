@@ -19,6 +19,7 @@
 #import "MyBlogDemo-Swift.h"
 #import "ResponderChainViewController.h"
 
+
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -77,8 +78,9 @@
     TCViewModel *TableViewViewModel = [[TCViewModel alloc] initWithTitle:@"Table View" targetVCName:NSStringFromClass([TCGoodTableViewController class])];
     TCViewModel *SwiftViewModel = [[TCViewModel alloc] initWithTitle:@"Swift" targetVCName:NSStringFromClass([SwiftDemo class])];
     TCViewModel *ResponderChainViewModel = [[TCViewModel alloc] initWithTitle:@"ResponderChain" targetVCName:NSStringFromClass([ResponderChainViewController class])];
+    TCViewModel *RxSwiftViewModel = [[TCViewModel alloc] initWithTitle:@"RxSwift" targetVCName:NSStringFromClass([RxSwiftViewController class])];
 
-    self.viewModels = @[copyViewModel, runtimeViewModel, retainCycleViewModel, memoryOptimizationViewModel, blockViewModel, GCDViewModel, MockViewModel, TableViewViewModel, SwiftViewModel, ResponderChainViewModel];
+    self.viewModels = @[copyViewModel, runtimeViewModel, retainCycleViewModel, memoryOptimizationViewModel, blockViewModel, GCDViewModel, MockViewModel, TableViewViewModel, SwiftViewModel, ResponderChainViewModel, RxSwiftViewModel];
 }
 
 @end
