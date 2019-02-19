@@ -22,6 +22,9 @@
             TCItemModel *model = [[TCItemModel alloc] init];
             model.itemName = [itemInfo objectForKey:@"name"];
             model.itemDescription = [itemInfo objectForKey:@"description"];
+            model.img1 = [itemInfo objectForKey:@"img1"];
+            model.img2 = [itemInfo objectForKey:@"img2"];
+            model.img3 = [itemInfo objectForKey:@"img3"];
             [tempArray addObject:model];
         }
         response.items = tempArray.copy;

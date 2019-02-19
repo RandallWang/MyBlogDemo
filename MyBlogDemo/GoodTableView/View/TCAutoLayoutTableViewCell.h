@@ -12,6 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TCAutoLayoutTableViewCell : UITableViewCell
 
+- (void)setImages:(NSArray <UIImage*>*)images;
+
+- (void)setAvatar:(UIImage *)avatar;
+
+- (void)setDes:(NSString *)des;
+
 @end
 
 NS_ASSUME_NONNULL_END

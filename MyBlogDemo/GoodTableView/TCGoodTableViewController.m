@@ -8,13 +8,18 @@
 
 #import "TCGoodTableViewController.h"
 #import "TCDemoTableViewCell.h"
+#import "TCAutoLayoutTableViewCell.h"
+#import "TCMasonryTableViewCell.h"
 #import "TCListItemRequest.h"
 #import "TCListItemResponse.h"
 #import "TCNetworkManager.h"
 #import "FakeNetRequest.h"
+#import "TCItemModel.h"
 
 
 @interface TCGoodTableViewController ()<TCNetworkDelegate>
+
+@property (nonatomic, copy)NSArray <TCItemModel *>*items;
 
 @end
 
@@ -28,6 +33,7 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([TCAutoLayoutTableViewCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([TCAutoLayoutTableViewCell class])];
     
     self.title = @"A Good TableView";
     
@@ -38,21 +44,19 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.items.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([TCDemoTableViewCell class]) forIndexPath:indexPath];
- 
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([TCDemoTableViewCell class]) forIndexPath:indexPath];
+    TCAutoLayoutTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([TCAutoLayoutTableViewCell class]) forIndexPath:indexPath];
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([TCMasonryTableViewCell class]) forIndexPath:indexPath];
     
+    TCItemModel *model = self.items[indexPath.row];
+    
+    [cell setImages:@[[UIImage imageNamed:model.img1], [UIImage imageNamed:model.img2], [UIImage imageNamed:model.img3]]];
     
     return cell;
 }
@@ -99,7 +103,8 @@
 }
 
 - (void)startLoadTableView:(TCListItemResponse *)response {
-    NSLog(@"%@", response);
+    self.items = response.items;
+    [self.tableView reloadData];
 }
 
 #pragma mark - TCNetworkDelegate
@@ -117,5 +122,15 @@
 - (void)showErrorView:(NSError *)error {
     NSLog(@"ERROR: %@",error.localizedDescription);
 }
+
+- (void)startScroll {
+    [UIScrollView beginAnimations:@"scrollAnimation" context:nil];
+    [UIScrollView setAnimationDuration:10];
+    
+    [self.tableView setContentOffset:CGPointMake(0, 1000)];
+    
+    [UIScrollView commitAnimations];
+}
+
 
 @end

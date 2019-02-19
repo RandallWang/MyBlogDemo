@@ -14,6 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy)NSString *itemName;
 @property (nonatomic, copy)NSString *itemDescription;
+@property (nonatomic, copy)NSString *img1;
+@property (nonatomic, copy)NSString *img2;
+@property (nonatomic, copy)NSString *img3;
 
 @end
 

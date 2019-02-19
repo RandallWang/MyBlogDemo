@@ -4,39 +4,56 @@
             "name" : "item1",
             "description" : "The first item",
             "type" : "1",
-            "thumbnail" : ""
+            "img1" : "1",
+            "img2" : "2",
+            "img3" : "3",
+            "avatar" : ""
         },
         {
             "name" : "item2",
             "description" : "The second item",
             "type" : "2",
-            "thumbnail" : ""
+            "img1" : "4",
+            "img2" : "5",
+            "img3" : "6",
+            "avatar" : ""
         },
         {
             "name" : "item3",
             "description" : "The second item",
             "type" : "2",
-            "thumbnail" : ""
+            "img1" : "7",
+            "img2" : "8",
+            "img3" : "9",
+            "avatar" : ""
         },
         {
             "name" : "item4",
             "description" : "The second item",
             "type" : "2",
-            "thumbnail" : ""
+            "img1" : "1",
+            "img2" : "2",
+            "img3" : "3",
+            "avatar" : ""
         },
         {
             "name" : "item5",
             "description" : "The second item",
             "type" : "2",
-            "thumbnail" : ""
+            "img1" : "4",
+            "img2" : "5",
+            "img3" : "6",
+            "avatar" : ""
         },
         {
             "name" : "item6",
             "description" : "The second item",
             "type" : "2",
-            "thumbnail" : ""
+            "img1" : "7",
+            "img2" : "8",
+            "img3" : "9",
+            "avatar" : ""
         }
-
     ]
 }
     
