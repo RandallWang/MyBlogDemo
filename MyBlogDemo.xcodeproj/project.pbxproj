@@ -10,6 +10,9 @@
 		12DF5351F21017FA691A971A /* Pods_MyBlogDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5E3272CB990F469E762EFF /* Pods_MyBlogDemoTests.framework */; };
 		527BB56B1AC5243CF9D8E828 /* Pods_MyBlogDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0416E95980E86CB68EB3A71 /* Pods_MyBlogDemo.framework */; };
 		B1075CAB21E745C30088DFE1 /* SwiftProtocolOptionalDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1075CAA21E745C30088DFE1 /* SwiftProtocolOptionalDemo.swift */; };
+		B10EADAA221C0E4D001DCB69 /* TCTaskQueueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B10EADA9221C0E4D001DCB69 /* TCTaskQueueViewController.m */; };
+		B10EADAD221C0FAB001DCB69 /* TCTaskQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B10EADAC221C0FAB001DCB69 /* TCTaskQueue.m */; };
+		B10EADB0221C0FBB001DCB69 /* TCTask.m in Sources */ = {isa = PBXBuildFile; fileRef = B10EADAF221C0FBB001DCB69 /* TCTask.m */; };
 		B127866722129696007A0830 /* TCAutoLayoutTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B127866522129696007A0830 /* TCAutoLayoutTableViewCell.m */; };
 		B127866822129696007A0830 /* TCAutoLayoutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B127866622129696007A0830 /* TCAutoLayoutTableViewCell.xib */; };
 		B127866B221296FA007A0830 /* TCMasonryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B127866A221296FA007A0830 /* TCMasonryTableViewCell.m */; };
@@ -69,6 +72,12 @@
 		7BFDC55F51D5AC57B4A9AC6B /* Pods-MyBlogDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBlogDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyBlogDemoTests/Pods-MyBlogDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		8A619B6DCF69E6043B8C6FA0 /* Pods-MyBlogDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBlogDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyBlogDemo/Pods-MyBlogDemo.release.xcconfig"; sourceTree = "<group>"; };
 		B1075CAA21E745C30088DFE1 /* SwiftProtocolOptionalDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftProtocolOptionalDemo.swift; sourceTree = "<group>"; };
+		B10EADA8221C0E4D001DCB69 /* TCTaskQueueViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCTaskQueueViewController.h; sourceTree = "<group>"; };
+		B10EADA9221C0E4D001DCB69 /* TCTaskQueueViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCTaskQueueViewController.m; sourceTree = "<group>"; };
+		B10EADAB221C0FAB001DCB69 /* TCTaskQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCTaskQueue.h; sourceTree = "<group>"; };
+		B10EADAC221C0FAB001DCB69 /* TCTaskQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCTaskQueue.m; sourceTree = "<group>"; };
+		B10EADAE221C0FBB001DCB69 /* TCTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCTask.h; sourceTree = "<group>"; };
+		B10EADAF221C0FBB001DCB69 /* TCTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCTask.m; sourceTree = "<group>"; };
 		B127866422129696007A0830 /* TCAutoLayoutTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCAutoLayoutTableViewCell.h; sourceTree = "<group>"; };
 		B127866522129696007A0830 /* TCAutoLayoutTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCAutoLayoutTableViewCell.m; sourceTree = "<group>"; };
 		B127866622129696007A0830 /* TCAutoLayoutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TCAutoLayoutTableViewCell.xib; sourceTree = "<group>"; };
@@ -165,6 +174,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B10EADA7221C0DF9001DCB69 /* TaskQueue */ = {
+			isa = PBXGroup;
+			children = (
+				B10EADA8221C0E4D001DCB69 /* TCTaskQueueViewController.h */,
+				B10EADA9221C0E4D001DCB69 /* TCTaskQueueViewController.m */,
+				B10EADAB221C0FAB001DCB69 /* TCTaskQueue.h */,
+				B10EADAC221C0FAB001DCB69 /* TCTaskQueue.m */,
+				B10EADAE221C0FBB001DCB69 /* TCTask.h */,
+				B10EADAF221C0FBB001DCB69 /* TCTask.m */,
+			);
+			path = TaskQueue;
+			sourceTree = "<group>";
+		};
 		B1330FC4211F1F0600ED2E1A /* RuntimeDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +305,7 @@
 		B1780ABE211C1BD5003844EB /* MyBlogDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B10EADA7221C0DF9001DCB69 /* TaskQueue */,
 				B19E2BA021F6C28900DEB583 /* RxSwift */,
 				B19E2B9321F4A76200DEB583 /* ResponderChain */,
 				B1CF67F421E498EA003D8E24 /* Swift */,
@@ -657,8 +680,10 @@
 				B1780AC4211C1BD5003844EB /* ViewController.m in Sources */,
 				B1B8AAFB21CA1B8E00B93D79 /* TCListItemRequest.m in Sources */,
 				B172BE7321C6843A0025986A /* TCDemoTableViewCell.m in Sources */,
+				B10EADAA221C0E4D001DCB69 /* TCTaskQueueViewController.m in Sources */,
 				B1CF67F721E4990E003D8E24 /* SwiftDemo.swift in Sources */,
 				B172BE7021C662400025986A /* TCMockViewController.m in Sources */,
+				B10EADB0221C0FBB001DCB69 /* TCTask.m in Sources */,
 				B1075CAB21E745C30088DFE1 /* SwiftProtocolOptionalDemo.swift in Sources */,
 				B19CCF372125AC6B007C4764 /* TCMemoryOptimizationViewController.m in Sources */,
 				B19EA86721297EC100E5A54E /* TCImage.m in Sources */,
@@ -680,6 +705,7 @@
 				B1780AC1211C1BD5003844EB /* AppDelegate.m in Sources */,
 				B19692C9212481DC0049B804 /* TCForwardTarget.m in Sources */,
 				B1390EDB212BB6460009CF4E /* TCLoadAndInitializeViewController.m in Sources */,
+				B10EADAD221C0FAB001DCB69 /* TCTaskQueue.m in Sources */,
 				B1B8AB0321CA1D7800B93D79 /* TCItemModel.m in Sources */,
 				B127866722129696007A0830 /* TCAutoLayoutTableViewCell.m in Sources */,
 				B172BE5521C34B540025986A /* TCGCDViewController.m in Sources */,
