@@ -9,8 +9,8 @@ target 'MyBlogDemo' do
 
   # Pods for MyBlogDemo
   pod 'OHHTTPStubs'
-  pod 'RxSwift',    '~> 4.0'
-  pod 'RxCocoa',    '~> 4.0'
+  pod 'RxSwift'
+  pod 'RxCocoa'
   pod 'Masonry'
 
   target 'MyBlogDemoTests' do

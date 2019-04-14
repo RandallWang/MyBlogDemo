@@ -19,6 +19,7 @@
 #import "MyBlogDemo-Swift.h"
 #import "ResponderChainViewController.h"
 #import "TCTaskQueueViewController.h"
+#import "TCCrashViewController.h"
 
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
@@ -81,8 +82,9 @@
     TCViewModel *ResponderChainViewModel = [[TCViewModel alloc] initWithTitle:@"ResponderChain" targetVCName:NSStringFromClass([ResponderChainViewController class])];
     TCViewModel *RxSwiftViewModel = [[TCViewModel alloc] initWithTitle:@"RxSwift" targetVCName:NSStringFromClass([RxSwiftViewController class])];
     TCViewModel *TaskQueueViewModel = [[TCViewModel alloc] initWithTitle:@"Task Queue" targetVCName:NSStringFromClass([TCTaskQueueViewController class])];
-
-    self.viewModels = @[copyViewModel, runtimeViewModel, retainCycleViewModel, memoryOptimizationViewModel, blockViewModel, GCDViewModel, MockViewModel, TableViewViewModel, SwiftViewModel, ResponderChainViewModel, RxSwiftViewModel, TaskQueueViewModel];
+    TCViewModel *CrashViewModel = [[TCViewModel alloc] initWithTitle:@"Crash" targetVCName:NSStringFromClass([TCCrashViewController class])];
+    
+    self.viewModels = @[copyViewModel, runtimeViewModel, retainCycleViewModel, memoryOptimizationViewModel, blockViewModel, GCDViewModel, MockViewModel, TableViewViewModel, SwiftViewModel, ResponderChainViewModel, RxSwiftViewModel, TaskQueueViewModel, CrashViewModel];
 }
 
 @end

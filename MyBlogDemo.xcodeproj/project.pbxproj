@@ -13,6 +13,7 @@
 		B10EADAA221C0E4D001DCB69 /* TCTaskQueueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B10EADA9221C0E4D001DCB69 /* TCTaskQueueViewController.m */; };
 		B10EADAD221C0FAB001DCB69 /* TCTaskQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B10EADAC221C0FAB001DCB69 /* TCTaskQueue.m */; };
 		B10EADB0221C0FBB001DCB69 /* TCTask.m in Sources */ = {isa = PBXBuildFile; fileRef = B10EADAF221C0FBB001DCB69 /* TCTask.m */; };
+		B10EADBA222271FA001DCB69 /* TCCrashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B10EADB9222271FA001DCB69 /* TCCrashViewController.m */; };
 		B127866722129696007A0830 /* TCAutoLayoutTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B127866522129696007A0830 /* TCAutoLayoutTableViewCell.m */; };
 		B127866822129696007A0830 /* TCAutoLayoutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B127866622129696007A0830 /* TCAutoLayoutTableViewCell.xib */; };
 		B127866B221296FA007A0830 /* TCMasonryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B127866A221296FA007A0830 /* TCMasonryTableViewCell.m */; };
@@ -78,6 +79,8 @@
 		B10EADAC221C0FAB001DCB69 /* TCTaskQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCTaskQueue.m; sourceTree = "<group>"; };
 		B10EADAE221C0FBB001DCB69 /* TCTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCTask.h; sourceTree = "<group>"; };
 		B10EADAF221C0FBB001DCB69 /* TCTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCTask.m; sourceTree = "<group>"; };
+		B10EADB8222271FA001DCB69 /* TCCrashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCCrashViewController.h; sourceTree = "<group>"; };
+		B10EADB9222271FA001DCB69 /* TCCrashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCCrashViewController.m; sourceTree = "<group>"; };
 		B127866422129696007A0830 /* TCAutoLayoutTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCAutoLayoutTableViewCell.h; sourceTree = "<group>"; };
 		B127866522129696007A0830 /* TCAutoLayoutTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCAutoLayoutTableViewCell.m; sourceTree = "<group>"; };
 		B127866622129696007A0830 /* TCAutoLayoutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TCAutoLayoutTableViewCell.xib; sourceTree = "<group>"; };
@@ -185,6 +188,15 @@
 				B10EADAF221C0FBB001DCB69 /* TCTask.m */,
 			);
 			path = TaskQueue;
+			sourceTree = "<group>";
+		};
+		B10EADB722224E03001DCB69 /* Crash */ = {
+			isa = PBXGroup;
+			children = (
+				B10EADB8222271FA001DCB69 /* TCCrashViewController.h */,
+				B10EADB9222271FA001DCB69 /* TCCrashViewController.m */,
+			);
+			path = Crash;
 			sourceTree = "<group>";
 		};
 		B1330FC4211F1F0600ED2E1A /* RuntimeDemo */ = {
@@ -305,6 +317,7 @@
 		B1780ABE211C1BD5003844EB /* MyBlogDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B10EADB722224E03001DCB69 /* Crash */,
 				B10EADA7221C0DF9001DCB69 /* TaskQueue */,
 				B19E2BA021F6C28900DEB583 /* RxSwift */,
 				B19E2B9321F4A76200DEB583 /* ResponderChain */,
@@ -586,10 +599,9 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MyBlogDemo/Pods-MyBlogDemo-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MyBlogDemo/Pods-MyBlogDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
-				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
@@ -597,13 +609,12 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyBlogDemo/Pods-MyBlogDemo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyBlogDemo/Pods-MyBlogDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8333D5D515E7F20D09D90D23 /* [CP] Check Pods Manifest.lock */ = {
@@ -630,7 +641,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MyBlogDemoTests/Pods-MyBlogDemoTests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-MyBlogDemoTests/Pods-MyBlogDemoTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -639,7 +650,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyBlogDemoTests/Pods-MyBlogDemoTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyBlogDemoTests/Pods-MyBlogDemoTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E1A423DE9CFD42E63EF61ACA /* [CP] Check Pods Manifest.lock */ = {
@@ -694,6 +705,7 @@
 				B19E2BA721F81A4B00DEB583 /* FakeNetRequest.m in Sources */,
 				B19E2BA221F6C2A700DEB583 /* RxSwiftViewController.swift in Sources */,
 				B19E2B9E21F4B0F200DEB583 /* ResponderChainViewController.m in Sources */,
+				B10EADBA222271FA001DCB69 /* TCCrashViewController.m in Sources */,
 				B1780AD8211C1FD2003844EB /* TCCopyViewController.m in Sources */,
 				B1B8AB0621CA1FC100B93D79 /* TCBaseRequest.m in Sources */,
 				B1B8AAF721C892CE00B93D79 /* TCNetworkManager.m in Sources */,
