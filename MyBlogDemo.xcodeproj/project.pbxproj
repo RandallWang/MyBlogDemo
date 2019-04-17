@@ -10,6 +10,11 @@
 		12DF5351F21017FA691A971A /* Pods_MyBlogDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E5E3272CB990F469E762EFF /* Pods_MyBlogDemoTests.framework */; };
 		527BB56B1AC5243CF9D8E828 /* Pods_MyBlogDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0416E95980E86CB68EB3A71 /* Pods_MyBlogDemo.framework */; };
 		B1075CAB21E745C30088DFE1 /* SwiftProtocolOptionalDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1075CAA21E745C30088DFE1 /* SwiftProtocolOptionalDemo.swift */; };
+		B10D090B2265D38100EFB12F /* Login.json in Resources */ = {isa = PBXBuildFile; fileRef = B10D090A2265D38000EFB12F /* Login.json */; };
+		B10D091022660CF000EFB12F /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10D090F22660CF000EFB12F /* NewsModel.swift */; };
+		B10D09122266107800EFB12F /* RxSwiftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B10D09112266107800EFB12F /* RxSwiftViewController.xib */; };
+		B10D09162266113E00EFB12F /* RxNewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10D09142266113E00EFB12F /* RxNewsTableViewCell.swift */; };
+		B10D09172266113E00EFB12F /* RxNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B10D09152266113E00EFB12F /* RxNewsTableViewCell.xib */; };
 		B10EADAA221C0E4D001DCB69 /* TCTaskQueueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B10EADA9221C0E4D001DCB69 /* TCTaskQueueViewController.m */; };
 		B10EADAD221C0FAB001DCB69 /* TCTaskQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B10EADAC221C0FAB001DCB69 /* TCTaskQueue.m */; };
 		B10EADB0221C0FBB001DCB69 /* TCTask.m in Sources */ = {isa = PBXBuildFile; fileRef = B10EADAF221C0FBB001DCB69 /* TCTask.m */; };
@@ -73,6 +78,11 @@
 		7BFDC55F51D5AC57B4A9AC6B /* Pods-MyBlogDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBlogDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyBlogDemoTests/Pods-MyBlogDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		8A619B6DCF69E6043B8C6FA0 /* Pods-MyBlogDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBlogDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyBlogDemo/Pods-MyBlogDemo.release.xcconfig"; sourceTree = "<group>"; };
 		B1075CAA21E745C30088DFE1 /* SwiftProtocolOptionalDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftProtocolOptionalDemo.swift; sourceTree = "<group>"; };
+		B10D090A2265D38000EFB12F /* Login.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Login.json; sourceTree = "<group>"; };
+		B10D090F22660CF000EFB12F /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		B10D09112266107800EFB12F /* RxSwiftViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RxSwiftViewController.xib; sourceTree = "<group>"; };
+		B10D09142266113E00EFB12F /* RxNewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxNewsTableViewCell.swift; sourceTree = "<group>"; };
+		B10D09152266113E00EFB12F /* RxNewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RxNewsTableViewCell.xib; sourceTree = "<group>"; };
 		B10EADA8221C0E4D001DCB69 /* TCTaskQueueViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCTaskQueueViewController.h; sourceTree = "<group>"; };
 		B10EADA9221C0E4D001DCB69 /* TCTaskQueueViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCTaskQueueViewController.m; sourceTree = "<group>"; };
 		B10EADAB221C0FAB001DCB69 /* TCTaskQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCTaskQueue.h; sourceTree = "<group>"; };
@@ -177,6 +187,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B10D090E22660CDB00EFB12F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B10D090F22660CF000EFB12F /* NewsModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B10D09132266112000EFB12F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B10D09142266113E00EFB12F /* RxNewsTableViewCell.swift */,
+				B10D09152266113E00EFB12F /* RxNewsTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		B10EADA7221C0DF9001DCB69 /* TaskQueue */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,7 +346,7 @@
 			children = (
 				B10EADB722224E03001DCB69 /* Crash */,
 				B10EADA7221C0DF9001DCB69 /* TaskQueue */,
-				B19E2BA021F6C28900DEB583 /* RxSwift */,
+				B19E2BA021F6C28900DEB583 /* MVVM+RxSwift */,
 				B19E2B9321F4A76200DEB583 /* ResponderChain */,
 				B1CF67F421E498EA003D8E24 /* Swift */,
 				B172BE5F21C640550025986A /* Mock */,
@@ -330,7 +357,7 @@
 				B19CCF342125ABF3007C4764 /* MemoryOptimization */,
 				B14FA7C82121B71B00D07D30 /* RetainCycle */,
 				B1330FC4211F1F0600ED2E1A /* RuntimeDemo */,
-				B1780AD9211C21A6003844EB /* MVVM */,
+				B1780AD9211C21A6003844EB /* Model */,
 				B1780AD5211C1E38003844EB /* Copy,Strong,DeepCopy,ShallowCopy */,
 				B1780ABF211C1BD5003844EB /* AppDelegate.h */,
 				B1780AC0211C1BD5003844EB /* AppDelegate.m */,
@@ -342,6 +369,7 @@
 				B1780ACA211C1BD6003844EB /* LaunchScreen.storyboard */,
 				B1780ACD211C1BD6003844EB /* Info.plist */,
 				B1780ACE211C1BD6003844EB /* main.m */,
+				B10D090A2265D38000EFB12F /* Login.json */,
 			);
 			path = MyBlogDemo;
 			sourceTree = "<group>";
@@ -357,13 +385,13 @@
 			path = "Copy,Strong,DeepCopy,ShallowCopy";
 			sourceTree = "<group>";
 		};
-		B1780AD9211C21A6003844EB /* MVVM */ = {
+		B1780AD9211C21A6003844EB /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				B13674C9211C35F500282FB3 /* TCViewModel.h */,
 				B13674CA211C35F500282FB3 /* TCViewModel.m */,
 			);
-			path = MVVM;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		B19CCF342125ABF3007C4764 /* MemoryOptimization */ = {
@@ -397,12 +425,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		B19E2BA021F6C28900DEB583 /* RxSwift */ = {
+		B19E2BA021F6C28900DEB583 /* MVVM+RxSwift */ = {
 			isa = PBXGroup;
 			children = (
+				B10D09132266112000EFB12F /* Cell */,
+				B10D090E22660CDB00EFB12F /* ViewModel */,
 				B19E2BA121F6C2A700DEB583 /* RxSwiftViewController.swift */,
+				B10D09112266107800EFB12F /* RxSwiftViewController.xib */,
 			);
-			path = RxSwift;
+			path = "MVVM+RxSwift";
 			sourceTree = "<group>";
 		};
 		B19E2BA421F8195900DEB583 /* FakeNetworkRequest */ = {
@@ -534,7 +565,7 @@
 		B1780AB4211C1BD5003844EB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Tianchi Wang";
 				TargetAttributes = {
 					B172BE6321C65B8E0025986A = {
@@ -581,9 +612,12 @@
 			files = (
 				B1780ACC211C1BD6003844EB /* LaunchScreen.storyboard in Resources */,
 				B19E2B9F21F4B0F200DEB583 /* ResponderChainViewController.xib in Resources */,
+				B10D09122266107800EFB12F /* RxSwiftViewController.xib in Resources */,
 				B1780AC9211C1BD6003844EB /* Assets.xcassets in Resources */,
+				B10D09172266113E00EFB12F /* RxNewsTableViewCell.xib in Resources */,
 				B1780AC7211C1BD5003844EB /* Main.storyboard in Resources */,
 				B19EA8692129896800E5A54E /* testImage.jpg in Resources */,
+				B10D090B2265D38100EFB12F /* Login.json in Resources */,
 				B172BE7521C6958D0025986A /* moco.json in Resources */,
 				B1A3C23421D0D39F00C9E0BD /* httpStub.json in Resources */,
 				B127866822129696007A0830 /* TCAutoLayoutTableViewCell.xib in Resources */,
@@ -600,6 +634,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-MyBlogDemo/Pods-MyBlogDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -607,6 +642,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -699,6 +735,8 @@
 				B19CCF372125AC6B007C4764 /* TCMemoryOptimizationViewController.m in Sources */,
 				B19EA86721297EC100E5A54E /* TCImage.m in Sources */,
 				B1780ACF211C1BD6003844EB /* main.m in Sources */,
+				B10D09162266113E00EFB12F /* RxNewsTableViewCell.swift in Sources */,
+				B10D091022660CF000EFB12F /* NewsModel.swift in Sources */,
 				B1330FC7211F1F2A00ED2E1A /* TCRunTimeViewController.m in Sources */,
 				B13674CB211C35F500282FB3 /* TCViewModel.m in Sources */,
 				B127866B221296FA007A0830 /* TCMasonryTableViewCell.m in Sources */,
@@ -760,7 +798,6 @@
 			baseConfigurationReference = E1531DD6D286098607ECFA3E /* Pods-MyBlogDemoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ARCHS = "$(ARCHS_STANDARD)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8U54G7LGSB;
@@ -785,7 +822,6 @@
 			baseConfigurationReference = 7BFDC55F51D5AC57B4A9AC6B /* Pods-MyBlogDemoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ARCHS = "$(ARCHS_STANDARD)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8U54G7LGSB;
@@ -913,6 +949,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

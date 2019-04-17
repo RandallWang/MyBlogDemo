@@ -12,7 +12,9 @@ target 'MyBlogDemo' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'Masonry'
-
+  pod 'Alamofire'
+  
+  
   target 'MyBlogDemoTests' do
     inherit! :search_paths
     # Pods for testing
