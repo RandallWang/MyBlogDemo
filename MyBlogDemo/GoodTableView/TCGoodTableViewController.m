@@ -33,7 +33,8 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([TCAutoLayoutTableViewCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([TCAutoLayoutTableViewCell class])];
+//    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([TCAutoLayoutTableViewCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([TCAutoLayoutTableViewCell class])];
+    [self.tableView registerClass:[TCDemoTableViewCell class] forCellReuseIdentifier:NSStringFromClass([TCDemoTableViewCell class]) ];
     
     self.title = @"A Good TableView";
     
@@ -50,17 +51,38 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([TCDemoTableViewCell class]) forIndexPath:indexPath];
-    TCAutoLayoutTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([TCAutoLayoutTableViewCell class]) forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([TCDemoTableViewCell class]) forIndexPath:indexPath];
+//    TCAutoLayoutTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([TCAutoLayoutTableViewCell class]) forIndexPath:indexPath];
 //    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([TCMasonryTableViewCell class]) forIndexPath:indexPath];
     
-    TCItemModel *model = self.items[indexPath.row];
+//    TCItemModel *model = self.items[indexPath.row];
     
-    [cell setImages:@[[UIImage imageNamed:model.img1], [UIImage imageNamed:model.img2], [UIImage imageNamed:model.img3]]];
-    
+//    [cell setImages:@[[UIImage imageNamed:model.img1], [UIImage imageNamed:model.img2], [UIImage imageNamed:model.img3]]];
+    NSLog(@"cell for row");
+
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"estimatedHeightForRowAtIndexPath");
+    return 50;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"heightForRowAtIndexPath");
+    return 40;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UIView *header = [[UIView alloc] init];
+    
+    return header;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    NSLog(@"heightForHeaderInSection");
+    return 40;
+}
 
 /*
 // Override to support conditional editing of the table view.

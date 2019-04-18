@@ -39,6 +39,7 @@
 		B1780ACC211C1BD6003844EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1780ACA211C1BD6003844EB /* LaunchScreen.storyboard */; };
 		B1780ACF211C1BD6003844EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1780ACE211C1BD6003844EB /* main.m */; };
 		B1780AD8211C1FD2003844EB /* TCCopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1780AD7211C1FD2003844EB /* TCCopyViewController.m */; };
+		B1898E7022684E0D009BA72C /* NewsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1898E6F22684E0D009BA72C /* NewsDataManager.swift */; };
 		B19692C9212481DC0049B804 /* TCForwardTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = B19692C8212481DC0049B804 /* TCForwardTarget.m */; };
 		B19CCF3321259DCB007C4764 /* TCCopyItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B19CCF3221259DCB007C4764 /* TCCopyItem.m */; };
 		B19CCF372125AC6B007C4764 /* TCMemoryOptimizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B19CCF362125AC6B007C4764 /* TCMemoryOptimizationViewController.m */; };
@@ -128,6 +129,7 @@
 		B1780ACE211C1BD6003844EB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B1780AD6211C1FD2003844EB /* TCCopyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCCopyViewController.h; sourceTree = "<group>"; };
 		B1780AD7211C1FD2003844EB /* TCCopyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCCopyViewController.m; sourceTree = "<group>"; };
+		B1898E6F22684E0D009BA72C /* NewsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDataManager.swift; sourceTree = "<group>"; };
 		B19692C7212481DC0049B804 /* TCForwardTarget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCForwardTarget.h; sourceTree = "<group>"; };
 		B19692C8212481DC0049B804 /* TCForwardTarget.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCForwardTarget.m; sourceTree = "<group>"; };
 		B19CCF3121259DCB007C4764 /* TCCopyItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCCopyItem.h; sourceTree = "<group>"; };
@@ -432,6 +434,7 @@
 				B10D090E22660CDB00EFB12F /* ViewModel */,
 				B19E2BA121F6C2A700DEB583 /* RxSwiftViewController.swift */,
 				B10D09112266107800EFB12F /* RxSwiftViewController.xib */,
+				B1898E6F22684E0D009BA72C /* NewsDataManager.swift */,
 			);
 			path = "MVVM+RxSwift";
 			sourceTree = "<group>";
@@ -739,6 +742,7 @@
 				B10D091022660CF000EFB12F /* NewsModel.swift in Sources */,
 				B1330FC7211F1F2A00ED2E1A /* TCRunTimeViewController.m in Sources */,
 				B13674CB211C35F500282FB3 /* TCViewModel.m in Sources */,
+				B1898E7022684E0D009BA72C /* NewsDataManager.swift in Sources */,
 				B127866B221296FA007A0830 /* TCMasonryTableViewCell.m in Sources */,
 				B19E2BA721F81A4B00DEB583 /* FakeNetRequest.m in Sources */,
 				B19E2BA221F6C2A700DEB583 /* RxSwiftViewController.swift in Sources */,

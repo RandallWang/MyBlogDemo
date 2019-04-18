@@ -14,9 +14,6 @@ import Alamofire
 class RxSwiftViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    //    curl https://newsapi.org/v2/top-headlines -G \
-//    -d country=us \
-//    -d apiKey=14d76183090f423e8a36db70d9bc0aba
 
     var newItems = Variable<[NewsModel]>([])
     var bag = DisposeBag()
