@@ -34,6 +34,7 @@
     [self strongArray];
 //    [self testDeepCopy];
 //    [self imageViewTest];
+    [self stringTest];
 }
 
 - (void)copyAndStrongStringTest {
@@ -128,6 +129,16 @@
     NSLog(@"imageVIew.image:%p,**************%p", imageView.image, &image);
     
 }
+
+//https://stackoverflow.com/questions/11605851/why-are-these-two-nsstring-pointers-the-same
+- (void)stringTest {
+    NSString *a = [[NSString alloc] init];
+    NSString *b = [[NSString alloc] init];
+    a = @"1";
+    b = @"1";
+    NSLog(@"finished");
+}
+
 
 @end
 

@@ -8,8 +8,15 @@
 
 import Foundation
 
+struct NewsResponse: Codable {
+    var status: String
+    var totalResults: Int
+    var articles: [NewsModel]
+}
+
 struct NewsModel: Codable {
-    var title: String?
-    var detail: String?
-    var thumbnailUrl: String?
+    var title: String
+    var description: String
+    var urlToImage: String
+    var content: String
 }

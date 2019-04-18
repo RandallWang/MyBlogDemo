@@ -15,13 +15,12 @@ class RxSwiftViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
 
-    var newItems = Variable<[NewsModel]>([])
+    var newsItems = BehaviorRelay<[NewsModel]>(value: [])
     var bag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadNewsItems()
-
     }
 
     deinit {
@@ -29,7 +28,14 @@ class RxSwiftViewController: UIViewController {
     }
     
     func loadNewsItems() {
-        
+        NewsDataManager.shared.requestNewsData { (result) in
+            switch result {
+            case .success(let items):
+                self.newsItems.accept(items)
+            case .failure(let error):
+                print("\(error)")
+            }
+        }
         tableView.reloadData()
     }
 
@@ -37,7 +43,7 @@ class RxSwiftViewController: UIViewController {
 
 extension RxSwiftViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return newItems.value.count
+        return newsItems.value.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
