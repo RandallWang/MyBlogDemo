@@ -13,7 +13,7 @@ target 'MyBlogDemo' do
   pod 'RxCocoa'
   pod 'Masonry'
   pod 'Alamofire'
-  
+  pod 'Kingfisher'
   
   target 'MyBlogDemoTests' do
     inherit! :search_paths

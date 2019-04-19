@@ -43,11 +43,9 @@ final class NewsDataManager {
             var request = URLRequest(url: url)
             request.httpMethod = "GET"
             
-            let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            URLSession.shared.dataTask(with: request) { (data, response, error) in
                 self.didFinishGettingNewsData(data: data, response: response, error: error, completion: completion)
-            }
-            
-            task.resume()
+            }.resume()
         }
     }
     
