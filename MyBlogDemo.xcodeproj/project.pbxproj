@@ -12,7 +12,6 @@
 		B1075CAB21E745C30088DFE1 /* SwiftProtocolOptionalDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1075CAA21E745C30088DFE1 /* SwiftProtocolOptionalDemo.swift */; };
 		B10D090B2265D38100EFB12F /* Login.json in Resources */ = {isa = PBXBuildFile; fileRef = B10D090A2265D38000EFB12F /* Login.json */; };
 		B10D091022660CF000EFB12F /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10D090F22660CF000EFB12F /* NewsModel.swift */; };
-		B10D09122266107800EFB12F /* RxSwiftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B10D09112266107800EFB12F /* RxSwiftViewController.xib */; };
 		B10D09162266113E00EFB12F /* RxNewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10D09142266113E00EFB12F /* RxNewsTableViewCell.swift */; };
 		B10D09172266113E00EFB12F /* RxNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B10D09152266113E00EFB12F /* RxNewsTableViewCell.xib */; };
 		B10EADAA221C0E4D001DCB69 /* TCTaskQueueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B10EADA9221C0E4D001DCB69 /* TCTaskQueueViewController.m */; };
@@ -41,8 +40,11 @@
 		B1780AD8211C1FD2003844EB /* TCCopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1780AD7211C1FD2003844EB /* TCCopyViewController.m */; };
 		B1898E7022684E0D009BA72C /* NewsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1898E6F22684E0D009BA72C /* NewsDataManager.swift */; };
 		B1898E732269B07D009BA72C /* RxSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1898E712269B07D009BA72C /* RxSettingViewController.swift */; };
-		B1898E742269B07D009BA72C /* RxSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1898E722269B07D009BA72C /* RxSettingViewController.xib */; };
 		B1898E772269F339009BA72C /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1898E762269F339009BA72C /* NewsViewModel.swift */; };
+		B1898E79226B1182009BA72C /* NewsFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1898E78226B1182009BA72C /* NewsFeedViewModel.swift */; };
+		B190948F226B16F9003B9183 /* WebNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B190948E226B16F9003B9183 /* WebNewsViewController.swift */; };
+		B1909491226B170E003B9183 /* RxMVVMStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1909490226B170E003B9183 /* RxMVVMStoryboard.storyboard */; };
+		B1909493226B27B9003B9183 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1909492226B27B9003B9183 /* WebKit.framework */; };
 		B19692C9212481DC0049B804 /* TCForwardTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = B19692C8212481DC0049B804 /* TCForwardTarget.m */; };
 		B19CCF3321259DCB007C4764 /* TCCopyItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B19CCF3221259DCB007C4764 /* TCCopyItem.m */; };
 		B19CCF372125AC6B007C4764 /* TCMemoryOptimizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B19CCF362125AC6B007C4764 /* TCMemoryOptimizationViewController.m */; };
@@ -84,7 +86,6 @@
 		B1075CAA21E745C30088DFE1 /* SwiftProtocolOptionalDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftProtocolOptionalDemo.swift; sourceTree = "<group>"; };
 		B10D090A2265D38000EFB12F /* Login.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Login.json; sourceTree = "<group>"; };
 		B10D090F22660CF000EFB12F /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
-		B10D09112266107800EFB12F /* RxSwiftViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RxSwiftViewController.xib; sourceTree = "<group>"; };
 		B10D09142266113E00EFB12F /* RxNewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxNewsTableViewCell.swift; sourceTree = "<group>"; };
 		B10D09152266113E00EFB12F /* RxNewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RxNewsTableViewCell.xib; sourceTree = "<group>"; };
 		B10EADA8221C0E4D001DCB69 /* TCTaskQueueViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCTaskQueueViewController.h; sourceTree = "<group>"; };
@@ -134,8 +135,11 @@
 		B1780AD7211C1FD2003844EB /* TCCopyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCCopyViewController.m; sourceTree = "<group>"; };
 		B1898E6F22684E0D009BA72C /* NewsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDataManager.swift; sourceTree = "<group>"; };
 		B1898E712269B07D009BA72C /* RxSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSettingViewController.swift; sourceTree = "<group>"; };
-		B1898E722269B07D009BA72C /* RxSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RxSettingViewController.xib; sourceTree = "<group>"; };
 		B1898E762269F339009BA72C /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		B1898E78226B1182009BA72C /* NewsFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewModel.swift; sourceTree = "<group>"; };
+		B190948E226B16F9003B9183 /* WebNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebNewsViewController.swift; sourceTree = "<group>"; };
+		B1909490226B170E003B9183 /* RxMVVMStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RxMVVMStoryboard.storyboard; sourceTree = "<group>"; };
+		B1909492226B27B9003B9183 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		B19692C7212481DC0049B804 /* TCForwardTarget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCForwardTarget.h; sourceTree = "<group>"; };
 		B19692C8212481DC0049B804 /* TCForwardTarget.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCForwardTarget.m; sourceTree = "<group>"; };
 		B19CCF3121259DCB007C4764 /* TCCopyItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCCopyItem.h; sourceTree = "<group>"; };
@@ -188,6 +192,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1909493226B27B9003B9183 /* WebKit.framework in Frameworks */,
 				527BB56B1AC5243CF9D8E828 /* Pods_MyBlogDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,6 +203,7 @@
 		B10D090E22660CDB00EFB12F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B1898E78226B1182009BA72C /* NewsFeedViewModel.swift */,
 				B1898E762269F339009BA72C /* NewsViewModel.swift */,
 			);
 			path = ViewModel;
@@ -410,6 +416,16 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		B190948D226B15F7003B9183 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B19E2BA121F6C2A700DEB583 /* RxSwiftViewController.swift */,
+				B1898E712269B07D009BA72C /* RxSettingViewController.swift */,
+				B190948E226B16F9003B9183 /* WebNewsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		B19CCF342125ABF3007C4764 /* MemoryOptimization */ = {
 			isa = PBXGroup;
 			children = (
@@ -444,13 +460,11 @@
 		B19E2BA021F6C28900DEB583 /* MVVM+RxSwift */ = {
 			isa = PBXGroup;
 			children = (
+				B190948D226B15F7003B9183 /* ViewControllers */,
 				B1898E752269F326009BA72C /* Model */,
 				B10D09132266112000EFB12F /* Cell */,
 				B10D090E22660CDB00EFB12F /* ViewModel */,
-				B19E2BA121F6C2A700DEB583 /* RxSwiftViewController.swift */,
-				B1898E712269B07D009BA72C /* RxSettingViewController.swift */,
-				B1898E722269B07D009BA72C /* RxSettingViewController.xib */,
-				B10D09112266107800EFB12F /* RxSwiftViewController.xib */,
+				B1909490226B170E003B9183 /* RxMVVMStoryboard.storyboard */,
 				B1898E6F22684E0D009BA72C /* NewsDataManager.swift */,
 			);
 			path = "MVVM+RxSwift";
@@ -520,6 +534,7 @@
 		E206F889C50DBA3CAECA1CF7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B1909492226B27B9003B9183 /* WebKit.framework */,
 				F0416E95980E86CB68EB3A71 /* Pods_MyBlogDemo.framework */,
 				6E5E3272CB990F469E762EFF /* Pods_MyBlogDemoTests.framework */,
 			);
@@ -632,16 +647,15 @@
 			files = (
 				B1780ACC211C1BD6003844EB /* LaunchScreen.storyboard in Resources */,
 				B19E2B9F21F4B0F200DEB583 /* ResponderChainViewController.xib in Resources */,
-				B10D09122266107800EFB12F /* RxSwiftViewController.xib in Resources */,
 				B1780AC9211C1BD6003844EB /* Assets.xcassets in Resources */,
 				B10D09172266113E00EFB12F /* RxNewsTableViewCell.xib in Resources */,
 				B1780AC7211C1BD5003844EB /* Main.storyboard in Resources */,
+				B1909491226B170E003B9183 /* RxMVVMStoryboard.storyboard in Resources */,
 				B19EA8692129896800E5A54E /* testImage.jpg in Resources */,
 				B10D090B2265D38100EFB12F /* Login.json in Resources */,
 				B172BE7521C6958D0025986A /* moco.json in Resources */,
 				B1A3C23421D0D39F00C9E0BD /* httpStub.json in Resources */,
 				B127866822129696007A0830 /* TCAutoLayoutTableViewCell.xib in Resources */,
-				B1898E742269B07D009BA72C /* RxSettingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -746,11 +760,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1898E79226B1182009BA72C /* NewsFeedViewModel.swift in Sources */,
 				B1B8AB0021CA1C1C00B93D79 /* TCListItemResponse.m in Sources */,
 				B1780AC4211C1BD5003844EB /* ViewController.m in Sources */,
 				B1B8AAFB21CA1B8E00B93D79 /* TCListItemRequest.m in Sources */,
 				B172BE7321C6843A0025986A /* TCDemoTableViewCell.m in Sources */,
 				B10EADAA221C0E4D001DCB69 /* TCTaskQueueViewController.m in Sources */,
+				B190948F226B16F9003B9183 /* WebNewsViewController.swift in Sources */,
 				B1CF67F721E4990E003D8E24 /* SwiftDemo.swift in Sources */,
 				B172BE7021C662400025986A /* TCMockViewController.m in Sources */,
 				B1898E772269F339009BA72C /* NewsViewModel.swift in Sources */,
@@ -918,7 +934,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -971,7 +987,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -989,7 +1005,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8U54G7LGSB;
 				INFOPLIST_FILE = MyBlogDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1012,7 +1028,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8U54G7LGSB;
 				INFOPLIST_FILE = MyBlogDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

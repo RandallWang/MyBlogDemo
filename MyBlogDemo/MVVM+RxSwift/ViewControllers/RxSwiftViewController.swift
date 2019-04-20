@@ -9,13 +9,18 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import Alamofire
 
 class RxSwiftViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-
-    var newsItems = BehaviorRelay<[NewsModel]>(value: [])
+    
+    var vm: NewsFeedViewModel? {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
     var bag = DisposeBag()
     
     override func viewDidLoad() {
@@ -34,8 +39,7 @@ class RxSwiftViewController: UIViewController {
         NewsDataManager.shared.requestNewsData { (result) in
             switch result {
             case .success(let items):
-                self.newsItems.accept(items)
-                self.tableView.reloadData()
+                self.vm = NewsFeedViewModel(newsFeed: items)
             case .failure(let error):
                 print("\(error)")
             }
@@ -50,6 +54,14 @@ class RxSwiftViewController: UIViewController {
         tableView.register(UINib.init(nibName: "RxNewsTableViewCell", bundle: nil), forCellReuseIdentifier: "RxNewsTableViewCell")
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("sss")
+        guard let vm = sender as? NewsViewModel else { return }
+        if let webNewsVC = segue.destination as? WebNewsViewController {
+            webNewsVC.vm = vm
+        }
+    }
+    
     @objc private func gotoSetting() {
         let settingVC = RxSettingViewController()
         navigationController?.pushViewController(settingVC, animated: true)
@@ -58,15 +70,15 @@ class RxSwiftViewController: UIViewController {
 
 extension RxSwiftViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return newsItems.value.count
+        return vm?.numberOfRows ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "RxNewsTableViewCell", for: indexPath) as? RxNewsTableViewCell else {return UITableViewCell()}
         
-        let vm = NewsViewModel(newsData: newsItems.value[indexPath.row])
-        
-        cell.configure(with: vm)
+        if let newsViewModel = vm?.viewModel(for: indexPath.row) {
+            cell.configure(with: newsViewModel)
+        }
         
         return cell
     }
@@ -75,5 +87,11 @@ extension RxSwiftViewController: UITableViewDataSource {
 extension RxSwiftViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let newsViewModel = vm?.viewModel(for: indexPath.row) {
+            performSegue(withIdentifier: "ToWebNews", sender: newsViewModel)
+        }
     }
 }

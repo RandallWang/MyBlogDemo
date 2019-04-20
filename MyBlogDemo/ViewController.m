@@ -44,7 +44,13 @@
     self.title = @"My blog demo";
 }
 
-
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"ToRxMVVM"]) {
+//        segue.destinationViewController =
+        NSLog(@"");
+    }
+    
+}
 
 #pragma mark - UITableView DataSource and Delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -63,9 +69,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    TCViewModel *model = self.viewModels[indexPath.row];
-    UIViewController *targetViewController = [[NSClassFromString(model.targetVCName) alloc] init];
-    [self.navigationController pushViewController:targetViewController animated:YES];
+//    TCViewModel *model = self.viewModels[indexPath.row];
+    [self performSegueWithIdentifier:@"ToRxMVVM" sender:self];
+//    UIViewController *targetViewController = [[NSClassFromString(model.targetVCName) alloc] init];
+//    [self.navigationController pushViewController:targetViewController animated:YES];
 }
 
 #pragma mark - Private Method
