@@ -32,20 +32,23 @@ class RxSwiftViewController: UIViewController {
     }
     
     func loadNewsItems() {
-        NewsDataManager.shared.requestNewsData()
-            .map{NewsFeedViewModel(newsFeed: $0.articles)}
-            .bind(to: self.vm)
-            .disposed(by: bag)
+//       let newData = NewsDataManager.shared.requestNewsData()
+//            .map{NewsFeedViewModel(newsFeed: $0.articles)}
+        
+//        newData.map(<#T##transform: (NewsFeedViewModel) throws -> R##(NewsFeedViewModel) throws -> R#>).subscribe(onNext:{
+//            
+//        })
     }
     
     func observeViewModel() {
-        vm.subscribe(onCompleted:{
-            self.tableView.reloadData()
-        }).disposed(by: bag)
+//        vm.map(NewsFeedViewModel(newsFeed: $0))(
+//            onNext:{
+//                self.tableView.reloadData()
+//        }).disposed(by: bag)
     }
 
     func setNavigationBar() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Settings", style: .plain, target: self, action: #selector(gotoSetting))
+//        navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "Settings", style: .plain, target: self, action: #selector(gotoSetting))
     }
     
     func setUpTableView() {
@@ -59,9 +62,13 @@ class RxSwiftViewController: UIViewController {
         }
     }
     
-    @objc private func gotoSetting() {
-        let settingVC = RxSettingViewController()
-        navigationController?.pushViewController(settingVC, animated: true)
+    @objc private func presentUserInfo() {
+        
+    }
+    
+    
+    @objc private func login() {
+        
     }
 }
 

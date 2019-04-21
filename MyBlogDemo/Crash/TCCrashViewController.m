@@ -39,7 +39,7 @@
     obj = NULL;
     [obj description];
     
-    self.weakObj = [[TestClass alloc] init];
+//    self.weakObj = [[TestClass alloc] init];
 }
 
 

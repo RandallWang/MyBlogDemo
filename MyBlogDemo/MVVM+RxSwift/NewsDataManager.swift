@@ -46,7 +46,7 @@ final class NewsDataManager {
             return URLSession.shared.rx.data(request: request).map {
                 let newsResponse = try JSONDecoder().decode(NewsResponse.self, from: $0)
                 return newsResponse
-            }
+                }.do(onNext: {print("onNext:\($0)")})
         }
         return Observable.create({ observer in
             observer.on(.completed)

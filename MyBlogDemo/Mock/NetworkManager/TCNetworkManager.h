@@ -14,8 +14,8 @@
 
 @protocol TCNetworkDelegate
 
-- (void)successedWithResponse:(TCBaseResponse *)response;
-- (void)failedWithError:(NSError *)error;
+- (void)successedWithResponse:(TCBaseResponse *_Nonnull)response;
+- (void)failedWithError:(NSError *_Nonnull)error;
 
 @end
 

@@ -79,11 +79,11 @@ void backUpMethod (id self, SEL _cmd) {
 }
 
 + (BOOL)resolveInstanceMethod:(SEL)sel {
-    if (sel == @selector(methodIsNotImplemented)) {
-        class_addMethod([self class], sel, (IMP)backUpMethod, "v@:@");
-        return YES;
-    }
-    NSLog(@"resolved SEL:%@", NSStringFromSelector(sel));
+//    if (sel == @selector(methodIsNotImplemented)) {
+//        class_addMethod([self class], sel, (IMP)backUpMethod, "v@:@");
+//        return YES;
+//    }
+//    NSLog(@"resolved SEL:%@", NSStringFromSelector(sel));
     return [super resolveInstanceMethod:sel];
 }
 

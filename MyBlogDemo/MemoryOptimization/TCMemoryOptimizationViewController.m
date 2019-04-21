@@ -30,12 +30,12 @@
 
 - (void)notUsingAutoReleasePool {
     int i = 0;
-    NSMutableArray *myTestArray = [NSMutableArray array];
+//    NSMutableArray *myTestArray = [NSMutableArray array];
     while (i < 10000) {
 //UIImage will not release if using "imageNamed:",check https://stackoverflow.com/questions/24653440/uiimage-dont-release-memory
 //        TCImage *tempImage = [TCImage imageNamed:@"a"];
         
-        TCImage *tempImage = [TCImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"testImage" ofType:@"jpg"]];
+//        TCImage *tempImage = [TCImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"testImage" ofType:@"jpg"]];
         
         i += 1;
     }
@@ -47,7 +47,7 @@
     int i = 0;
     while (i < 10000) {
         @autoreleasepool {
-            TCImage *tempImage = [TCImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"testImage" ofType:@"jpg"]];
+//            TCImage *tempImage = [TCImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"testImage" ofType:@"jpg"]];
             i += 1;
         }
     }
@@ -72,7 +72,7 @@
 #pragma mark - NSCache
 
 - (void)cacheTest {
-    NSCache *cache = [[NSCache alloc] init];
+//    NSCache *cache = [[NSCache alloc] init];
     
 }
 

@@ -39,8 +39,8 @@
                     <connections>
                         <outlet property="tableView" destination="fP5-d1-GUg" id="b7i-fn-RkR"/>
                         <segue destination="ytg-Iz-5Jy" kind="show" identifier="ToWebNews" id="2Vd-pL-sJ4"/>
-                        <segue destination="1AP-ay-8Qe" kind="presentation" id="gmV-e3-KTt"/>
-                        <segue destination="pJZ-Nf-HPB" kind="presentation" id="GOy-aX-gdM"/>
+                        <segue destination="1AP-ay-8Qe" kind="presentation" identifier="ToLogin" id="gmV-e3-KTt"/>
+                        <segue destination="pJZ-Nf-HPB" kind="presentation" identifier="ToUserInfo" id="GOy-aX-gdM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I0e-8k-onm" userLabel="First Responder" sceneMemberID="firstResponder"/>
