@@ -40,16 +40,32 @@
                         <outlet property="tableView" destination="fP5-d1-GUg" id="b7i-fn-RkR"/>
                         <segue destination="ytg-Iz-5Jy" kind="show" identifier="ToWebNews" id="2Vd-pL-sJ4"/>
                         <segue destination="1AP-ay-8Qe" kind="presentation" id="gmV-e3-KTt"/>
+                        <segue destination="pJZ-Nf-HPB" kind="presentation" id="GOy-aX-gdM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I0e-8k-onm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-399" y="-84"/>
         </scene>
-        <!--Rx Setting View Controller-->
+        <!--Rx User Info View Controller-->
+        <scene sceneID="q7P-On-AIj">
+            <objects>
+                <viewController id="pJZ-Nf-HPB" customClass="RxUserInfoViewController" customModule="MyBlogDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KDk-3U-9OB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="cBc-ef-QBj"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B0J-xc-hg4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="671" y="265"/>
+        </scene>
+        <!--Rx Login View Controller-->
         <scene sceneID="c12-PY-TYF">
             <objects>
-                <viewController id="1AP-ay-8Qe" customClass="RxSettingViewController" customModule="MyBlogDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1AP-ay-8Qe" customClass="RxLoginViewController" customModule="MyBlogDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nfK-vk-7bl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="neY-gP-rH2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="691" y="327"/>
+            <point key="canvasLocation" x="-400" y="679"/>
         </scene>
     </scenes>
 </document>

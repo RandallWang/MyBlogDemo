@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 
 enum NewsRequestError: Error {
     case failedRequest
@@ -25,12 +27,10 @@ final class NewsDataManager {
     
     let apiKey = "14d76183090f423e8a36db70d9bc0aba"
     let country = "us"
-    var page: Int = 0
+    var page: Int = 1
     let pageSize: Int = 10
-
-    typealias completionHandler = (Result<[NewsModel], Error>) -> Void
     
-    func requestNewsData(completion:@escaping completionHandler) {
+    func requestNewsData() -> Observable<NewsResponse> {
         let queryItemAppKey = URLQueryItem.init(name: "apiKey", value: apiKey)
         let queryItemCountry = URLQueryItem.init(name: "country", value: country)
         let queryItemPage = URLQueryItem.init(name: "page", value: "\(page)")
@@ -43,27 +43,17 @@ final class NewsDataManager {
             var request = URLRequest(url: url)
             request.httpMethod = "GET"
             
-            URLSession.shared.dataTask(with: request) { (data, response, error) in
-                self.didFinishGettingNewsData(data: data, response: response, error: error, completion: completion)
-            }.resume()
-        }
-    }
-    
-    func didFinishGettingNewsData(data: Data?, response: URLResponse?, error: Error?, completion: completionHandler) {
-        if let error = error {
-            completion(Result.failure(error))
-        }else if let data = data, let response = response as? HTTPURLResponse{
-            if response.statusCode == 200 {
-                do {
-                    let newsResponse = try JSONDecoder().decode(NewsResponse.self, from: data)
-                    completion(Result.success(newsResponse.articles))
-                }catch {
-                    completion(Result.failure(NewsRequestError.invalidResponse))
-                }
-            }else {
-                completion(Result.failure(NewsRequestError.failedRequest))
+            return URLSession.shared.rx.data(request: request).map {
+                let newsResponse = try JSONDecoder().decode(NewsResponse.self, from: $0)
+                return newsResponse
             }
         }
+        return Observable.create({ observer in
+            observer.on(.completed)
+            return Disposables.create {
+                print("disposed")
+            }
+        })
     }
 }
 

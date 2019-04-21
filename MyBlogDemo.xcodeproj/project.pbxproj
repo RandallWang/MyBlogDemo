@@ -38,7 +38,6 @@
 		B1780ACF211C1BD6003844EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1780ACE211C1BD6003844EB /* main.m */; };
 		B1780AD8211C1FD2003844EB /* TCCopyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1780AD7211C1FD2003844EB /* TCCopyViewController.m */; };
 		B1898E7022684E0D009BA72C /* NewsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1898E6F22684E0D009BA72C /* NewsDataManager.swift */; };
-		B1898E732269B07D009BA72C /* RxSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1898E712269B07D009BA72C /* RxSettingViewController.swift */; };
 		B1898E772269F339009BA72C /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1898E762269F339009BA72C /* NewsViewModel.swift */; };
 		B1898E79226B1182009BA72C /* NewsFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1898E78226B1182009BA72C /* NewsFeedViewModel.swift */; };
 		B190948F226B16F9003B9183 /* WebNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B190948E226B16F9003B9183 /* WebNewsViewController.swift */; };
@@ -66,6 +65,8 @@
 		B1B91DDE21CB464C0011DBB6 /* httpStub.json in Resources */ = {isa = PBXBuildFile; fileRef = B1B91DDC21CB45DD0011DBB6 /* httpStub.json */; };
 		B1CF67F721E4990E003D8E24 /* SwiftDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CF67F621E4990E003D8E24 /* SwiftDemo.swift */; };
 		B1CF680221E5D4F7003D8E24 /* AtomicTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CF680121E5D4F7003D8E24 /* AtomicTest.m */; };
+		B1E2B401226C75490035ECBC /* RxLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E2B400226C75490035ECBC /* RxLoginViewController.swift */; };
+		B1E2B403226C75580035ECBC /* RxUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E2B402226C75580035ECBC /* RxUserInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,7 +133,6 @@
 		B1780AD6211C1FD2003844EB /* TCCopyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCCopyViewController.h; sourceTree = "<group>"; };
 		B1780AD7211C1FD2003844EB /* TCCopyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCCopyViewController.m; sourceTree = "<group>"; };
 		B1898E6F22684E0D009BA72C /* NewsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDataManager.swift; sourceTree = "<group>"; };
-		B1898E712269B07D009BA72C /* RxSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSettingViewController.swift; sourceTree = "<group>"; };
 		B1898E762269F339009BA72C /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		B1898E78226B1182009BA72C /* NewsFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewModel.swift; sourceTree = "<group>"; };
 		B190948E226B16F9003B9183 /* WebNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebNewsViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +174,8 @@
 		B1CF67F521E4990E003D8E24 /* MyBlogDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyBlogDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		B1CF67F621E4990E003D8E24 /* SwiftDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDemo.swift; sourceTree = "<group>"; };
 		B1CF680121E5D4F7003D8E24 /* AtomicTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AtomicTest.m; sourceTree = "<group>"; };
+		B1E2B400226C75490035ECBC /* RxLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxLoginViewController.swift; sourceTree = "<group>"; };
+		B1E2B402226C75580035ECBC /* RxUserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxUserInfoViewController.swift; sourceTree = "<group>"; };
 		E1531DD6D286098607ECFA3E /* Pods-MyBlogDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBlogDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyBlogDemoTests/Pods-MyBlogDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F0416E95980E86CB68EB3A71 /* Pods_MyBlogDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyBlogDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -419,8 +421,9 @@
 			isa = PBXGroup;
 			children = (
 				B19E2BA121F6C2A700DEB583 /* RxSwiftViewController.swift */,
-				B1898E712269B07D009BA72C /* RxSettingViewController.swift */,
+				B1E2B400226C75490035ECBC /* RxLoginViewController.swift */,
 				B190948E226B16F9003B9183 /* WebNewsViewController.swift */,
+				B1E2B402226C75580035ECBC /* RxUserInfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -768,10 +771,10 @@
 				B1CF67F721E4990E003D8E24 /* SwiftDemo.swift in Sources */,
 				B172BE7021C662400025986A /* TCMockViewController.m in Sources */,
 				B1898E772269F339009BA72C /* NewsViewModel.swift in Sources */,
+				B1E2B401226C75490035ECBC /* RxLoginViewController.swift in Sources */,
 				B10EADB0221C0FBB001DCB69 /* TCTask.m in Sources */,
 				B1075CAB21E745C30088DFE1 /* SwiftProtocolOptionalDemo.swift in Sources */,
 				B19CCF372125AC6B007C4764 /* TCMemoryOptimizationViewController.m in Sources */,
-				B1898E732269B07D009BA72C /* RxSettingViewController.swift in Sources */,
 				B19EA86721297EC100E5A54E /* TCImage.m in Sources */,
 				B1780ACF211C1BD6003844EB /* main.m in Sources */,
 				B10D09162266113E00EFB12F /* RxNewsTableViewCell.swift in Sources */,
@@ -784,6 +787,7 @@
 				B19E2BA221F6C2A700DEB583 /* RxSwiftViewController.swift in Sources */,
 				B19E2B9E21F4B0F200DEB583 /* ResponderChainViewController.m in Sources */,
 				B10EADBA222271FA001DCB69 /* TCCrashViewController.m in Sources */,
+				B1E2B403226C75580035ECBC /* RxUserInfoViewController.swift in Sources */,
 				B1780AD8211C1FD2003844EB /* TCCopyViewController.m in Sources */,
 				B1B8AB0621CA1FC100B93D79 /* TCBaseRequest.m in Sources */,
 				B1B8AAF721C892CE00B93D79 /* TCNetworkManager.m in Sources */,

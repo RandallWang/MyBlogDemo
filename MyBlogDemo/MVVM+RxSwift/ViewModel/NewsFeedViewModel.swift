@@ -26,6 +26,8 @@ struct NewsFeedViewModel {
     mutating func appendNewsModel (models: [NewsModel]) {
         newsFeed.append(contentsOf: models)
     }
+    
+    static let empty = NewsFeedViewModel(newsFeed: [])
 }
 
 

@@ -1,21 +1,21 @@
 //
-//  RxSettingViewController.swift
+//  RxLoginViewController.swift
 //  MyBlogDemo
 //
-//  Created by Tianchi Wang on 2019/4/19.
+//  Created by Tianchi Wang on 2019/4/21.
 //  Copyright © 2019 Tianchi Wang. All rights reserved.
 //
 
 import UIKit
 
-class RxSettingViewController: UIViewController {
+class RxLoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-
+    
 
     /*
     // MARK: - Navigation
