@@ -17,6 +17,6 @@ struct NewsResponse: Codable {
 struct NewsModel: Codable {
     var title: String
     var description: String
-    var urlToImage: String
+    var urlToImage: String?
     var url: String
 }

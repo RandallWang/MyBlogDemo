@@ -20,7 +20,7 @@ struct NewsViewModel {
     }
     
     var urlToImage: String{
-        return newsData.urlToImage
+        return newsData.urlToImage ?? ""
     }
     
     var newsUrlString: String{

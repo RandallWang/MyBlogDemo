@@ -55,7 +55,6 @@ class RxSwiftViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("sss")
         guard let vm = sender as? NewsViewModel else { return }
         if let webNewsVC = segue.destination as? WebNewsViewController {
             webNewsVC.vm = vm

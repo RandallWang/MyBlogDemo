@@ -15,7 +15,6 @@
 #import "TCGCDViewController.h"
 #import "TCMockViewController.h"
 #import "TCGoodTableViewController.h"
-#import "TCViewModel.h"
 #import "MyBlogDemo-Swift.h"
 #import "ResponderChainViewController.h"
 #import "TCTaskQueueViewController.h"
@@ -25,7 +24,7 @@
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) NSArray <TCViewModel *> *viewModels;
+@property (nonatomic, strong) NSArray <TCBlogModel *> *models;
 
 @end
 
@@ -46,21 +45,19 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"ToRxMVVM"]) {
-//        segue.destinationViewController =
-        NSLog(@"");
+
     }
-    
 }
 
 #pragma mark - UITableView DataSource and Delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.viewModels.count;
+    return self.models.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
-    TCViewModel *model = self.viewModels[indexPath.row];
+    TCBlogModel *model = self.models[indexPath.row];
     cell.textLabel.text = model.title;
     
     return cell;
@@ -69,29 +66,38 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-//    TCViewModel *model = self.viewModels[indexPath.row];
-    [self performSegueWithIdentifier:@"ToRxMVVM" sender:self];
-//    UIViewController *targetViewController = [[NSClassFromString(model.targetVCName) alloc] init];
-//    [self.navigationController pushViewController:targetViewController animated:YES];
+    TCBlogModel *model = self.models[indexPath.row];
+    [self performPushForModel:model];
 }
 
 #pragma mark - Private Method
 - (void)setUpViewModel {
-    TCViewModel *copyViewModel = [[TCViewModel alloc] initWithTitle:@"Copy VS Strong,Deep Copy VS Shallow Copy" targetVCName:NSStringFromClass([TCCopyViewController class])];
-    TCViewModel *runtimeViewModel = [[TCViewModel alloc] initWithTitle:@"Runtime Demo" targetVCName:NSStringFromClass([TCRunTimeViewController class])];
-    TCViewModel *retainCycleViewModel = [[TCViewModel alloc] initWithTitle:@"Retain Cycle" targetVCName:NSStringFromClass([TCRetainCycleViewController class])];
-    TCViewModel *memoryOptimizationViewModel = [[TCViewModel alloc] initWithTitle:@"Memory Optimization" targetVCName:NSStringFromClass([TCMemoryOptimizationViewController class])];
-    TCViewModel *blockViewModel = [[TCViewModel alloc] initWithTitle:@"Block" targetVCName:NSStringFromClass([TCBlockViewController class])];
-    TCViewModel *GCDViewModel = [[TCViewModel alloc] initWithTitle:@"GCD" targetVCName:NSStringFromClass([TCGCDViewController class])];
-    TCViewModel *MockViewModel = [[TCViewModel alloc] initWithTitle:@"Mock" targetVCName:NSStringFromClass([TCMockViewController class])];
-    TCViewModel *TableViewViewModel = [[TCViewModel alloc] initWithTitle:@"Table View" targetVCName:NSStringFromClass([TCGoodTableViewController class])];
-    TCViewModel *SwiftViewModel = [[TCViewModel alloc] initWithTitle:@"Swift" targetVCName:NSStringFromClass([SwiftDemo class])];
-    TCViewModel *ResponderChainViewModel = [[TCViewModel alloc] initWithTitle:@"ResponderChain" targetVCName:NSStringFromClass([ResponderChainViewController class])];
-    TCViewModel *RxSwiftViewModel = [[TCViewModel alloc] initWithTitle:@"RxSwift" targetVCName:NSStringFromClass([RxSwiftViewController class])];
-    TCViewModel *TaskQueueViewModel = [[TCViewModel alloc] initWithTitle:@"Task Queue" targetVCName:NSStringFromClass([TCTaskQueueViewController class])];
-    TCViewModel *CrashViewModel = [[TCViewModel alloc] initWithTitle:@"Crash" targetVCName:NSStringFromClass([TCCrashViewController class])];
     
-    self.viewModels = @[copyViewModel, runtimeViewModel, retainCycleViewModel, memoryOptimizationViewModel, blockViewModel, GCDViewModel, MockViewModel, TableViewViewModel, SwiftViewModel, ResponderChainViewModel, RxSwiftViewModel, TaskQueueViewModel, CrashViewModel];
+    TCBlogModel *copyModel = [[TCBlogModel alloc] initWithType:ModelTypeStrongVsWeak];
+    
+    TCBlogModel *runtimeModel =  [[TCBlogModel alloc] initWithType:ModelTypeRuntimeDemo];
+    TCBlogModel *retainCycleModel = [[TCBlogModel alloc] initWithType:ModelTypeRetainCycle];
+    TCBlogModel *memoryOptimizationModel =  [[TCBlogModel alloc] initWithType:ModelTypeMemoryOptimization];
+    TCBlogModel *blockModel =  [[TCBlogModel alloc] initWithType:ModelTypeBlock];
+    TCBlogModel *GCDModel =  [[TCBlogModel alloc] initWithType:ModelTypeGCD];
+    TCBlogModel *MockModel = [[TCBlogModel alloc] initWithType:ModelTypeMock];
+    TCBlogModel *TableViewModel = [[TCBlogModel alloc] initWithType:ModelTypeTableView];
+    TCBlogModel *SwiftModel = [[TCBlogModel alloc] initWithType:ModelTypeSwift];
+    TCBlogModel *ResponderChainModel = [[TCBlogModel alloc] initWithType:ModelTypeResponderChain];
+    TCBlogModel *RxSwiftModel = [[TCBlogModel alloc] initWithType:ModelTypeRxSwift];
+    TCBlogModel *TaskQueueModel = [[TCBlogModel alloc] initWithType:ModelTypeTaskQueue];
+    TCBlogModel *CrashModel = [[TCBlogModel alloc] initWithType:ModelTypeCrash];
+
+    self.models = @[copyModel, runtimeModel, retainCycleModel, memoryOptimizationModel, blockModel, GCDModel, MockModel, TableViewModel, SwiftModel, ResponderChainModel, RxSwiftModel, TaskQueueModel, CrashModel];
+}
+
+- (void)performPushForModel:(TCBlogModel *)model {
+    if (model.type == ModelTypeRxSwift) {
+        [self performSegueWithIdentifier:@"ToRxMVVM" sender:self];
+    }else {
+        UIViewController *targetViewController = model.targetVC;
+        [self.navigationController pushViewController:targetViewController animated:YES];
+    }
 }
 
 @end

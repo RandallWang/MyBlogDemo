@@ -22,7 +22,6 @@
 		B127866822129696007A0830 /* TCAutoLayoutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B127866622129696007A0830 /* TCAutoLayoutTableViewCell.xib */; };
 		B127866B221296FA007A0830 /* TCMasonryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B127866A221296FA007A0830 /* TCMasonryTableViewCell.m */; };
 		B1330FC7211F1F2A00ED2E1A /* TCRunTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1330FC6211F1F2A00ED2E1A /* TCRunTimeViewController.m */; };
-		B13674CB211C35F500282FB3 /* TCViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B13674CA211C35F500282FB3 /* TCViewModel.m */; };
 		B1390EDB212BB6460009CF4E /* TCLoadAndInitializeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1390EDA212BB6460009CF4E /* TCLoadAndInitializeViewController.m */; };
 		B14FA7CB2121B76300D07D30 /* TCRetainCycleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B14FA7CA2121B76300D07D30 /* TCRetainCycleViewController.m */; };
 		B172BE5521C34B540025986A /* TCGCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B172BE5421C34B540025986A /* TCGCDViewController.m */; };
@@ -45,6 +44,7 @@
 		B190948F226B16F9003B9183 /* WebNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B190948E226B16F9003B9183 /* WebNewsViewController.swift */; };
 		B1909491226B170E003B9183 /* RxMVVMStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1909490226B170E003B9183 /* RxMVVMStoryboard.storyboard */; };
 		B1909493226B27B9003B9183 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1909492226B27B9003B9183 /* WebKit.framework */; };
+		B1909495226C1AA3003B9183 /* TCBlogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1909494226C1AA3003B9183 /* TCBlogModel.swift */; };
 		B19692C9212481DC0049B804 /* TCForwardTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = B19692C8212481DC0049B804 /* TCForwardTarget.m */; };
 		B19CCF3321259DCB007C4764 /* TCCopyItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B19CCF3221259DCB007C4764 /* TCCopyItem.m */; };
 		B19CCF372125AC6B007C4764 /* TCMemoryOptimizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B19CCF362125AC6B007C4764 /* TCMemoryOptimizationViewController.m */; };
@@ -103,8 +103,6 @@
 		B127866A221296FA007A0830 /* TCMasonryTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCMasonryTableViewCell.m; sourceTree = "<group>"; };
 		B1330FC5211F1F2A00ED2E1A /* TCRunTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCRunTimeViewController.h; sourceTree = "<group>"; };
 		B1330FC6211F1F2A00ED2E1A /* TCRunTimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCRunTimeViewController.m; sourceTree = "<group>"; };
-		B13674C9211C35F500282FB3 /* TCViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCViewModel.h; sourceTree = "<group>"; };
-		B13674CA211C35F500282FB3 /* TCViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCViewModel.m; sourceTree = "<group>"; };
 		B1390ED9212BB6460009CF4E /* TCLoadAndInitializeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCLoadAndInitializeViewController.h; sourceTree = "<group>"; };
 		B1390EDA212BB6460009CF4E /* TCLoadAndInitializeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCLoadAndInitializeViewController.m; sourceTree = "<group>"; };
 		B14FA7C92121B76300D07D30 /* TCRetainCycleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCRetainCycleViewController.h; sourceTree = "<group>"; };
@@ -140,6 +138,7 @@
 		B190948E226B16F9003B9183 /* WebNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebNewsViewController.swift; sourceTree = "<group>"; };
 		B1909490226B170E003B9183 /* RxMVVMStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RxMVVMStoryboard.storyboard; sourceTree = "<group>"; };
 		B1909492226B27B9003B9183 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		B1909494226C1AA3003B9183 /* TCBlogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCBlogModel.swift; sourceTree = "<group>"; };
 		B19692C7212481DC0049B804 /* TCForwardTarget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCForwardTarget.h; sourceTree = "<group>"; };
 		B19692C8212481DC0049B804 /* TCForwardTarget.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCForwardTarget.m; sourceTree = "<group>"; };
 		B19CCF3121259DCB007C4764 /* TCCopyItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TCCopyItem.h; sourceTree = "<group>"; };
@@ -378,6 +377,7 @@
 				B19EA8682129896700E5A54E /* testImage.jpg */,
 				B1780AC2211C1BD5003844EB /* ViewController.h */,
 				B1780AC3211C1BD5003844EB /* ViewController.m */,
+				B1CF67F521E4990E003D8E24 /* MyBlogDemo-Bridging-Header.h */,
 				B1780AC5211C1BD5003844EB /* Main.storyboard */,
 				B1780AC8211C1BD6003844EB /* Assets.xcassets */,
 				B1780ACA211C1BD6003844EB /* LaunchScreen.storyboard */,
@@ -402,8 +402,7 @@
 		B1780AD9211C21A6003844EB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B13674C9211C35F500282FB3 /* TCViewModel.h */,
-				B13674CA211C35F500282FB3 /* TCViewModel.m */,
+				B1909494226C1AA3003B9183 /* TCBlogModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -526,7 +525,6 @@
 			children = (
 				B1CF67F621E4990E003D8E24 /* SwiftDemo.swift */,
 				B1075CAA21E745C30088DFE1 /* SwiftProtocolOptionalDemo.swift */,
-				B1CF67F521E4990E003D8E24 /* MyBlogDemo-Bridging-Header.h */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -779,7 +777,7 @@
 				B10D09162266113E00EFB12F /* RxNewsTableViewCell.swift in Sources */,
 				B10D091022660CF000EFB12F /* NewsModel.swift in Sources */,
 				B1330FC7211F1F2A00ED2E1A /* TCRunTimeViewController.m in Sources */,
-				B13674CB211C35F500282FB3 /* TCViewModel.m in Sources */,
+				B1909495226C1AA3003B9183 /* TCBlogModel.swift in Sources */,
 				B1898E7022684E0D009BA72C /* NewsDataManager.swift in Sources */,
 				B127866B221296FA007A0830 /* TCMasonryTableViewCell.m in Sources */,
 				B19E2BA721F81A4B00DEB583 /* FakeNetRequest.m in Sources */,
@@ -1012,7 +1010,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = WTC.MyBlogDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "MyBlogDemo/Swift/MyBlogDemo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyBlogDemo/MyBlogDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1035,7 +1033,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = WTC.MyBlogDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "MyBlogDemo/Swift/MyBlogDemo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyBlogDemo/MyBlogDemo-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
