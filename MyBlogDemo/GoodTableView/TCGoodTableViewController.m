@@ -20,6 +20,7 @@
 @interface TCGoodTableViewController ()<TCNetworkDelegate>
 
 @property (nonatomic, copy)NSArray <TCItemModel *>*items;
+@property (nonatomic, strong)UITableView *tableView;
 
 @end
 
@@ -126,7 +127,9 @@
 
 - (void)startLoadTableView:(TCListItemResponse *)response {
     self.items = response.items;
-    [self.tableView reloadData];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.tableView reloadData];
+    });
 }
 
 #pragma mark - TCNetworkDelegate

@@ -1,22 +1,25 @@
 //
-//  ResponderChainViewController.m
+//  BaseViewController.m
 //  MyBlogDemo
 //
-//  Created by Tianchi Wang on 2019/1/20.
+//  Created by Tianchi Wang on 2019/5/9.
 //  Copyright © 2019 Tianchi Wang. All rights reserved.
 //
 
-#import "ResponderChainViewController.h"
+#import "BaseViewController.h"
+#import "MyBlogDemo-Swift.h"
 
-@interface ResponderChainViewController ()
+@interface BaseViewController ()
 
 @end
 
-@implementation ResponderChainViewController
+@implementation BaseViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.title = self.model.title;
 }
 
 /*

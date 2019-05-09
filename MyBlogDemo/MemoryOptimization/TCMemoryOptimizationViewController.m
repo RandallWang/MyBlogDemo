@@ -22,8 +22,6 @@
     // Do any additional setup after loading the view.
 //    [self notUsingAutoReleasePool];
     [self usingAutoReleasePool];
-    self.view.backgroundColor = [UIColor whiteColor];
-    
 }
 
 #pragma mark - AutoReleasePool

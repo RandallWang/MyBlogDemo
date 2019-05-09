@@ -20,8 +20,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"Mock";
-    self.view.backgroundColor = [UIColor whiteColor];
 //    [self testPostmanMock];
 //    [self testMocoMock];
     

@@ -22,6 +22,7 @@ import UIKit
     case RxSwift
     case TaskQueue
     case Crash
+    case Codable
 }
 
 
@@ -60,12 +61,14 @@ import UIKit
             return "Crash"
         case .TaskQueue:
             return "Task Queue"
+        case .Codable:
+            return "Codable"
 //        default:
 //            return "Error"
         }
     }
     
-    @objc var targetVC: UIViewController? {
+    @objc func targetVC() -> BaseViewController? {
         switch type {
         case .StrongVsWeak:
             return TCCopyViewController()
@@ -91,6 +94,8 @@ import UIKit
             return TCCrashViewController()
         case .TaskQueue:
             return TCTaskQueueViewController()
+        case .Codable:
+            return SwiftCodableViewController()
         default://.RxSwift
             return nil
         }

@@ -9,7 +9,7 @@
 import UIKit
 
 
-class SwiftDemo: UIViewController {
+class SwiftDemo: BaseViewController {
     
     let demoArray1 = [1,2,2,3,3,4,5,5]
     let demoArray2 = [1,nil,3,3,4,nil,6]
@@ -18,7 +18,6 @@ class SwiftDemo: UIViewController {
 
 
     override func viewDidLoad() {
-        view.backgroundColor = UIColor.white
 //        map()
 //        flatMap()
 //        compactMap()

@@ -14,3 +14,4 @@
 #import "TCCrashViewController.h"
 #import "TCTaskQueueViewController.h"
 #import "ResponderChainViewController.h"
+#import "BaseViewController.h"

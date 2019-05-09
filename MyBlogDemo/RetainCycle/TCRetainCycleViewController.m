@@ -22,9 +22,7 @@ typedef void(^selfHoldingBlock)(void);
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor whiteColor];
-    
+    // Do any additional setup after loading the view.    
     [self alertControllerDemo];
 //    [self blockStrongWeakDemo1];
 //    [self blockStrongWeakDemo2];

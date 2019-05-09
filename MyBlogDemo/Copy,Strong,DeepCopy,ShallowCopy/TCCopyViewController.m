@@ -26,9 +26,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
-    self.title = @"Copy and Strong";
-
 //    [self copyAndStrongStringTest];
 //    [self MutableCopyArrayTest];
     [self strongArray];

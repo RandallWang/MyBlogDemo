@@ -16,10 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.title = @"GCD";
-    self.view.backgroundColor = [UIColor whiteColor];
-    
+    // Do any additional setup after loading the view.    
 //    [self serialQueue];
 //    [self concurrentQueue];
     

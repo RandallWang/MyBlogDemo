@@ -87,15 +87,17 @@
     TCBlogModel *RxSwiftModel = [[TCBlogModel alloc] initWithType:ModelTypeRxSwift];
     TCBlogModel *TaskQueueModel = [[TCBlogModel alloc] initWithType:ModelTypeTaskQueue];
     TCBlogModel *CrashModel = [[TCBlogModel alloc] initWithType:ModelTypeCrash];
+    TCBlogModel *codableModel = [[TCBlogModel alloc] initWithType:ModelTypeCodable];
 
-    self.models = @[copyModel, runtimeModel, retainCycleModel, memoryOptimizationModel, blockModel, GCDModel, MockModel, TableViewModel, SwiftModel, ResponderChainModel, RxSwiftModel, TaskQueueModel, CrashModel];
+    self.models = @[copyModel, runtimeModel, retainCycleModel, memoryOptimizationModel, blockModel, GCDModel, MockModel, TableViewModel, SwiftModel, ResponderChainModel, RxSwiftModel, TaskQueueModel, CrashModel, codableModel];
 }
 
 - (void)performPushForModel:(TCBlogModel *)model {
     if (model.type == ModelTypeRxSwift) {
         [self performSegueWithIdentifier:@"ToRxMVVM" sender:self];
     }else {
-        UIViewController *targetViewController = model.targetVC;
+        BaseViewController *targetViewController = model.targetVC;
+        targetViewController.model = model;
         [self.navigationController pushViewController:targetViewController animated:YES];
     }
 }

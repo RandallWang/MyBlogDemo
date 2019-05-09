@@ -29,7 +29,6 @@ typedef void(^TestBlock)(int testValue);
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor whiteColor];
 //    [self simpleBlockUsage];
 //    [self standerBlockUsage];
     
