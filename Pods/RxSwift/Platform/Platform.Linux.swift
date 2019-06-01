@@ -13,17 +13,11 @@
     extension Thread {
 
         static func setThreadLocalStorageValue<T: AnyObject>(_ value: T?, forKey key: String) {
-            let currentThread = Thread.current
-            var threadDictionary = currentThread.threadDictionary
-
             if let newValue = value {
-                threadDictionary[key] = newValue
+                Thread.current.threadDictionary[key] = newValue
+            } else {
+                Thread.current.threadDictionary[key] = nil
             }
-            else {
-                threadDictionary[key] = nil
-            }
-
-            currentThread.threadDictionary = threadDictionary
         }
 
         static func getThreadLocalStorageValueForKey<T: AnyObject>(_ key: String) -> T? {

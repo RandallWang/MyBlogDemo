@@ -25,14 +25,13 @@ import UIKit
     case Codable
 }
 
-
 @objc class TCBlogModel: NSObject {
     @objc let type: ModelType
-    
+
     @objc init(type: ModelType) {
         self.type = type
     }
-    
+
     @objc var title: String {
         switch type {
         case .StrongVsWeak:
@@ -63,11 +62,9 @@ import UIKit
             return "Task Queue"
         case .Codable:
             return "Codable"
-//        default:
-//            return "Error"
         }
     }
-    
+
     @objc func targetVC() -> BaseViewController? {
         switch type {
         case .StrongVsWeak:

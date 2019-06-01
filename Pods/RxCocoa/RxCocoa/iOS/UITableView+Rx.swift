@@ -11,10 +11,6 @@
 import RxSwift
 import UIKit
 
-#if swift(>=4.2)
-    public typealias UITableViewCellEditingStyle = UITableViewCell.EditingStyle
-#endif
-
 // Items
 
 extension Reactive where Base: UITableView {
@@ -43,13 +39,13 @@ extension Reactive where Base: UITableView {
          .disposed(by: disposeBag)
 
      */
-    public func items<S: Sequence, O: ObservableType>
-        (_ source: O)
-        -> (_ cellFactory: @escaping (UITableView, Int, S.Iterator.Element) -> UITableViewCell)
+    public func items<Sequence: Swift.Sequence, Source: ObservableType>
+        (_ source: Source)
+        -> (_ cellFactory: @escaping (UITableView, Int, Sequence.Element) -> UITableViewCell)
         -> Disposable
-        where O.E == S {
+        where Source.Element == Sequence {
             return { cellFactory in
-                let dataSource = RxTableViewReactiveArrayDataSourceSequenceWrapper<S>(cellFactory: cellFactory)
+                let dataSource = RxTableViewReactiveArrayDataSourceSequenceWrapper<Sequence>(cellFactory: cellFactory)
                 return self.items(dataSource: dataSource)(source)
             }
     }
@@ -77,15 +73,15 @@ extension Reactive where Base: UITableView {
              }
              .disposed(by: disposeBag)
     */
-    public func items<S: Sequence, Cell: UITableViewCell, O : ObservableType>
+    public func items<Sequence: Swift.Sequence, Cell: UITableViewCell, Source: ObservableType>
         (cellIdentifier: String, cellType: Cell.Type = Cell.self)
-        -> (_ source: O)
-        -> (_ configureCell: @escaping (Int, S.Iterator.Element, Cell) -> Void)
+        -> (_ source: Source)
+        -> (_ configureCell: @escaping (Int, Sequence.Element, Cell) -> Void)
         -> Disposable
-        where O.E == S {
+        where Source.Element == Sequence {
         return { source in
             return { configureCell in
-                let dataSource = RxTableViewReactiveArrayDataSourceSequenceWrapper<S> { tv, i, item in
+                let dataSource = RxTableViewReactiveArrayDataSourceSequenceWrapper<Sequence> { tv, i, item in
                     let indexPath = IndexPath(item: i, section: 0)
                     let cell = tv.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! Cell
                     configureCell(i, item, cell)
@@ -95,7 +91,6 @@ extension Reactive where Base: UITableView {
             }
         }
     }
-
 
     /**
     Binds sequences of elements to table view rows using a custom reactive data used to perform the transformation.
@@ -110,11 +105,11 @@ extension Reactive where Base: UITableView {
     */
     public func items<
             DataSource: RxTableViewDataSourceType & UITableViewDataSource,
-            O: ObservableType>
+            Source: ObservableType>
         (dataSource: DataSource)
-        -> (_ source: O)
+        -> (_ source: Source)
         -> Disposable
-        where DataSource.Element == O.E {
+        where DataSource.Element == Source.Element {
         return { source in
             // This is called for sideeffects only, and to make sure delegate proxy is in place when
             // data source is being bound.
@@ -144,7 +139,7 @@ extension Reactive where Base: UITableView {
     public var dataSource: DelegateProxy<UITableView, UITableViewDataSource> {
         return RxTableViewDataSourceProxy.proxy(for: base)
     }
-   
+
     /**
     Installs data source as forwarding delegate on `rx.dataSource`.
     Data source won't be retained.
@@ -158,9 +153,9 @@ extension Reactive where Base: UITableView {
         -> Disposable {
         return RxTableViewDataSourceProxy.installForwardDelegate(dataSource, retainDelegate: false, onProxyForObject: self.base)
     }
-    
+
     // events
-    
+
     /**
     Reactive wrapper for `delegate` message `tableView:didSelectRowAtIndexPath:`.
     */
@@ -193,40 +188,40 @@ extension Reactive where Base: UITableView {
             .map { a in
                 return try castOrThrow(IndexPath.self, a[1])
             }
-        
+
         return ControlEvent(events: source)
     }
-    
+
     /**
     Reactive wrapper for `delegate` message `tableView:commitEditingStyle:forRowAtIndexPath:`.
     */
     public var itemInserted: ControlEvent<IndexPath> {
         let source = self.dataSource.methodInvoked(#selector(UITableViewDataSource.tableView(_:commit:forRowAt:)))
             .filter { a in
-                return UITableViewCellEditingStyle(rawValue: (try castOrThrow(NSNumber.self, a[1])).intValue) == .insert
+                return UITableViewCell.EditingStyle(rawValue: (try castOrThrow(NSNumber.self, a[1])).intValue) == .insert
             }
             .map { a in
                 return (try castOrThrow(IndexPath.self, a[2]))
         }
-        
+
         return ControlEvent(events: source)
     }
-    
+
     /**
     Reactive wrapper for `delegate` message `tableView:commitEditingStyle:forRowAtIndexPath:`.
     */
     public var itemDeleted: ControlEvent<IndexPath> {
         let source = self.dataSource.methodInvoked(#selector(UITableViewDataSource.tableView(_:commit:forRowAt:)))
             .filter { a in
-                return UITableViewCellEditingStyle(rawValue: (try castOrThrow(NSNumber.self, a[1])).intValue) == .delete
+                return UITableViewCell.EditingStyle(rawValue: (try castOrThrow(NSNumber.self, a[1])).intValue) == .delete
             }
             .map { a in
                 return try castOrThrow(IndexPath.self, a[2])
             }
-        
+
         return ControlEvent(events: source)
     }
-    
+
     /**
     Reactive wrapper for `delegate` message `tableView:moveRowAtIndexPath:toIndexPath:`.
     */
@@ -235,7 +230,7 @@ extension Reactive where Base: UITableView {
             .map { a in
                 return (try castOrThrow(IndexPath.self, a[1]), try castOrThrow(IndexPath.self, a[2]))
             }
-        
+
         return ControlEvent(events: source)
     }
 
@@ -282,7 +277,7 @@ extension Reactive where Base: UITableView {
 
             return Observable.just(try view.rx.model(at: indexPath))
         }
-        
+
         return ControlEvent(events: source)
     }
 
@@ -308,7 +303,7 @@ extension Reactive where Base: UITableView {
 
         return ControlEvent(events: source)
     }
-    
+
     /**
      Reactive wrapper for `delegate` message `tableView:commitEditingStyle:forRowAtIndexPath:`.
      
@@ -325,10 +320,10 @@ extension Reactive where Base: UITableView {
             guard let view = view else {
                 return Observable.empty()
             }
-            
+
             return Observable.just(try view.rx.model(at: indexPath))
         }
-        
+
         return ControlEvent(events: source)
     }
 
@@ -337,7 +332,7 @@ extension Reactive where Base: UITableView {
      */
     public func model<T>(at indexPath: IndexPath) throws -> T {
         let dataSource: SectionedViewDataSourceType = castOrFatalError(self.dataSource.forwardToDelegate(), message: "This method only works in case one of the `rx.items*` methods was used.")
-        
+
         let element = try dataSource.model(at: indexPath)
 
         return castOrFatalError(element)
@@ -388,21 +383,21 @@ extension Reactive where Base: UITableView {
 #endif
 
 #if os(tvOS)
-    
+
     extension Reactive where Base: UITableView {
-        
+
         /**
          Reactive wrapper for `delegate` message `tableView:didUpdateFocusInContext:withAnimationCoordinator:`.
          */
         public var didUpdateFocusInContextWithAnimationCoordinator: ControlEvent<(context: UITableViewFocusUpdateContext, animationCoordinator: UIFocusAnimationCoordinator)> {
-            
+
             let source = delegate.methodInvoked(#selector(UITableViewDelegate.tableView(_:didUpdateFocusIn:with:)))
                 .map { a -> (context: UITableViewFocusUpdateContext, animationCoordinator: UIFocusAnimationCoordinator) in
                     let context = try castOrThrow(UITableViewFocusUpdateContext.self, a[1])
                     let animationCoordinator = try castOrThrow(UIFocusAnimationCoordinator.self, a[2])
                     return (context: context, animationCoordinator: animationCoordinator)
             }
-            
+
             return ControlEvent(events: source)
         }
     }

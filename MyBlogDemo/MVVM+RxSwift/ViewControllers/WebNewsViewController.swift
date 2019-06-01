@@ -10,21 +10,19 @@ import UIKit
 import WebKit
 
 class WebNewsViewController: UIViewController {
-
     @IBOutlet weak var webView: WKWebView!
-    
+
     var vm: NewsViewModel?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         if let newsURLStr = vm?.newsUrlString, let newsURL = URL(string: newsURLStr) {
-            let request = URLRequest(url:newsURL)
+            let request = URLRequest(url: newsURL)
             webView.load(request)
         }
     }
-    
 
     /*
     // MARK: - Navigation
@@ -35,5 +33,4 @@ class WebNewsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

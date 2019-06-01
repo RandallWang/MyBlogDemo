@@ -9,12 +9,9 @@
 import UIKit
 
 class SwiftCodableViewController: BaseViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
-    
 
     /*
     // MARK: - Navigation
@@ -25,5 +22,4 @@ class SwiftCodableViewController: BaseViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

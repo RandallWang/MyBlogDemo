@@ -10,21 +10,20 @@ import Foundation
 
 struct NewsViewModel {
     let newsData: NewsModel
-    
+
     var title: String {
         return newsData.title
     }
-    
-    var description: String{
+
+    var description: String {
         return newsData.description
     }
-    
-    var urlToImage: String{
+
+    var urlToImage: String {
         return newsData.urlToImage ?? ""
     }
-    
-    var newsUrlString: String{
+
+    var newsUrlString: String {
         return newsData.url
     }
-
 }

@@ -14,10 +14,7 @@ import RxSwift
 /// Delegate proxy for `NSTextField`.
 ///
 /// For more information take a look at `DelegateProxyType`.
-open class RxTextFieldDelegateProxy
-    : DelegateProxy<NSTextField, NSTextFieldDelegate>
-    , DelegateProxyType 
-    , NSTextFieldDelegate {
+open class RxTextFieldDelegateProxy: DelegateProxy<NSTextField, NSTextFieldDelegate>, DelegateProxyType, NSTextFieldDelegate {
 
     /// Typed parent object.
     public weak private(set) var textField: NSTextField?
@@ -37,21 +34,12 @@ open class RxTextFieldDelegateProxy
     fileprivate let textSubject = PublishSubject<String?>()
 
     // MARK: Delegate methods
-#if swift(>=4.2)
     open func controlTextDidChange(_ notification: Notification) {
         let textField: NSTextField = castOrFatalError(notification.object)
         let nextValue = textField.stringValue
         self.textSubject.on(.next(nextValue))
         _forwardToDelegate?.controlTextDidChange?(notification)
     }
-#else
-    open override func controlTextDidChange(_ notification: Notification) {
-        let textField: NSTextField = castOrFatalError(notification.object)
-        let nextValue = textField.stringValue
-        self.textSubject.on(.next(nextValue))
-        self._forwardToDelegate?.controlTextDidChange?(notification)
-    }
-#endif
 
     // MARK: Delegate proxy methods
 
@@ -64,7 +52,7 @@ open class RxTextFieldDelegateProxy
     open class func setCurrentDelegate(_ delegate: NSTextFieldDelegate?, to object: ParentObject) {
         object.delegate = delegate
     }
-    
+
 }
 
 extension Reactive where Base: NSTextField {
@@ -75,11 +63,11 @@ extension Reactive where Base: NSTextField {
     public var delegate: DelegateProxy<NSTextField, NSTextFieldDelegate> {
         return RxTextFieldDelegateProxy.proxy(for: self.base)
     }
-    
+
     /// Reactive wrapper for `text` property.
     public var text: ControlProperty<String?> {
         let delegate = RxTextFieldDelegateProxy.proxy(for: self.base)
-        
+
         let source = Observable.deferred { [weak textField = self.base] in
             delegate.textSubject.startWith(textField?.stringValue)
         }.takeUntil(self.deallocated)
@@ -90,7 +78,7 @@ extension Reactive where Base: NSTextField {
 
         return ControlProperty(values: source, valueSink: observer.asObserver())
     }
-    
+
 }
 
 #endif

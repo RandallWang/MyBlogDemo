@@ -1,23 +1,26 @@
 PODS:
   - Alamofire (4.8.2)
-  - Kingfisher (4.10.1)
+  - Kingfisher (5.5.0)
   - Masonry (1.1.0)
-  - OHHTTPStubs (7.0.0):
-    - OHHTTPStubs/Default (= 7.0.0)
-  - OHHTTPStubs/Core (7.0.0)
-  - OHHTTPStubs/Default (7.0.0):
+  - OHHTTPStubs (8.0.0):
+    - OHHTTPStubs/Default (= 8.0.0)
+  - OHHTTPStubs/Core (8.0.0)
+  - OHHTTPStubs/Default (8.0.0):
     - OHHTTPStubs/Core
     - OHHTTPStubs/JSON
     - OHHTTPStubs/NSURLSession
     - OHHTTPStubs/OHPathHelpers
-  - OHHTTPStubs/JSON (7.0.0):
+  - OHHTTPStubs/JSON (8.0.0):
     - OHHTTPStubs/Core
-  - OHHTTPStubs/NSURLSession (7.0.0):
+  - OHHTTPStubs/NSURLSession (8.0.0):
     - OHHTTPStubs/Core
-  - OHHTTPStubs/OHPathHelpers (7.0.0)
-  - RxCocoa (4.5.0):
-    - RxSwift (>= 4.4.2, ~> 4.4)
-  - RxSwift (4.5.0)
+  - OHHTTPStubs/OHPathHelpers (8.0.0)
+  - RxCocoa (5.0.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.0.0):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -34,15 +37,17 @@ SPEC REPOS:
     - Masonry
     - OHHTTPStubs
     - RxCocoa
+    - RxRelay
     - RxSwift
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
-  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  Kingfisher: 6fe5e67a90fd335e49b0f5c075ff55ac5ebedd94
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  OHHTTPStubs: ef33a2c353110d306bb98f695435ec56ff5a26c3
-  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
-  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  OHHTTPStubs: 9cbce6364bec557cc3439aa6bb7514670d780881
+  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
 
 PODFILE CHECKSUM: ed890da798dd0e8bc62256b5e163c591f87fc532
 

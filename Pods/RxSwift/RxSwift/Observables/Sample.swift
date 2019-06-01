@@ -20,35 +20,33 @@ extension ObservableType {
      - parameter sampler: Sampling tick sequence.
      - returns: Sampled observable sequence.
      */
-    public func sample<O: ObservableType>(_ sampler: O)
-        -> Observable<E> {
+    public func sample<Source: ObservableType>(_ sampler: Source)
+        -> Observable<Element> {
             return Sample(source: self.asObservable(), sampler: sampler.asObservable())
     }
 }
 
-final private class SamplerSink<O: ObserverType, SampleType>
-    : ObserverType
-    , LockOwnerType
-    , SynchronizedOnType {
-    typealias E = SampleType
-    
-    typealias Parent = SampleSequenceSink<O, SampleType>
-    
+final private class SamplerSink<Observer: ObserverType, SampleType>
+    : ObserverType, LockOwnerType, SynchronizedOnType {
+    typealias Element = SampleType
+
+    typealias Parent = SampleSequenceSink<Observer, SampleType>
+
     fileprivate let _parent: Parent
 
     var _lock: RecursiveLock {
         return self._parent._lock
     }
-    
+
     init(parent: Parent) {
         self._parent = parent
     }
-    
-    func on(_ event: Event<E>) {
+
+    func on(_ event: Event<Element>) {
         self.synchronizedOn(event)
     }
 
-    func _synchronized_on(_ event: Event<E>) {
+    func _synchronized_on(_ event: Event<Element>) {
         switch event {
         case .next, .completed:
             if let element = _parent._element {
@@ -67,36 +65,33 @@ final private class SamplerSink<O: ObserverType, SampleType>
     }
 }
 
-final private class SampleSequenceSink<O: ObserverType, SampleType>
-    : Sink<O>
-    , ObserverType
-    , LockOwnerType
-    , SynchronizedOnType {
-    typealias Element = O.E
+final private class SampleSequenceSink<Observer: ObserverType, SampleType>
+    : Sink<Observer>, ObserverType, LockOwnerType, SynchronizedOnType {
+    typealias Element = Observer.Element
     typealias Parent = Sample<Element, SampleType>
-    
+
     fileprivate let _parent: Parent
 
     let _lock = RecursiveLock()
-    
+
     // state
     fileprivate var _element = nil as Element?
     fileprivate var _atEnd = false
-    
+
     fileprivate let _sourceSubscription = SingleAssignmentDisposable()
-    
-    init(parent: Parent, observer: O, cancel: Cancelable) {
+
+    init(parent: Parent, observer: Observer, cancel: Cancelable) {
         self._parent = parent
         super.init(observer: observer, cancel: cancel)
     }
-    
+
     func run() -> Disposable {
         self._sourceSubscription.setDisposable(self._parent._source.subscribe(self))
         let samplerSubscription = self._parent._sampler.subscribe(SamplerSink(parent: self))
-        
+
         return Disposables.create(_sourceSubscription, samplerSubscription)
     }
-    
+
     func on(_ event: Event<Element>) {
         self.synchronizedOn(event)
     }
@@ -113,7 +108,7 @@ final private class SampleSequenceSink<O: ObserverType, SampleType>
             self._sourceSubscription.dispose()
         }
     }
-    
+
 }
 
 final private class Sample<Element, SampleType>: Producer<Element> {
@@ -124,8 +119,8 @@ final private class Sample<Element, SampleType>: Producer<Element> {
         self._source = source
         self._sampler = sampler
     }
-    
-    override func run<O: ObserverType>(_ observer: O, cancel: Cancelable) -> (sink: Disposable, subscription: Disposable) where O.E == Element {
+
+    override func run<Observer: ObserverType>(_ observer: Observer, cancel: Cancelable) -> (sink: Disposable, subscription: Disposable) where Observer.Element == Element {
         let sink = SampleSequenceSink(parent: self, observer: observer, cancel: cancel)
         let subscription = sink.run()
         return (sink: sink, subscription: subscription)
